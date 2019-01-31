@@ -1,0 +1,54 @@
+header{
+    display: block;
+    position: absolute;
+    left: 70px;
+    font-size: 60px;
+    margin-bottom: 80px;
+}
+#addition input {
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    margin: 20px;
+    /* margin-top: 80px; */
+
+}
+#addition button {
+    width: 500px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+}
+#subtract input {
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    margin: 20px;
+}
+#subtract button {
+    width: 500px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+}
+#multiply input {
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    margin: 20px;
+}
+#multiply button {
+    width: 500px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+}
