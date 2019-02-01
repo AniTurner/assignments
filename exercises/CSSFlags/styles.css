@@ -142,29 +142,40 @@
     margin-left: 20px;
     margin-top: 46px;
 }
-#Tonga2 {
-    width: 20px;
-    height: 50px;
-    /* position: absolute; */
-    background-color: blue;
-    display: block;
-    margin-left: 12px;
-    margin-top: 1px;
-}
-#Tonga3 {
-    width: 90px;
-    height: 60px;
-    /* position: absolute; */
-    background-color: white;
-    display: inline-block;
-}
-#Tonga4 {
+
+.Tonga {
     width: 180px;
     height: 120px;
-    /* position: absolute; */
+    position: relative;    
     background-color: #C10000;
-    display: block;
+    display: grid;
 }
+#Tonga2{
+    width: 90px;
+    height: 60px;
+    position: relative;
+    background-color: white;
+    display: grid;
+}
+#Tonga2::before {
+    background: #C10000;
+    content: "";
+    position: relative;
+    top: 18px;
+    width: 50px;
+    height: 20px;
+    margin-left: 15px;
+}
+#Tonga2::after {
+    content: "";
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    background-color: #C10000;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
 #Japan1 {
     height: 70px;
     width: 70px;
@@ -243,51 +254,61 @@
     background-color: red;
     display: inline-block;
 }
-#Greece1 {
+.Greece {
     width: 170px;
-    height: 10px;
+    height: 90px;
     background-color: #0C1C8C;
-    display: block;
-    margin-bottom: 8px;
-
+    top: 20px;
+    position: relative;
 }
 #Greece2 {
-    width: 170px;
-    height: 10px;
-    background-color: #0C1C8C;
-    display: inline-block;
-    margin-top: 0px;
-    margin-bottom: 8px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    margin-left: 15px;
 }
 #Greece3 {
-    width: 170px;
+    width: 40px;
     height: 10px;
-    background-color: #0C1C8C;
-    margin-top: 3px;
-    margin-bottom: 8px;
-    margin-bottom: 8px;
-    display: block;
+    background-color: white;
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    top: 8px;
+    /* margin-bottom: 8px; */
+    /* margin-bottom: 8px; */
 }
 #Greece4 {
-    width: 170px;
+    width: 180px;
     height: 10px;
-    background-color: #0C1C8C;
-    margin-top: 3px;
-    margin-bottom: 8px;
-    display: block;
+    background-color: white;
+    position: relative;
+    left: 40px;
+    top: 10px;
 }
 #Greece5 {
-    width: 170px;
+    width: 180px;
     height: 10px;
-    background-color: #0C1C8C;
-    margin-top: 3px;
-    margin-bottom: 8px;
-    display: block;
+    background-color: white;
+    position: relative;
+    left: 40px;
+    top: 20px;
 }
 #Greece6 {
-    width: 170px;
+    width: 200px;
     height: 10px;
-    background-color: #0C1C8C;
-    margin-top: 3px;
-    display: block;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    top: 30px;
+}
+#Greece7 {
+    width: 200px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    top: 40px;
 }

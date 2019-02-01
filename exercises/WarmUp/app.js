@@ -13,7 +13,7 @@ console.log(upperCaseMe("good morning!")) // GOOD MORNING!
 // 2. Write a function that takes a string and returns that string reversed.
 
 function reverseMe(str){
-    var reversed = str.split('').reverse().join('')
+    var reversed = str.split("").reverse().join('')
     return reversed
 }
 
