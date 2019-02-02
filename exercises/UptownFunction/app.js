@@ -7,7 +7,6 @@ var lyrics = ["This", "hit", "that", "ice", "cold",
               "the", "city", "Got", "Chucks", "on", 
               "with", "Saint", "Laurent", "Gotta", "kiss", 
               "myself", "I'm", "so", "pretty"];
-var newLyrics = []
 
 // // First function: returns contents of the array, lyrics, to the console as a string, including necessary spaces.
 // function mylyrics(lyrics) {
@@ -24,11 +23,13 @@ var newLyrics = []
 
 // Third function: returns a string of just every other word, (e.g. "this that cold Pfeiffer...").
 function otherLyrics(arr) {
+    var newLyrics = []
+
     for(var i = 0; i < arr.length; i+=2){
         newLyrics.push(arr[i])
-        return otherLyrics(arr)
         
-    }
-} console.log(arr)
+    }         
+        return newLyrics
 
-
+} 
+console.log(otherLyrics(lyrics))
