@@ -1,1 +1,195 @@
-asd
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+/* 
+
+@media only screen and (min-width: 600px) {
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+[class*="col-"] {
+    float:left;
+    padding:15px;
+}
+
+h1 {
+    position: absolute;
+    top: 120px;
+    left: 16px;
+}
+h2 {
+    position: absolute;
+    top: 355px;
+    left: 16px;
+}
+h3 {
+    position: absolute;
+    top: 420px;
+    left: 16px;
+}
+form {
+    position: absolute;
+    top: 220px;
+    left: 716px;
+    font-size: 3vw;
+}
+#answer {
+    font-size: 1vw;
+}
+#one {
+    position: absolute;
+    top: 240px;
+    left: 16px;
+    font-size: 2vw;
+
+}
+#two {
+    position: absolute;
+    top:230px;
+    left: 16px;
+    font-size: 2vw;
+
+}
+#three {
+    position: absolute;
+    top: 240px;
+    left: 16px;
+    font-size: 2vw;
+
+}
+h5 {
+    position: absolute;
+    top: 870px;
+    left: 0px;
+    font-size: 1vw;
+    font-weight: bold;
+} */
+
+/* .background {
+    /* background-position: center center; */
+    background-image: url('https://wallpaperplay.com/walls/full/4/f/7/213492.jpg');
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 120%;
+} */
+.coins {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    top: 220px;
+    left: 720px;
+}
+body {
+    background-color: #049cd8;
+}
+h1 {
+    font-family: "squirk";
+    font-size: 90px;
+    color: #e52521;
+    margin-left: 20px;
+}
+#goombas {
+    font-family: "SuperMarioBrothers";
+    font-size: 50px;
+    color: #fbd000;
+    margin-left: 20px;
+    margin-top: 60px;
+    position: absolute;
+
+}
+#bobombs {
+    font-family: "SuperMarioBrothers";
+    font-size: 50px;
+    color: #fbd000;
+    margin-left: 20px;
+    margin-top: 200px;
+    position: absolute;
+
+}
+#cheepcheeps {
+    font-family: "SuperMarioBrothers";
+    font-size: 50px;
+    color: #fbd000;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 340px;
+}
+#number1 {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 65px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+
+}
+#number2 {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 185px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+#number3 {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 305px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+
+}
+h5 {
+    position: absolute;
+    margin-top: 250px;
+}
+h3 {
+    position: absolute;
+    margin-top: 500px;
+}
+h2 {
+    position: absolute;
+    margin-top: 530px;
+}
+footer {
+    position: absolute;
+    margin-top: 700px;
+    display: block;
+}
