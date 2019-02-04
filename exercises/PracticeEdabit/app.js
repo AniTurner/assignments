@@ -34,12 +34,12 @@
 // console.log(myNum())
 
 // Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
-function strLength(a,b) {
-    if (a.length === b.length){
-        return true
-    }
-    return false
-} 
-console.log(strLength("AB", "CD"))
-console.log(strLength("ABC", "DE"))
-console.log(strLength("hello", "edabit"))
+// function strLength(a,b) {
+//     if (a.length === b.length){
+//         return true
+//     }
+//     return false
+// } 
+// console.log(strLength("AB", "CD"))
+// console.log(strLength("ABC", "DE"))
+// console.log(strLength("hello", "edabit"))

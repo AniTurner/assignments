@@ -1,0 +1,26 @@
+body {
+    background-color: #6d6876;
+    
+}
+h1 {
+    text-align: center;
+    font-family: "scriptina";
+    color: #ffcdbf;
+    font-size: 290%;
+}
+.w3Button {
+    text-align: center;
+    color: black;
+    font-size: 135%;
+    font-family: "BeautyMountainsPersonalUse";
+    text-decoration: none;
+    float: left;
+}
+.w3Button a:hover {
+    color: #e5989e;
+}
+.mySlides {
+    width: 50%;
+    height: auto;
+
+}
