@@ -7,36 +7,14 @@
 
 @media only screen and (min-width: 600px) {
 
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  
 }
 
 @media only screen and (min-width: 768px) {
     [class*="col-"] {
         width: 100%;
     }
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+
 }
 
 [class*="col-"] {
@@ -49,15 +27,7 @@ h1 {
     top: 10px;
     left: 5px;
 }
-/* h2 {
-    position: absolute;
-    top: 355px;
-    left: 16px;
-}
-h3 {
-    position: relative;
-    left: 16px;
-} */
+
 form {
     position: absolute;
     top: 0px;
@@ -260,8 +230,8 @@ h1 {
     position: absolute;
     margin-left: 450px;
     margin-top: 65px;
-    width: 60px;
-    height: 60px;
+    width: 8vw;
+    height: auto;
     font-size: 40px;
     background-color: transparent;
     color: black;
@@ -269,22 +239,24 @@ h1 {
     display: center;
 }
 #number2 {
+    display: flex;
     position: absolute;
     margin-left: 450px;
     margin-top: 185px;
-    width: 60px;
-    height: 60px;
+    width: 8vw;
+    height: auto;
     font-size: 40px;
     background-color: transparent;
     color: black;
     border: 4px dotted #049cd8;
 }
 #number3 {
+    display: flex;
     position: absolute;
     margin-left: 450px;
     margin-top: 305px;
-    width: 60px;
-    height: 60px;
+    width: 8vw;
+    height: auto;
     font-size: 40px;
     background-color: transparent;
     color: black;
@@ -292,17 +264,154 @@ h1 {
 
 }
 .empty {
-    width: 900px;
+    width: auto;
     height: 55px;
     background-color: #f00
 }
 .arrow-down {
-    position: absolute;
+    position: relative;
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #f00;
-    left: 400px;
-    top: 480px;
+    left: 380px;
+    top: 0px;
+}
+
+@media(max-width:650px){
+    h1 {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        font-size: 60px;
+    }
+    .arrow-down {
+        position: relative;
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #f00;
+        left: 350px;;
+        top: 350px;
+    }
+    #number1 {
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 50px;
+        width: 5vw;
+        height: auto;
+        font-size: 30px;
+        background-color: transparent;
+        color: black;
+        border: 4px dotted #049cd8;
+        display: center;
+    }
+    #number2 {
+        display: flex;
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 130px;
+        width: 5vw;
+        height: auto;
+        font-size: 30px;
+        background-color: transparent;
+        color: black;
+        border: 4px dotted #049cd8;
+    }
+    #number3 {
+        display: flex;
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 220px;
+        width: 5vw;
+        height: auto;
+        font-size: 30px;
+        background-color: transparent;
+        color: black;
+        border: 4px dotted #049cd8;
+    
+    }
+    .coinspic {
+        position: absolute;
+        top: 110px;
+        left: 220px;
+        width: 65px;
+        height: 65px;
+    }
+    #one {
+        position: absolute;
+        top: 960px;
+        left: 16px;
+        font-size: 2vw;
+        display: inline;
+        border-top: 2px solid black;
+        /* min-width: 30%; */
+    
+    }
+    #two {
+        position: absolute;
+        top: 930px;
+        left: 16px;
+        font-size: 2vw;
+        display: inline;
+    
+    }
+    #three {
+        position: absolute;
+        top: 960px;
+        left: 16px;
+        display: inline;
+        font-size: 2vw;
+    
+    }
+    #four {
+        position: absolute;
+        top: 1000px;
+        left: 16px;
+        font-size: 1.3vw;
+        page-break-after: always;
+    }
+    #goombapic {
+        position: absolute;
+        top: 80px;
+        left: 510px;
+        width: 70px;
+        height: 70px;
+    }
+    #cheeppic {
+        position: absolute;
+        top: 170px;
+        left: 510px;
+        width: 70px;
+        height: 70px;
+    }
+    #bobombspic {
+        position: absolute;
+        top: 270px;
+        left: 510px;
+        width: 70px;
+        height: 70px;
+    }
+    #coins {
+        font-size: 1vw;
+        position: absolute;
+        top: 65px;
+        left: 175px;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: pixelemulator;
+        animation: blinkingText 0.8s infinite;
+    }
+    #answer {
+        font-size: 1vw;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: pixelemulator;
+        animation: blinkingText 0.8s infinite;
+    }
 }
