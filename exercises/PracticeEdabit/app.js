@@ -21,14 +21,25 @@
     //Function must return a value
     //Console.log the called function to see the returned value
 
-function myNum(a,b) {
-    return a * b
-}
-console.log(myNum(2,4))
+// function myNum(a,b) {
+//     return a * b
+// }
+// console.log(myNum(2,4))
 
-var myNum = function() {
-    var a = 3
-    var b = 2
-    return a * b
-}
-console.log(myNum())
+// var myNum = function() {
+//     var a = 3
+//     var b = 2
+//     return a * b
+// }
+// console.log(myNum())
+
+// Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+function strLength(a,b) {
+    if (a.length === b.length){
+        return true
+    }
+    return false
+} 
+console.log(strLength("AB", "CD"))
+console.log(strLength("ABC", "DE"))
+console.log(strLength("hello", "edabit"))
