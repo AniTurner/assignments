@@ -3,48 +3,78 @@
     margin: 0px;
     padding: 0px;
 }
-
-
-@media only screen and (min-width: 600px) {
-
-  
+.container {
+    display: flex;
+}
+.backgroundBlank {
+    width: 100%;
+    height: 40vw;
+    background-image: url("yellowPic.png");
 }
 
-@media only screen and (min-width: 768px) {
-    [class*="col-"] {
-        width: 100%;
+@media (max-width: 800px) {
+    .container {
+        height: 50vh;
     }
-
-}
-
-[class*="col-"] {
-    float:left;
-    padding:15px;
-}
-
-h1 {
-    position: absolute;
-    top: 10px;
-    left: 5px;
 }
 
 form {
-    position: absolute;
     top: 0px;
     left: 36px;
     font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 30vw;
+    width: 50%;
+    background-image: url("yellowPic.png");
+    margin-left: -10%;
+    z-index: 2;
+    top: 50px;
+    margin-top: 8%;
+}
+.inputPicture {
+    display: flex;
+    margin: 50px;
+    width: 13vw;
+    height: 5vw;
+
+}
+.goomba-pic2{
+    width: auto;
+    height: 10vw;
+    margin-top: -35px;
+    margin-left: 20px;
+}
+@media (max-width: 600px){
+    .goomba-pic2{
+        width: auto;
+        height: 10vw;
+        margin-top: 5px;
+    }
+}
+.number1New{
+    height: 65px;
+    width: 9vw;
+    /* height: auto; */
+    font-size: 40px;
+    background-color: transparent;
+    color: black;
+    border: 4px dotted #049cd8;
 }
 #goombapic {
-    position: absolute;
-    top: 100px;
-    left: 580px;
+    /* position: absolute;
+    top: 170px;
+    left: 580px; */
     width: 100px;
     height: 100px;
 }
 #cheeppic {
-    position: absolute;
-    top: 220px;
-    left: 580px;
+    /* position: absolute; */
+    top: 20;
+    left: 880px;
     width: 100px;
     height: 100px;
 }
@@ -56,32 +86,27 @@ form {
     height: 100px;
 }
 #number1 {
-    position: absolute;
     top: 40px;
 }
 #number2 {
-    position: absolute;
     top: 50px;
 }
 #number3 {
-    position: absolute;
     top: 60px;
 }
 #answer {
-    font-size: 1vw;
-    position: absolute;
-    top: 26px;
-    left: 25px;
-    font-size: 30px;
+    margin-left: 5px;
+    font-size: 20px;
     font-weight: bold;
     font-family: pixelemulator;
     animation: blinkingText 0.8s infinite;
 }
 #coins {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     font-size: 1vw;
-    position: absolute;
-    top: 80px;
-    left: 220px;
     font-size: 30px;
     font-weight: bold;
     font-family: pixelemulator;
@@ -93,39 +118,33 @@ form {
     100% { color: #049cd8;  }
 }
 #one {
-    position: absolute;
     top: 960px;
     left: 16px;
     font-size: 2vw;
     display: inline;
     border-top: 2px solid black;
-    /* min-width: 30%; */
-
 }
 #two {
-    position: absolute;
     top: 930px;
     left: 16px;
-    font-size: 2vw;
+    font-size: 1vw;
     display: inline;
-
 }
+
 #three {
-    position: absolute;
     top: 960px;
     left: 16px;
     display: inline;
-    font-size: 2vw;
-
+    font-size: 1vw;
 }
+
 #four {
-    position: absolute;
     top: 1000px;
     left: 16px;
-    font-size: 1.3vw;
+    font-size: 1vw;
     page-break-after: always;
-    
 }
+
 a [href^="tel:"] {
     color: red;
     font-weight: bold;
@@ -133,19 +152,19 @@ a [href^="tel:"] {
     font-weight: bold;
     background-color: red;
 }
+
 #goombatext {
-    position: absolute;
-    left: 130px;
+    margin-left: 110px;
 }
+
 #cheeptext {
-    position: absolute;
-    left: 130px;
+    margin-left: 110px;
 }
+
 #bobombtext {
-    position: absolute;
-    left: 130px;
-    float: left;
+    margin-left: 110px;
 }
+
 #g {
     width: 80px;
     height: 80px;
@@ -153,6 +172,8 @@ a [href^="tel:"] {
     margin-left: 20px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    display: inline-block;
+    float: left;
 }
 #c {
     width: 80px;
@@ -161,35 +182,30 @@ a [href^="tel:"] {
     margin-left: 15px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    display: inline-block;
+    float: left;
 }
 #b {
     width: 80px;
     height: 80px;
     top: 300px;
     margin-left: 15px;
+    display: inline-block;
+    float: left;
 }
 
 .background {
-    background-position: center center;
     background-image: url('https://yese69.com/wp-content/uploads/data/2017/12/16/full-size-super-mario-backgrounds-1920x1080-high-resolution-WTG200610115-768x432.jpg');
-    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: contain;
-    min-height: 100%;
-    max-width: 100%;
+    background-size: cover;
+    height: 40vw;
+    width: 50%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
-.coinspic {
-    position: absolute;
-    top: 137px;
-    left: 268px;
-    width: 80px;
-    height: 80px;
-}
 body {
     background-color: #fbd000;
 }
@@ -199,102 +215,69 @@ h1 {
     color: #e52521;
     margin-left: 20px;
     margin-top: 0;
+    z-index: 3;
+    text-align: center;
+    display: block;
 }
 #goombas {
     font-family: "";
-    font-size: 20px;
+    font-size: 30px;
     color: black;
-    margin-left: 10px;
-    margin-top: 180px;
-    position: absolute;
+    margin-left: 108px;
+    text-decoration: underline;
+   
 
 }
 #bobombs {
     font-family: "";
-    font-size: 20px;
+    font-size: 30px;
     color: black;
-    margin-left: 10px;
-    margin-top: 450px;
-    position: absolute;
+    margin-left: 108px;
+    text-decoration: underline;
+
 
 }
 #cheepcheeps {
     font-family: "";
-    font-size: 20px;
+    font-size: 30px;
     color: black;
-    margin-left: 10px;
-    position: absolute;
-    margin-top: 320px;
+    margin-left: 108px;
+    text-decoration: underline;
 }
-#number1 {
-    position: absolute;
-    margin-left: 450px;
-    margin-top: 65px;
-    width: 8vw;
-    height: auto;
-    font-size: 40px;
-    background-color: transparent;
-    color: black;
-    border: 4px dotted #049cd8;
-    display: center;
-}
-#number2 {
-    display: flex;
-    position: absolute;
-    margin-left: 450px;
-    margin-top: 185px;
-    width: 8vw;
-    height: auto;
-    font-size: 40px;
-    background-color: transparent;
-    color: black;
-    border: 4px dotted #049cd8;
-}
-#number3 {
-    display: flex;
-    position: absolute;
-    margin-left: 450px;
-    margin-top: 305px;
-    width: 8vw;
-    height: auto;
-    font-size: 40px;
-    background-color: transparent;
-    color: black;
-    border: 4px dotted #049cd8;
 
+.arrowContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .empty {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     width: auto;
     height: 55px;
     background-color: #f00
 }
 .arrow-down {
-    position: relative;
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #f00;
-    left: 380px;
-    top: 0px;
+    margin-left: 48%;
+    
 }
 
 @media(max-width:650px){
     h1 {
-        position: absolute;
-        top: 10px;
-        left: 5px;
-        font-size: 60px;
+        font-size: 30px;
     }
     .arrow-down {
-        position: relative;
-        width: 0; 
-        height: 0; 
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid #f00;
-        left: 350px;;
-        top: 350px;
     }
     #number1 {
         position: absolute;
@@ -340,39 +323,7 @@ h1 {
         width: 65px;
         height: 65px;
     }
-    #one {
-        position: absolute;
-        top: 960px;
-        left: 16px;
-        font-size: 2vw;
-        display: inline;
-        border-top: 2px solid black;
-        /* min-width: 30%; */
-    
-    }
-    #two {
-        position: absolute;
-        top: 930px;
-        left: 16px;
-        font-size: 2vw;
-        display: inline;
-    
-    }
-    #three {
-        position: absolute;
-        top: 960px;
-        left: 16px;
-        display: inline;
-        font-size: 2vw;
-    
-    }
-    #four {
-        position: absolute;
-        top: 1000px;
-        left: 16px;
-        font-size: 1.3vw;
-        page-break-after: always;
-    }
+
     #goombapic {
         position: absolute;
         top: 80px;
@@ -395,21 +346,12 @@ h1 {
         height: 70px;
     }
     #coins {
-        font-size: 1vw;
-        position: absolute;
-        top: 65px;
-        left: 175px;
-        font-size: 22px;
         font-weight: bold;
         font-family: pixelemulator;
         animation: blinkingText 0.8s infinite;
     }
     #answer {
-        font-size: 1vw;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        font-size: 20px;
+        font-size: 40px;
         font-weight: bold;
         font-family: pixelemulator;
         animation: blinkingText 0.8s infinite;

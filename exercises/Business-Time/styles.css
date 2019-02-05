@@ -11,10 +11,16 @@ h1 {
 .w3Button {
     text-align: center;
     color: black;
-    font-size: 135%;
+    font-size: 165%;
     font-family: "BeautyMountainsPersonalUse";
     text-decoration: none;
-    float: left;
+    left: 0px;
+}
+#navBox {
+    text-decoration: none;
+    color: black;
+    font-size: 250%;
+    display: inline-block;
 }
 .w3Button a:hover {
     color: #e5989e;
@@ -22,5 +28,27 @@ h1 {
 .mySlides {
     width: 50%;
     height: auto;
-
 }
+@media (max-width: 860px) {
+    .w3Button {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    h1 {
+        text-align: center;
+        font-family: "scriptina";
+        color: #ffcdbf;
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        text-align: center;
+        font-family: "scriptina";
+        color: #ffcdbf;
+        font-size: 150%;
+    }
