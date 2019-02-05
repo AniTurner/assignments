@@ -8,6 +8,13 @@ h1 {
     color: #ffcdbf;
     font-size: 290%;
 }
+.dropbtn {
+    text-decoration: none;
+    color: black;
+    font-size: 250%;
+    display: inline-block;
+}
+
 .w3Button {
     text-align: center;
     color: black;
@@ -16,12 +23,7 @@ h1 {
     text-decoration: none;
     left: 0px;
 }
-#navBox {
-    text-decoration: none;
-    color: black;
-    font-size: 250%;
-    display: inline-block;
-}
+
 .w3Button a:hover {
     color: #e5989e;
 }
