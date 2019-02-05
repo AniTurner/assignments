@@ -56,9 +56,28 @@ h1 {
 .dropdown:hover .dropdownContent {
     display: block;
 }
+@keyframes mySlides {
+    0% {opacity: 0;}
+    20% {opacity:1;}
+    33% {opacity:1;}
+    53% {opacity:1;}
+    70% {opacity:1;}
+    90% {opacity:1;}
+    100% {opacity:0;}
+}
 .mySlides {
-    width: 50%;
-    height: auto;
+    animation-name: mySlides;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    
+}
+.text {
+    font-family: Parkavenue, cursive;
+
+    font-size: 150%;
+    text-align: center;
 }
 @media (max-width: 911px) {
     .navbar a {
