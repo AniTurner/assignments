@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #6d6876;
     
@@ -12,6 +15,7 @@ h1 {
     overflow: hidden;
     background-color: #ffcdbf;
     font-family: BeautyMountainsPersonalUse;
+    height: 35px;
 }
 .navbar a {
     float: left;
@@ -22,11 +26,11 @@ h1 {
     text-decoration: none;
 }
 .dropbtn {
-    font-size: 40px;
+    font-size: 20px;
     border: none;
     outline: none;
     color: #6d6876;
-    padding: 10px 12px;
+    padding: 5px 12px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;    
@@ -56,19 +60,27 @@ h1 {
 .dropdown:hover .dropdownContent {
     display: block;
 }
-.myPictureContainer {
-    display: flex;
-    justify-content: left;
-    margin-top: 10px;
+div .dropdown {
+    margin: 0;
+    padding: 0;
 }
+
 .myPicture {
+    float: left;
+    margin: 10px;
+}
+.ptag {
+    font-size: 30px;
+    font-family: BeautyMountainsPersonalUse
+}
+input {
+    display: block;
+    float: center;
     width: 50%;
-    height: auto;
+    height: 20px;
+    padding: 20px;
 }
-p {
-    float: right;
-    text-align: right;
-}
+
 @media (max-width: 911px) {
     .navbar a {
         display: none;
@@ -104,5 +116,8 @@ p {
         font-family: "scriptina";
         color: #ffcdbf;
         font-size: 150%;
+    }
+    p {
+        font-size: 3.2vw;
     }
 }
