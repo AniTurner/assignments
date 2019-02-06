@@ -56,9 +56,12 @@ h1 {
 .dropdown:hover .dropdownContent {
     display: block;
 }
+.myImageContainer {
+    display: flex;
+    justify-content: center;
+}
 .mySlides {
-    width: 50%;
-    height: auto;
+    margin-top: 10px;
 }
 @media (max-width: 911px) {
     .navbar a {

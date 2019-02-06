@@ -65,6 +65,10 @@ h1 {
     90% {opacity:1;}
     100% {opacity:0;}
 }
+.mySlidesContainer {
+    /* display: flex;
+    justify-content: center; */
+}
 .mySlides {
     animation-name: mySlides;
     animation-timing-function: ease-in-out;
@@ -78,6 +82,9 @@ h1 {
 
     font-size: 150%;
     text-align: center;
+}
+.borderDecoration {
+    margin: 0;
 }
 @media (max-width: 911px) {
     .navbar a {
