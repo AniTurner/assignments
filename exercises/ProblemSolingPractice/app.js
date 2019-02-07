@@ -26,11 +26,12 @@
 //Write a function that takes a num1 and num2 and returns whether num1 is divisible by num2.
 
 function divisible(num1, num2) {
-    for (var i = 0; i < num1.length; i++) {
-        if(num1 / num2) {
+        if(num1 % num2 === 0) {
             return true
         } else {
             return false
         }
     }  
-}
+console.log(divisible(4,2))
+console.log(divisible(9,3))
+console.log(divisible(15,4))
