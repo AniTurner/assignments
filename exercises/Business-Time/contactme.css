@@ -94,7 +94,7 @@ input {
 #message {
     margin-left: 31.5%;
 }
-footer {
+/* footer {
     background: #061D25;
     padding: 10px 0;
     text-align: center;
@@ -111,7 +111,7 @@ footer a:first-child {
 }
 footer a:hover {
     color: white;
-}
+} */
 
 @media (max-width: 911px) {
     .navbar a {

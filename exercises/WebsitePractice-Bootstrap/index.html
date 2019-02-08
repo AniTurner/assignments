@@ -3,61 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bootstrap Practice</title>
-    <link href="css/bootstrap.min.css" rel="stylessheet
+    <title>The Fruity Tuty</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbarButton" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Stunning Photographer</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About Me</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Animal Pictures<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Cats</a></li>
-                                <li><a href="#">Dogs</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Contact Me</a></li>
-                    </ul>
-                </div>
+    <header id="home"></header>
+        <div class="menu">
+            <span class="bar"></span>
+        </div>
+        
+        <nav class="nav">
+            <div class="overlay">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </nav>
-        <div class="jumbotron">
-                <div class="container">
-                    <h1>Ready. Set. Animals.</h1>
-                    <p>Are you ready for the most adorable pictures?</p>
-                    <br>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <div class="main-text">
+            <h1>Welcome</h1>
+            <h2>The Fruity Tuty</h2>
+            <a href="#" class="btn main-btn">Explore</a>
+        </div>
+    <header>
+    <section class="our-story" id="story">
+        <div class="container">
+            <h1 class="custom-font">Discover</h1>
+            <h2 class="custom-font-secondary">Our Story</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est distinctio tempora necessitatibus iste laudantium corrupti velit, ut iure laborum incidunt. Laboriosam nemo velit debitis error necessitatibus mollitia praesentium nisi fuga.</p>
+            <a href="#"" class="btn btn-info">Learn More</a>
+            <div class="store"></div>
+        </div>
+    </section>
+    <section class="fresh-ingredients between-sec">
+        <div class="container">
+            <h1 class="custom-font">Fresh</h1>
+            <h2 class="custom-font-secondary between-sec-color">Ingredients</h2>
+        </div>
+    </section>
+    <section class="our-menu" id="menu">
+            <div class="container">
+                <h1 class="custom-font">Discover</h1>
+                <h2 class="custom-font-secondary">Our Story</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est distinctio tempora necessitatibus iste laudantium corrupti velit, ut iure laborum incidunt. Laboriosam nemo velit debitis error necessitatibus mollitia praesentium nisi fuga.</p>
+                <a href="#"" class="btn btn-info">Full Menu</a>
+                <div class="image.group">
+                    <img src="https://www.rd.com/wp-content/uploads/2016/01/13-aphrodisiac-foods-strawberries.jpg" alt="">
+                    <img src="https://cdn1.sph.harvard.edu/wp-content/uploads/sites/30/2012/09/vegetables-and-fruits-farmers-market.jpg" alt="">
+                    <img src="https://www.heart.org/-/media/aha/h4gm/article-images/how-to-eat-more-fruits-and-veg.jpg?h=800&la=en&w=1200&hash=F662753067CDEBD879359EB35869072B4F1CCFA3" alt="">
+                    <img src="https://www.healthline.com/hlcmsresource/images/AN_images/AN174-Kiwis-732x549-Thumb_0.jpg" alt="">
                 </div>
             </div>
-
-                    
-            </div>
-        </div>
-    <h1>Stunning Photographer</h1>
-    <div class="row">
-        <div class="col-md-6"></div>
-        <div class="col-md-6"></div>
-    </div>
-    <section class="call-to-action">
-        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-    </section>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+        </section>
+        <section class="citrus-goodness between-sec">
+                <div class="container">
+                    <h1 class="custom-font">Fruit</h1>
+                    <h2 class="custom-font-secondary between-sec-color">Goodness</h2>
+                </div>
+        </section>
+        <section class="contact-us" id="contact">
+                <div class="container">
+                    <h1 class="custom-font">Contact</h1>
+                    <h2 class="custom-font-secondary">Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est distinctio tempora necessitatibus iste laudantium corrupti velit, ut iure laborum incidunt. Laboriosam nemo velit debitis error necessitatibus mollitia praesentium nisi fuga.</p>
+                    <form action="">
+                        <input type="text" class="input" placeholder="Full Name" name="name"  required>
+                        <input type="text" class="input" placeholder="Email" name="email"  required>
+                        <textarea name="message" class="text-area" placeholder="What can we help you with?" name="name"  required>
+                        <input type="submit" class="input btn-submit"></input>
+                    </form>
+                </div>
+            </section>
+            <footer>
+                <div class="locations">
+                    <h4>Locations</h4>
+                    <div class="Location">
+                        <h5>500 Fruit Rd <br>
+                            SLC, UT -84102
+                        </h5>
+                    </div>
+                </div>
+                <div class="hours">
+                        <h4>Hours</h4>
+                        <div class="days">
+                            <h5>Monday- Saturday <br>
+                                10:30AM -8:00PM
+                            </h5>
+                        </div>
+                    </div>
+            </footer>
+    <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    </header>
 </body>
 </html>
