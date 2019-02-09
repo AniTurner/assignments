@@ -52,20 +52,20 @@ var wizards = [
 // }) 
 // console.log(neutralGoodWizards)
 
-// var LawfulGoodIndex = wizards.findIndex(function(wizard) {
+// wizards.findIndex(function(wizard) {
 //     return wizard.alignment === "lawful good"
 // }) 
-// console.log(LawfulGoodIndex)
+// console.log(wizards)
 
-// var everyAlive = wizards.every(function(wizard) {
-//     return wizard.isAlive = true
-// })
-// console.log(everyAlive)
+isStillAlive = wizards.every(function(wizard) {
+    return wizard.isAlive = true
+})
+// console.log(isStillAlive)
 
-// var atLeastOneGood = wizards.some(function(wizard){
+// var neutralGood = wizards.some(function(wizard){
 //     return wizard.alignment === "neutral good"
 // })
-// console.log(atLeastOneGood)
+// console.log(neutralGood)
 
 wizards.find(function(wizard) {
     if (wizard.alignment === "neutral good") {
@@ -74,4 +74,13 @@ wizards.find(function(wizard) {
 })
 console.log(wizards)
 
-wizards.some
+// var isAliveAnymore = wizards.every(function(wizard) {
+//     wizard.isAlive 
+// })
+// console.log(isAliveAnymore)
+
+// var isAliveAnymore = wizards.some(function(wizard) {
+//     wizard.isAlive
+// })
+// console.log(wizards)
+
