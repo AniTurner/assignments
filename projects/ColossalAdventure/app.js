@@ -38,7 +38,7 @@ var player = {
     inventory: []
 } 
 
-var attackers = ["White Walkers", "House Baratheon", "Walder Frey"]
+var attackers = ["White Walkers", "a pack of wolfs", "Walder Frey"]
 ///////////////////Game Functions////////////////////////////
 function walk() {
     ///////Random number between 1-4
@@ -48,11 +48,11 @@ function walk() {
             console.log("Let us ATTAAAAACKKKK!!!")
 
         } else {
-            console.log("Oh, nothing happened. You shall see!")
+            console.log("Oh, nothing happened. But you wait!")
         }
 }
 ////////////////////Game Intro//////////////////////////////
-console.log("Let's get started " + player.character + " to my super awesome game")
+console.log("Let's get started " + player)
 
 var options = ["Walk"]
 ////////////////////Game Loop///////////////////////////////

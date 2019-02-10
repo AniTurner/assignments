@@ -1,10 +1,11 @@
+//  WIZARD BATTLE PRACTICE //
+
+// Use forEach(), find(), findIndex(), some(), and every()
+
+
 // Log to the console every Wizard in the array using forEach().
-
-// var wizards = ["Edwin Odesseiron", "Harry Potter", "Ronny the Bear", "Gandalf the Grey"] 
-
-// wizards.forEach(function(wizard) {
-//     console.log(wizards)
-// })
+// Using the following array, complete the following tasks in order.
+// Some tasks will change the behaviour of later tasks
 
 var wizards = [
     {
@@ -33,6 +34,66 @@ var wizards = [
       alignment: "neutral good"
     }
   ]
+  console.log("wizards")
+
+// Log to the console every wizard's name.
+  wizards.forEach(function (wizard) {
+    console.log(wizard);
+  })
+
+// Add an isAlive property to every wizard, setting it to true.
+wizards.forEach(function(wizard) {
+  wizard.isAlive = true
+})
+console.log(wizards)
+
+// Make a new array of all the wizards that are "neutral good".
+var neutralGoodWizards = []
+
+wizards.forEach(function(wizard) {
+  if (wizard.alignment === "neutral good") {
+    neutralGoodWizards.push(wizard)
+  }
+})
+console.log(neutralGoodWizards)
+
+// Find Index of a wizard that is "lawful good".
+wizards.findIndex(function(wizard) {
+  return wizard.alignment === "lawful good"
+})
+console.log(wizards)
+
+// Return a Boolean that states whether or not all the wizards are alive.
+wizards.every(function(wizard) {
+  return wizard.isAlive === true;
+})
+console.log(wizards)
+
+// Return a Boolean that states whether or not at least one wizard is "neutral good".
+wizards.some(function(wizard) {
+  return wizard.alignment === "neutral good"
+})
+console.log(wizards)
+
+// Check every alignment for every wizard. Kill every "neutral good" wizard. Modify every "neutral good" wizard isAlive property to false.
+wizard.find(function(wizard) {
+  if (wizard.alignment === "neutral good")
+    wizard.isAlive = false
+})
+console.log(wizards)
+
+// Return a Boolean that states whether or not all the wizards are alive.
+wizards.every(function(wizard) {
+  return (wizard.isAlive)
+})
+console.log(wizards)
+
+// Return a Boolean that states whether or not some of the wizards are alive.
+wizards.some(function(wizard) {
+  return (wizard.isAlive)
+})
+console.log(wizards)
+
 
 //   var names = wizards.forEach(function(wizard) {
 //     console.log(wizard.name)  
