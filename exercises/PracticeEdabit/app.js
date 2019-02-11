@@ -95,36 +95,47 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.
 
-function month_name(num) {
-    if (num === 1) {
-        return "January"
-    } else if (num === 2) {
-        return "February"
-    } else if (num === 3) {
-        return "March"
-    } else if (num === 4) {
-        return "April"
-    } else if (num === 5) {
-        return "May"
-    } else if (num === 6) {
-        return "June"
-    } else if (num === 7) {
-        return "July"
-    } else if (num === 8) {
-        return "August"
-    } else if (num === 9) {
-        return "September"
-    } else if (num === 10) {
-        return "October"
-    } else if (num === 11) {
-        return "November"
-    } else if (num === 12) {
-        return "December"
-    } else {
-        return "not a number"
-    }
+// function month_name(num) {
+//     if (num === 1) {
+//         return "January"
+//     } else if (num === 2) {
+//         return "February"
+//     } else if (num === 3) {
+//         return "March"
+//     } else if (num === 4) {
+//         return "April"
+//     } else if (num === 5) {
+//         return "May"
+//     } else if (num === 6) {
+//         return "June"
+//     } else if (num === 7) {
+//         return "July"
+//     } else if (num === 8) {
+//         return "August"
+//     } else if (num === 9) {
+//         return "September"
+//     } else if (num === 10) {
+//         return "October"
+//     } else if (num === 11) {
+//         return "November"
+//     } else if (num === 12) {
+//         return "December"
+//     } else {
+//         return "not a number"
+//     }
+// }
+// console.log(month_name(3))
+// console.log(month_name(12))
+// console.log(month_name(6))
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that accepts an array and returns the last item in the array.
+
+function getLastItem(arr) {
+    return arr.pop()
 }
-console.log(month_name(3))
-console.log(month_name(12))
-console.log(month_name(6))
+console.log(getLastItem([1, 2, 3]))
+console.log(getLastItem(['cat', 'dog', 'duck']))
+console.log(getLastItem([true, false, true]))
 
