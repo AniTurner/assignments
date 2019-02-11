@@ -143,10 +143,22 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that takes a string and returns the word count. The string will be a sentence.
 
-function countWords(str) {
-    var newStr = str.split(' ')
-    return newStr.length
+// function countWords(str) {
+//     var newStr = str.split(' ')
+//     return newStr.length
+// }
+// console.log(countWords("Just an example here move along"))
+// console.log(countWords("This is a test"))
+// console.log(countWords("What an easy task, right"))
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that takes an array of students and returns an array of student names.
+
+function getStudentNames(arr, item) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === " ") {
+        }
+    }
 }
-console.log(countWords("Just an example here move along"))
-console.log(countWords("This is a test"))
-console.log(countWords("What an easy task, right"))
+console.log(getStudentNames([{ name: 'Steve'}, { name: 'Mike'}, { name: 'John'}]))
