@@ -1,3 +1,33 @@
+// players = ["Jon Snow", "Daenerys Targaryen", "Cersei Lannister", "Aria Stark", "Jorah Mormont"],
+
+
+// character = ask.keyInSelect(players, 'Which character would you like to be?' )
+
+
+/////////////////Jon Snow/////////////////////////
+// if (character === 0) {
+//     console.log("Welcome to House Stark. WINTER IS COMING! ")
+// }
+
+/////////////////Daenerys//////////////////////////
+// if (character === 1) {
+//     console.log("Welcome to House Targaryen, Daenerys Stormborn of the House Targaryen, First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons. ")
+// }
+//////////////////Cersei///////////////////
+// if (character === 2) {
+//     console.log("Welcome to House Lannister, HEAR ME ROAR")
+// }
+//////////////////Aria///////////////////////////
+// if (character === 3) {
+//     console.log("Welcome to House Stark, youngest daughter of Lady Catelyn and Lord Eddard Stark")
+// }
+////////////////////Jorah////////////////////////
+// if (character === 4) {
+//     console.log("Welcome to House Mormont, courageous knight!")
+// }
+
+
+
 function walk() {
     ///////Random number between 1-4
     var chance = Math.ceil(Math.random() * 4)
@@ -38,7 +68,7 @@ function die() {
 
 function enemyDie() {
     //////if enemy dies, you get an item and HP
-    
+
 }
 
 function enemyCreation() {
