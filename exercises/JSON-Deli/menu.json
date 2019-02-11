@@ -1,0 +1,92 @@
+{
+    "name": "JSON's Deli",
+    "menu": {
+        "appetizers": [
+            {
+                "name": "Breadsticks",
+                "ingredients": ["white flour", "water", "yeast"],
+                "description": "The carbs that don't count"
+            },
+            {
+                "name": "Guacamole and Chips",
+                "ingrediets": ["Acovado", "red onions", "corn chips", "seasoning"],
+                "description": "the mexican champ"
+            },
+            {
+
+            }
+        ],
+        "cold sandwiches": [
+            {
+                "name": "Chicken Salad",
+                "ingredients": ["chicken", "celery", "carrots", "red onion", "mayonnaise", "mustard", "on a nice dinner roll"],
+                "description": "The classic"
+            },
+            {
+                "name": "Egg Salad",
+                "ingredients": ["free-land eggs", "lemon juice", "mayonnaise", "green onions", "lettuce leaves", "on a sourdough toast"],
+                "description": "More than just eggs"
+            },
+            {
+                "name": "Ham and Swiss",
+                "ingredients": ["Ham", "Swiss cheese", "tomato", "dill pickes", "mayonnaise", "mustard", "on a crusty rye bread"],
+                "description": "Ham and Swiss Cheese for the win"
+            },
+            {
+                "name": "Turkey Bacon Avocado",
+                "ingredients": ["Turkey", "Bacon", "Avocado", "lettuce", "tomato", "hummus", "on a multigrain bread"],
+                "description": "A different kind of BLT"
+            }
+        ],
+        "hot sandwiches": [
+            {
+                "name": "The Cuban",
+                "ingredients": ["Pork roast", "Ham", "Havarti cheese", "pickles", "Mustard on a po boy bun"],
+                "description": "Cubano, a lation variation on a grilled ham-and-cheese sandwich"
+            },
+            {
+                "name": "Salmon BLT",
+                "ingredients": ["Fresh grilled North Atlantic Salmon filet", "Bacon", "Lettuce", "Tomato", "Herb mayo on a homemade bun"],
+                "description": "A hint of Alaska in a bun"
+            },
+            {
+                "name": "Grilled Chicken Sandwich",
+                "ingredients": ["Cheddar cheese", "Lettuce", "Tomato", "red onion", "guacamole", "jalapenos", "on a homemade bun"],
+                "description": "A grilled chicken packed with flavor"
+            },
+            {
+                "name": "Reuben",
+                "ingredients": ["Corned beef", "Sauerkraut", "Swiss Cheese", "russian dressing on sourdough rye"],
+                "description": "A good ole' fashioned Reuben for the real meat lover"
+            }
+        ],
+        "desserts": [
+            {
+                "name": "Molten Chocolate Cake",
+                "calories": 350
+            },
+            {
+                "name": "Cheesecake",
+                "calories": 400
+            },
+            {
+                "name": "Chocolate Mousse",
+                "calories": 120
+            }
+        ],
+        "drinks": [
+            { 
+                "name": "Coke",
+                "calories": 250
+            },
+            {
+                "name": "Sprite",
+                "calories": 120
+            },
+            {
+                "name": "Dr. Pepper",
+                "calories": 200
+            }
+        ]
+    }
+}

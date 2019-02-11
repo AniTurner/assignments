@@ -156,9 +156,10 @@
 //Create a function that takes an array of students and returns an array of student names.
 
 function getStudentNames(arr, item) {
+    var namesOnly = []
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] === " ") {
+        namesOnly.push(arr[i].name)
         }
+        return namesOnly
     }
-}
 console.log(getStudentNames([{ name: 'Steve'}, { name: 'Mike'}, { name: 'John'}]))
