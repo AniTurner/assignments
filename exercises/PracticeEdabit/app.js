@@ -59,9 +59,21 @@
 
 // Create a function that takes a base number and an exponent number and returns the calculation.
 
-function calculateExponent(num1, num2) {
-    return Math.pow(num1,num2)
+// function calculateExponent(num1, num2) {
+//     return Math.pow(num1,num2)
+// }
+// console.log(calculateExponent(5, 5))
+// console.log(calculateExponent(10, 10))
+// console.log(calculateExponent(3, 3))
+
+//Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+
+function isEvenOrOdd(num) {
+    if (num % 2 === 0) {
+        return "even"
+    }
+    return "odd"
 }
-console.log(calculateExponent(5, 5))
-console.log(calculateExponent(10, 10))
-console.log(calculateExponent(3, 3))
+console.log(isEvenOrOdd(3))
+console.log(isEvenOrOdd(146))
+console.log(isEvenOrOdd(19))
