@@ -132,10 +132,21 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that accepts an array and returns the last item in the array.
 
-function getLastItem(arr) {
-    return arr.pop()
-}
-console.log(getLastItem([1, 2, 3]))
-console.log(getLastItem(['cat', 'dog', 'duck']))
-console.log(getLastItem([true, false, true]))
+// function getLastItem(arr) {
+//     return arr.pop()
+// }
+// console.log(getLastItem([1, 2, 3]))
+// console.log(getLastItem(['cat', 'dog', 'duck']))
+// console.log(getLastItem([true, false, true]))
 
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that takes a string and returns the word count. The string will be a sentence.
+
+function countWords(str) {
+    var newStr = str.split(' ')
+    return newStr.length
+}
+console.log(countWords("Just an example here move along"))
+console.log(countWords("This is a test"))
+console.log(countWords("What an easy task, right"))
