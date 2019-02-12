@@ -143,6 +143,7 @@ function enemyAttack(enemy) {
         attack(myEnemy);
     }
 }
+}
 
 function die() {
     return gameOver();
@@ -204,9 +205,6 @@ while (player.health > 0 && !endGame) {
         console.log(`Select print or type 'Print' to get a status:`)
         print();
     }
-
-
-
 }
 
 function endGame1(){
@@ -229,29 +227,29 @@ function gameOver() {
     console.log("*             * *     * *  * *   *            *      *  *       *   *         *      *   **");
     console.log("*            *   *    *  **  *   *            *      *   *     *    *****     *******    **");
     console.log("*    ***    *******   *      *   *****        *      *    *   *     *         * *        **");
-    console.log("*      *   *       *  *      *   *            *      *     * *      *         *   *  ");
+    console.log("*      *   *       *  *      *   *            *      *     * *      *         *   *         ");
     console.log("********  *         * *      *   ********      ******       *       ********  *     *    ** ");
-}
+};
 
 function walkingCharacter() {
     console.clear();
-    console.log("-------------------------")
-    console.log("O     ")
-    console.log("|\\    ")
-    console.log("/\\     ")
-    console.log("--------------------------")
+    console.log("-------------------------");
+    console.log("O                   ");
+    console.log("|\\                  ");
+    console.log("/\\                     ");
+    console.log("--------------------------");
     sleep.sleep(1);
     console.clear();
-    console.log("-------------------------")
-    console.log("       O     ")
-    console.log("      /|\\    ")
-    console.log("       /\\     ")
-    console.log("--------------------------")
+    console.log("-------------------------");
+    console.log("       O                ");
+    console.log("      /|\\               ");
+    console.log("       /\\                  ");
+    console.log("--------------------------");
     sleep.sleep(1);
     console.clear();
-    console.log("-------------------------")
-    console.log("                   O     ")
-    console.log("                   |\\    ")
-    console.log("                   /\\     ")
-    console.log("--------------------------")
-};
+    console.log("-------------------------");
+    console.log("                   O     ");
+    console.log("                   |\\    ");
+    console.log("                   /\\     ");
+    console.log("--------------------------");
+}
