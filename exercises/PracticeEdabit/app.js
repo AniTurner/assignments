@@ -155,11 +155,32 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that takes an array of students and returns an array of student names.
 
-function getStudentNames(arr, item) {
-    var namesOnly = []
-    for (var i = 0; i < arr.length; i++) {
-        namesOnly.push(arr[i].name)
-        }
-        return namesOnly
+// function getStudentNames(arr, item) {
+//     var namesOnly = []
+//     for (var i = 0; i < arr.length; i++) {
+//         namesOnly.push(arr[i].name)
+//         }
+//         return namesOnly
+//     }
+// console.log(getStudentNames([{ name: 'Steve'}, { name: 'Mike'}, { name: 'John'}]))
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that reverses a boolean value and returns the string "boolean expected" if another variable type is given.
+
+function reverse(bool) {
+    if(bool = true) {
+        console.log(false)
+    } else if (bool = false) {
+        console.log(true)
+    } else if (bool != true || bool != false) {
+        console.log("boolean expected")
     }
-console.log(getStudentNames([{ name: 'Steve'}, { name: 'Mike'}, { name: 'John'}]))
+    return ""
+}
+
+console.log(reverse(true)),
+console.log(reverse(false)),
+console.log(reverse(0)),
+console.log(reverse(null))
+
