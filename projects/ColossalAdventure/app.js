@@ -37,9 +37,9 @@ console.log(Reset);
 sleep.sleep(1);
 console.log('\n')
 
-console.log(FgBlack + BgWhite + "\n\mWelcome to the game of" + Reset + FgBlue + BgWhite + " ice" + Reset + FgBlack + BgWhite + " and " + Reset + FgRed + BgWhite + "fire." + Reset)
+console.log(FgBlack + BgWhite + "\n\nWelcome to the game of" + Reset + FgBlue + BgWhite + " ice" + Reset + FgBlack + BgWhite + " and " + Reset + FgRed + BgWhite + "fire." + Reset)
 
-console.log(BgBlack + FgRed + "\n\n\n`WHEN YOU PLAY THE GAME OF THRONES, YOU WIN OR YOU DIE. Click enter to give us your favorite Game of Thrones character's name." + Reset);
+console.log(BgBlack + FgRed + "\n\n\nWHEN YOU PLAY THE GAME OF THRONES, YOU WIN OR YOU DIE. \n\nClick enter to give us your favorite Game of Thrones character's name.\n\n" + Reset);
 //////////////////////////
 var player = {
     name: "",
@@ -63,11 +63,11 @@ function walk() {
     var chance = Math.ceil(Math.random() * 4)
     ///////If number is 1 --> attack!!
     if (chance === 1) {
-        console.log(BgWhite + FgRed + "\n\nAttack! ATTAAAAACKKKK!!!")
+        console.log(BgBlue + FgRed + "\n\nAttack! ATTAAAAACKKKK!!!" )
         attack();
 
     } else {
-        console.log(BgRed + FgWhite + "\n\nThere is only one god, and his name is Death. And there is only one thing we say to Death: 'NOT TODAY.'" + Reset)
+        console.log(BgRed + FgWhite + "\n\nThere is only one god, and his name is Death. And there is only one thing we say to Death: NOT TODAY.\n\n" +Reset )
         print();
     }
 }
@@ -83,15 +83,21 @@ function attack(enemy) {
     console.log(enemy)
     console.log(enemy.health);
     if (player.health > 0 && enemy.health > 0) {
-        var options = ['attack the enemy', 'run'];
+        var options = ['ATTACK THE ENEMY', 'Ruuuuuuun'];
         var fightRunQuestion = ask.keyInSelect(options, player.name + ", what would you like to do?");
         console.log(fightRunQuestion)
 
-        if (fightRunQuestion === 0) {
+        if (fightRunQuestion === 0) {    
+            attackingCharacter()
+            sleep.sleep(1)
+
             attackEnemy(enemy)
             ////////////Attack
         } else if (fightRunQuestion === 1) {
-            console.log(enemy.health)
+            console.log(BgWhite + FgGreen + enemy.health + Reset)
+            attackingCharacter()
+            sleep.sleep(1)
+
 
             /////////Run 
             enemyAttack(enemy, null);
@@ -118,8 +124,8 @@ function attackEnemy(existingEnemy) {
     var min = 5;
     var max = 40;
     var attackStrength = Math.ceil(Math.random() * max + min);
-    console.log('Your attack strength is ' + attackStrength)
-    console.log('\n\n\Attaaaaaaaack!')
+    console.log(FgBlack + BgWhite+ 'Your attack strength is ' + attackStrength + Reset)
+    console.log(FgBlack + BgRed + '\n\n\Attaaaaaaaack!' +Reset)
     existingEnemy.health -= attackStrength
     enemyAttack(existingEnemy);
 }
@@ -132,12 +138,12 @@ function enemyAttack(enemy) {
     var min = 5;
     var max = 30;
     var enemyAttackStrength = Math.ceil(Math.random() * max + min);
-    console.log(myEnemy.name + " just attacked you with " + enemyAttackStrength + " strength")
+    console.log(FgRed + BgWhite + myEnemy.name + " just attacked you with " + enemyAttackStrength + " strength" + Reset)
     player.health -= enemyAttackStrength
     if (player.health <= 0) {
         return die()
     } else if (myEnemy.health <= 0) {
-        console.log(myEnemy)
+        console.log(FgWhite + BgBlack + myEnemy + Reset)
         return enemyDie()
     } else {
         attack(myEnemy);
@@ -146,6 +152,7 @@ function enemyAttack(enemy) {
 }
 
 function die() {
+    dracarys();
     return gameOver();
 }
 
@@ -155,12 +162,12 @@ function enemyDie() {
     player.score += 20;
     if (player.score >= 50) {
         console.log(player.score)
-        console.log(FgRed + BgWhite + "\n\nYOU WON THE GAME OF THRONES!\n\n")
+        console.log(FgRed + BgWhite + "\n\nYOU WON THE GAME OF THRONES!\n\n" + Reset)
         return endGame1()
     } else {
         var randomItem = (Math.floor(Math.random() * specialItem.length))
         player.inventory.push(specialItem[randomItem])
-        console.log('\n\nHere is your current status' + player);
+        console.log(FgBlack + BgGreen + '\n\nHere is your current status' + player + Reset);
         walk();
     }
 }
@@ -188,11 +195,11 @@ function generateEnemy() {
 }
 
 ////////////////////Game Intro//////////////////////////////
-player.name = ask.question("What is your game of thrones character name? ")
-console.log("\t\t\t\nLet's get started " + player.name)
+player.name = ask.question(BgWhite + FgMagenta +"What is your game of thrones character name?\n\n " + Reset)
+console.log(FgBlack + BgWhite + "\t\t\t\nLet's get started " + player.name + Reset)
 
 
-var options = ["Walk", "Print", "Run", "Attack the Enemy"]
+var options = ["Walk", "Print"]
 ////////////////////Game Loop///////////////////////////////
 while (player.health > 0 && !endGame) {
     var userChoice = ask.keyInSelect(options, "\n\nWhat would you like to do? ")
@@ -202,14 +209,14 @@ while (player.health > 0 && !endGame) {
             walk();
         }
     } else if (userChoice === 'Print' || userChoice === 1) {
-        console.log(`Select print or type 'Print' to get a status:`)
+        console.log(`Select print to get a status:`)
         print();
     }
 }
 
 function endGame1(){
     endGame = true
-    gameOver()
+    youWon()
     return "you won the game"
 }
 function welcomeTitle() {
@@ -220,15 +227,24 @@ function welcomeTitle() {
     console.log("*      *   *       *  *      *   *            *      * *               *     *      *  *   *     *     *  *    **  *              *");
     console.log("********  *         * *      *   ********      ******  *               *     *      *  *     *    *****   *     *  ******   *******");
 };
+function youWon(){
+    console.log(" *      *   *****    *      *        *                *  *****    *     *    **"   )
+    console.log( " *   *    *      *  *      *         *              *  *      *  * *   *    **"   )
+    console.log( "   *      *      *  *      *          *      *     *   *      *  *  *  *    **"   )
+    console.log( "   *      *      *  *      *           *    * *   *    *      *  *   * *    **"                                                )
+    console.log("    *      *      *  *      *            *  *   * *     *      *  *    **"         )
+    console.log( "   *       ******    ******              *      *       *****    *     *    **"   )
 
+
+}
 
 function gameOver() {
-    console.log("********       *      *      *   *******       *****   *         *  ********  *******    **");
-    console.log("*             * *     * *  * *   *            *      *  *       *   *         *      *   **");
-    console.log("*            *   *    *  **  *   *            *      *   *     *    *****     *******    **");
-    console.log("*    ***    *******   *      *   *****        *      *    *   *     *         * *        **");
-    console.log("*      *   *       *  *      *   *            *      *     * *      *         *   *         ");
-    console.log("********  *         * *      *   ********      ******       *       ********  *     *    ** ");
+    console.log("********       *      *      *   *******       *****   *         *  ********  *******    **"   );
+    console.log("*             * *     * *  * *   *            *      *  *       *   *         *      *   **"   );
+    console.log("*            *   *    *  **  *   *            *      *   *     *    *****     *******    **"    );
+    console.log("*    ***    *******   *      *   *****        *      *    *   *     *         * *        **"    );
+    console.log("*      *   *       *  *      *   *            *      *     * *      *         *   *         "   );
+    console.log("********  *         * *      *   ********      ******       *       ********  *     *    ** "   );
 };
 
 function walkingCharacter() {
@@ -252,4 +268,70 @@ function walkingCharacter() {
     console.log("                   |\\    ");
     console.log("                   /\\     ");
     console.log("--------------------------");
+}
+
+function attackingCharacter(){
+
+console.clear();
+console.log("------------------------------------");
+console.log(" O                               O                   ");
+console.log(" |\\-->                      <--/|                ");
+console.log(" /\\                             /\\                    ");
+console.log("-------------------------------------");
+sleep.sleep(1);
+
+console.clear();
+console.log("------------------------------------");
+console.log("       O                       O                   ");
+console.log("       |\\-->              <--/|                ");
+console.log("       /\\                     /\\                    ");
+console.log("-------------------------------------");
+sleep.sleep(1);
+
+console.clear();
+console.log("------------------------------------");
+console.log("       O            O                   ");
+console.log("       |\\-->   <--/|                ");
+console.log("       /\\          /\\                    ");
+console.log("-------------------------------------");
+sleep.sleep(1);
+
+console.clear();
+console.log("------------------------------------");
+console.log("       O      O                   ");
+console.log("       |\\-->/|                ");
+console.log("       /\\    /\\                    ");
+console.log("-------------------------------------");
+sleep.sleep(1);
+
+console.clear();
+console.log("------------------------------------");
+console.log("          \\O/                  ");
+console.log("           |                ");
+console.log("           /\\                    ");
+console.log("-------------------------------------");
+}
+
+function dracarys() {
+
+console.log("-------------------------");
+console.log("                  @                ");
+console.log("                 /|\\               ");
+console.log("                  /\\                  ");
+console.log("--------------------------");
+sleep.sleep(1);
+console.clear();
+console.log("------------------------------------");
+console.log("           ||  //               ");
+console.log("         @ ----       ");
+console.log("                                    ");
+console.log("-------------------------------------");
+sleep.sleep(1);
+console.clear();
+console.log("------------------------------------");
+console.log("                                     ");
+console.log("        \\                               ");
+console.log("      @ -- /_                              ");
+console.log("-------------------------------------");
+
 }
