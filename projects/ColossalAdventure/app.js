@@ -37,7 +37,7 @@ console.log(Reset);
 sleep.sleep(1);
 console.log('\n')
 
-console.log(FgBlack + BgWhite + "\n\nWelcome to the game of" + Reset + FgBlue + BgWhite + " ice" + Reset + FgBlack + BgWhite + " and " + Reset + FgRed + BgWhite + "fire." + Reset)
+console.log(FgBlack + BgWhite + "\n\nWelcome to the game of" + Reset + FgBlue + BgWhite + " ice" + Reset + FgBlack + BgWhite + " and " + Reset + FgRed + BgWhite + "fire.\n\n" + Reset)
 
 console.log(BgBlack + FgRed + "\n\n\nWHEN YOU PLAY THE GAME OF THRONES, YOU WIN OR YOU DIE. \n\nClick enter to give us your favorite Game of Thrones character's name.\n\n" + Reset);
 //////////////////////////
@@ -54,16 +54,13 @@ var endGame = false
 
 ///////////////////Game Functions////////////////////////////
 function walk() {
-    ///////input 'w' for walk
-    // var enterW = ask.keyIn('Enter w to talk')
-    // console.log(`${FgBlack} ${BgWhite}\t\t\tLet's go!${Reset}`);
     walkingCharacter();
     sleep.sleep(1)
     ///////Random number between 1-4
     var chance = Math.ceil(Math.random() * 4)
     ///////If number is 1 --> attack!!
     if (chance === 1) {
-        console.log(BgBlue + FgRed + "\n\nAttack! ATTAAAAACKKKK!!!" )
+        console.log(BgBlue + FgRed + "\n\nAttack! ATTAAAAACKKKK!!!\n\n" )
         attack();
 
     } else {
@@ -84,7 +81,7 @@ function attack(enemy) {
     console.log(enemy.health);
     if (player.health > 0 && enemy.health > 0) {
         var options = ['ATTACK THE ENEMY', 'Ruuuuuuun'];
-        var fightRunQuestion = ask.keyInSelect(options, player.name + ", what would you like to do?");
+        var fightRunQuestion = ask.keyInSelect(options, player.name + ", what would you like to do?\n");
         console.log(fightRunQuestion)
 
         if (fightRunQuestion === 0) {    
@@ -110,11 +107,11 @@ function attack(enemy) {
 function run() {
     var runRandom = Math.ceil(Math.random() * 2 + 1);
     if (runRandom === 1) {
-        console.log(BgBlack + FgWhite + "\n\nNothing isn't better or worse than anything. Nothing is just nothing." + Reset)
+        console.log(BgBlack + FgWhite + "\n\nNothing isn't better or worse than anything. Nothing is just nothing.\n\n" + Reset)
         // console.log(enemy)
         enemy.health = 0
     } else {
-        console.log(BgBlack + FgWhite + "\n\nThe day will come when you think you are safe and happy, and your joy will turn to ashes in your mouth." + Reset)
+        console.log(BgBlack + FgWhite + "\n\nThe day will come when you think you are safe and happy, and your joy will turn to ashes in your mouth.\n\n" + Reset)
         enemyAttack();
         attack();
     }
@@ -124,8 +121,8 @@ function attackEnemy(existingEnemy) {
     var min = 5;
     var max = 40;
     var attackStrength = Math.ceil(Math.random() * max + min);
-    console.log(FgBlack + BgWhite+ 'Your attack strength is ' + attackStrength + Reset)
-    console.log(FgBlack + BgRed + '\n\n\Attaaaaaaaack!' +Reset)
+    console.log(FgBlack + BgWhite+ '\nYour attack strength is ' + attackStrength + Reset)
+    console.log(FgBlack + BgRed + '\n\nAttaaaaaaaack!\n\n' +Reset)
     existingEnemy.health -= attackStrength
     enemyAttack(existingEnemy);
 }
@@ -138,7 +135,7 @@ function enemyAttack(enemy) {
     var min = 5;
     var max = 30;
     var enemyAttackStrength = Math.ceil(Math.random() * max + min);
-    console.log(FgRed + BgWhite + myEnemy.name + " just attacked you with " + enemyAttackStrength + " strength" + Reset)
+    console.log(FgRed + BgWhite + myEnemy.name + " just attacked you with " + enemyAttackStrength + " strength\n" + Reset)
     player.health -= enemyAttackStrength
     if (player.health <= 0) {
         return die()
@@ -167,7 +164,7 @@ function enemyDie() {
     } else {
         var randomItem = (Math.floor(Math.random() * specialItem.length))
         player.inventory.push(specialItem[randomItem])
-        console.log(FgBlack + BgGreen + '\n\nHere is your current status' + player + Reset);
+        console.log(FgBlack + BgGreen + '\n\nHere is your current status\n\n' + player + Reset);
         walk();
     }
 }
@@ -196,13 +193,13 @@ function generateEnemy() {
 
 ////////////////////Game Intro//////////////////////////////
 player.name = ask.question(BgWhite + FgMagenta +"What is your game of thrones character name?\n\n " + Reset)
-console.log(FgBlack + BgWhite + "\t\t\t\nLet's get started " + player.name + Reset)
+console.log(FgBlack + BgWhite + "\n\nLet's get started\n\n " + player.name + Reset)
 
 
 var options = ["Walk", "Print"]
 ////////////////////Game Loop///////////////////////////////
 while (player.health > 0 && !endGame) {
-    var userChoice = ask.keyInSelect(options, "\n\nWhat would you like to do? ")
+    var userChoice = ask.keyInSelect(options, "\n\nWhat would you like to do?\n\n ")
     if (userChoice === 0) {
         var chance = Math.ceil(Math.random() * 4)
         if (chance === 1) {
