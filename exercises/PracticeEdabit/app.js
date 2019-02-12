@@ -169,14 +169,14 @@
 //Create a function that reverses a boolean value and returns the string "boolean expected" if another variable type is given.
 
 function reverse(bool) {
-    if(bool = true) {
+    if(bool = typeof true ) {
         console.log(false)
-    } else if (bool = false) {
+    } else if (bool = typeof false) {
         console.log(true)
-    } else if (bool != true || bool != false) {
+    } else if (bool != typeof true && bool != typeof false) {
         console.log("boolean expected")
     }
-    return ""
+    return bool
 }
 
 console.log(reverse(true)),
