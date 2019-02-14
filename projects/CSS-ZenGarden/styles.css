@@ -48,12 +48,20 @@
     height: 20%;
     opacity: 0.6;
 }
+header .bottom {
+    display: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10%;
+    margin-left: 0;
+    margin-right: 0;
 
+}
 header {
     grid-area: h;
     background-image: url("http://www.csszengarden.com/214/huntington.jpg");
     background-repeat: no-repeat;
     text-align: center;
+    display: relative;
 }
 h1 {
     font-family: "juliussansone";
@@ -80,12 +88,12 @@ h3 {
     padding: 10pt;
 
 }
-.see-through-bar {
+/* .see-through-bar {
     background-color: rgba(255,255,255,0.2);
     margin: 7%;
     margin-left: 0;
     margin-right: 0;
-}
+} */
 .view-all-designs {
     font-family: "juliussansone";
     color: white;
