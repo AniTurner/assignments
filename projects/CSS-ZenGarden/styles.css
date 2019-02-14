@@ -23,6 +23,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .main-container {    
@@ -37,10 +38,10 @@
         'h h h h h h h h h h h h'
         '. m m m m m m m m m m .'
         'f f f f f f f f f f f f';
-    border-top: 10px solid black;
+    /* border-top: 10px solid black; */
 
 }
-
+-->/* HEADER */-->
 .logo {
     display: absolute;
     margin-top: 5%;
@@ -58,10 +59,14 @@ header .bottom {
 }
 header {
     grid-area: h;
-    background-image: url("http://www.csszengarden.com/214/huntington.jpg");
+    background-image: url("http://www.csszengarden.com/214/huntington.jpg") ;
+    background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    display: relative;
+    position: relative;
+    border-top: 10px solid #2e484c;  
+     
+
 }
 h1 {
     font-family: "juliussansone";
@@ -72,8 +77,6 @@ h1 {
     justify-content: center;
     padding-top: 3%;
     font-weight: lighter;
-    
-    
 }
 
 h3 {
@@ -84,32 +87,53 @@ h3 {
     opacity: 0.6;
     color: white;
     font-weight: lighter;
-    font-size: 13pt;
+    font-size: 12.5pt;
     padding: 10pt;
 
 }
-/* .see-through-bar {
-    background-color: rgba(255,255,255,0.2);
-    margin: 7%;
-    margin-left: 0;
-    margin-right: 0;
-} */
+.see-through-bar {
+    position: absolute;
+    
+}
 .view-all-designs {
     font-family: "juliussansone";
     color: white;
-    text-align: center;    
+    text-align: center;  
+    font-size: 12pt;
+    opacity: 0.8;
+  
 }
+.plus-grid {
+    margin-top: -195px;
+    margin-left: -140px;
+    opacity: 0.6;
+}
+
+.nav-bar {
+    position: relative;
+    top: -50pt;
+    background-color: rgba(225,255,255,0.2);
+    padding: 15pt;
+    
+}
+.arrow {
+    position: absolute;
+    margin-top: -30px;
+    opacity: 1;
+}
+
+
+
+-->/* MAIN BODY */-->
+
 main {
     grid-area: m;
     margin-top: 10%;
-
-
 }
 .title1 {
     margin-top: 10%;
     font-family: "juliussansone";
     font-size: 1.5em;
-
 }
 
 footer {
