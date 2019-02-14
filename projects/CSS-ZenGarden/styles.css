@@ -1,0 +1,80 @@
+/* FONTS AND ICONS */
+@font-face {
+    font-family: verdemoderna;
+    src: url(verdemoderna.woff);
+}
+@font-face {
+    font-family: juliussansone;
+    src: url(https://fonts.gstatic.com/s/juliussansone/v7/1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
+}
+@font-face {
+    font-family:  librebaskerville;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2)
+}
+@font-face {
+    font-family:  librebaskerville-bold;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2)
+}
+/* bottom picture: http://www.csszengarden.com/214/koi.jpg */
+/* top picture: http://www.csszengarden.com/214/huntington.jpg */
+/* logo: http://www.csszengarden.com/214/enso.svg */
+
+/* MAIN STYLE */
+body {
+    background-color: black
+}
+.main-container {    
+    font-family: librebaskerville-bold;
+    font-size: 0.85em;
+    line-height: 1.7em;
+    color: #325050;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 240px auto 40px;
+    grid-template-areas:
+        'h h h h h h h h h h h h'
+        '. m m m m m m m m m m .'
+        'f f f f f f f f f f f f';
+    background-color: white;
+}
+
+header {
+    grid-area: h;
+    background-image: url("http://www.csszengarden.com/214/huntington.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    size: 10%;
+    margin-left: 0;
+}
+h1 {
+    font-family: "juliussansone";
+    color: white;
+    font-size: 160%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30%
+    
+}
+h3 {
+    font-family: "librebaskerville";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.6;
+
+}
+.view-all-designs {
+    font-family: "juliussansone";
+    padding: 6%;
+    border: 10px solid rgba(255,255,255, .5);
+    
+}
+main {
+    grid-area: m;
+
+}
+
+footer {
+    grid-area: f;
+}
