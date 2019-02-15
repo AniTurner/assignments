@@ -95,3 +95,18 @@
 //----------------------------------------------------------------------------//
 //Write some destructuring code to help this function out. Use object literals to simplify it:
 
+const populatePeople = (names) => {
+    return names.map((name) => {
+        name = name.split(" ")
+        const [firstName,lastName]= name
+        return {
+            firstName,lastName
+        }
+    }
+)}
+console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]))
+
+
+//  {firstName: "Frank", lastName: "Peterson"},
+//  {firstName: "Suzy", lastName: "Degual"},
+//  {firstName: "Liza", lastName: "Jones"},
