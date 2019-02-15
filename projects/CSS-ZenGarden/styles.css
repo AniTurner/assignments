@@ -33,14 +33,23 @@
     color: #325050;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 240px auto 40px;
+    grid-template-rows: 250px auto 40px;
     grid-template-areas:
         'h h h h h h h h h h h h'
-        '. m m m m m m m m m m .'
+        'm m m m m m m m m m m m'
         'f f f f f f f f f f f f';
     /* border-top: 10px solid black; */
 
 }
+.container{
+    padding-bottom: 0;
+}
+.container-white1, .container-white2 {
+    padding-left: 37px;
+    padding-right: 37px;
+
+}
+
 -->/* HEADER */-->
 .logo {
     display: absolute;
@@ -59,7 +68,7 @@ header .bottom {
 }
 header {
     grid-area: h;
-    background-image: url("http://www.csszengarden.com/214/huntington.jpg") ;
+    background-image: url("http://www.csszengarden.com/214/contours.png"),url("http://www.csszengarden.com/214/huntington.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -113,13 +122,20 @@ h3 {
     position: relative;
     top: -50pt;
     background-color: rgba(225,255,255,0.2);
-    padding: 15pt;
+    padding: 18pt;
     
 }
 .arrow {
     position: absolute;
-    margin-top: -30px;
-    opacity: 1;
+    margin-top: -25px;
+    margin-left: 300px;
+    font-family: verdemoderna;
+    text-align: center;
+    color: white;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    opacity: 0.6;
 }
 
 
@@ -130,12 +146,50 @@ main {
     grid-area: m;
     margin-top: 10%;
 }
-.title1 {
+.title1, .title2, .green1, .green2, .title3{
     margin-top: 10%;
+    margin-bottom: 4%;
     font-family: "juliussansone";
     font-size: 1.5em;
 }
 
+.container-green{
+    background-color: rgba(138,188,159,0.5);
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
+    background-size: auto, auto, cover;
+    background-repeat: repeat, repeat, no-repeat;
+    display: grid;
+    grid-column-start: 0;
+    grid-column-end: 11;
+    background-attachment: scroll, scroll, fixed;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 22px;
+}
+p {
+    margin-bottom: 4%;
+    margin-top: 0;  
+}
+-->/* FOOTER */-->
+
 footer {
     grid-area: f;
+}
+.dark-green-footer {
+    background-image: url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
+    background-size: cover;
+    display: grid;
+    grid-column-start: 0;
+    grid-column-end: 11;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 162px;
+    text-align: center;
+}
+.footer-plus-grid {
+    margin-left: -140px;
+}
+
+.icons {
+
 }
