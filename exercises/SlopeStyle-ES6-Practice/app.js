@@ -38,9 +38,19 @@
 //Use destructuring to make this code ES6:
 
 
-function returnFirst(items){
-    const [firstItem] = items /*change this line to be es6*/
-    return firstItem
-}
-console.log(returnFirst([1,2,3,4,5]))
+// function returnFirst(items){
+//     const [firstItem] = items 
+//     return firstItem
+// }
+// console.log(returnFirst([1,2,3,4,5]))
 
+
+//Write destructuring code to assign variables that will help us return the expected string. Also, change the string to be using Template literals:
+
+// const favoriteActivities = ["magnets", "snowboarding", "philanthropy", "janitor work", "eating"];
+
+// function returnFavorites(arr){
+//     const [firstFav, secondFav, thirdFav] = favoriteActivities
+//     return `My top three favorite activities are,${firstFav },${secondFav} , and ${thirdFav}`
+// }
+// console.log(returnFavorites(favoriteActivities))
