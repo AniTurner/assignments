@@ -27,11 +27,17 @@ function listTodos(todosArr) {
         //How to make it show on the DOM
         //Create Elements
         const todoContainer = document.createElement('div')
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        if (input.completed) {
+            input === true;
+        }
         const title = document.createElement('h1')
         const imgUrl = document.createElement('img')
 
         //Edit the element/ give it content
         todoContainer.classList.add('todo-container')
+        
         title.textContent = todosArr[i].title
         imgUrl.setAttribute('src', todosArr[i].imgUrl)
         if(todosArr[i].completed) {
@@ -39,6 +45,7 @@ function listTodos(todosArr) {
         }
     
         //Append it to the DOM
+        todoContainer.appendChild(input)
         todoContainer.appendChild(title)
         todoContainer.appendChild(imgUrl)
         todoListContainer.appendChild(todoContainer)
@@ -50,9 +57,15 @@ todoForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const newTodo = {
         //always an object
-        title:  todoForm.title.value
+        title:  todoForm.title.value,
+        price:  todoForm.price.value,
+        description:  todoForm.description.value,
+        imgUrl:  todoForm.img.value
     }
     todoForm.title.value = ""
+    todoForm.price.value = ""
+    todoForm.description.value = ""
+    todoForm.img.value = ""
 
     //axios request POST
     axios.post('https://api.vschool.io/ani/todo', newTodo).then(response => {
@@ -60,4 +73,6 @@ todoForm.addEventListener('submit', (e) => {
         getData()
     })
 })
+
+
 
