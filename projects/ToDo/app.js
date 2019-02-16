@@ -27,17 +27,22 @@ function listTodos(todosArr) {
         //How to make it show on the DOM
         //Create Elements
         const todoContainer = document.createElement('div')
+        todoContainer.setAttribute('id', todosArr[i]._id)
         const input = document.createElement('input');
+        input.addEventListener('click', updateItem)
         input.type = 'checkbox';
-        if (input.completed) {
-            input === true;
-        }
+        const input2 = document.createElement('input');
+        
+        input.addEventListener('click', deleteItem)
+        input2.type = 'h1'
+        
         const title = document.createElement('h1')
         const imgUrl = document.createElement('img')
+        console.log(input2)
 
         //Edit the element/ give it content
         todoContainer.classList.add('todo-container')
-        
+        input2.textContent = todosArr[i].input2
         title.textContent = todosArr[i].title
         imgUrl.setAttribute('src', todosArr[i].imgUrl)
         if(todosArr[i].completed) {
@@ -45,10 +50,12 @@ function listTodos(todosArr) {
         }
     
         //Append it to the DOM
+        todoContainer.appendChild(input2)
         todoContainer.appendChild(input)
         todoContainer.appendChild(title)
         todoContainer.appendChild(imgUrl)
-        todoListContainer.appendChild(todoContainer)
+        todoListContainer.appendChild(todoContainer)       
+
     }
 }
 
@@ -76,3 +83,46 @@ todoForm.addEventListener('submit', (e) => {
 
 
 
+function updateItem(event) {
+    if (event.completed) {
+        const updateAToDo = { 
+            completed: true
+
+        }
+        const parentId = event.target.parentNode.id
+        axios.put(`https://api.vschool.io/ani/todo/${parentId}`, updateAToDo ).then(response => {
+            console.log(response)
+            todoListContainer.innerHTML = ""
+            getData()
+        }).catch(err => console.log(err)) 
+    } else {
+        const updateAToDo = {
+                completed: false
+    
+            }
+            const parentId = event.target.parentNode.id
+            axios.put(`https://api.vschool.io/ani/todo/${parentId}`, updateAToDo ).then(response => {
+                console.log(response)
+                todoListContainer.innerHTML = ""
+                getData()
+            }).catch(err => console.log(err)) 
+    }
+}
+
+function deleteItem(event) {
+    if (event.completed) {
+        updateItem()
+    }
+
+    const parentId = even.target.parentNode.id
+    axios.delete(`https://api.vschool.io/ani/todo/${parentId}`, ).then(reponse => {
+        console.log(reponse)
+        todoListContainer.innerHTML = ""
+        getData()
+    }).catch(err => console.log(err))
+}
+
+// axios.delete(`https://api.vschool.io/ani/todo/:id`).then(function(res) {
+//     console.log(res.data)
+// }) 
+    
