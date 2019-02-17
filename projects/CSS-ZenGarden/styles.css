@@ -252,3 +252,87 @@ span {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 500px) {
+    .nav-bar {
+        top: -25px;
+    }
+    .arrow {
+        margin-left: 400px;
+    }
+    
+    h1 {
+        justify-content: left;
+        padding-top: 10%;
+        margin-left: 160px;
+    }
+    
+    h3 {
+        justify-content: left;
+        margin-left: 160px;
+
+    }
+
+    .logo {
+        float: left;
+        margin-left: 90px;
+        margin-top: 40px;
+        width: 10%;
+        height: 10%;
+    }
+}
+
+
+
+
+/* DOESNT WORK */
+@media (min-width: 601px) {  
+    .nav-bar {
+        top: -38px;
+    }
+    .arrow {
+        margin-left: 500px;
+    }
+    .logo {
+        float: left;
+        margin-right: 14px;
+        margin-left: 110px;
+        margin-top: 30px;
+        width: 13%;
+        height: 15%;
+    }
+
+}
+@media (min-width: 750px) {
+    .nav-bar {
+        top: -50px;
+    }
+    .arrow {
+        margin-left: 650px;
+    }
+    .logo {
+        margin-top: 40px;
+        width: 10.5%;
+    }
+}
+
+@media (min-width: 1132px) {
+    .main-container {    
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 250px auto 40px;
+
+    }
+    footer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 250px auto 40px;
+        grid-column-start: 9;
+        grid-column-end: -1;
+    }
+
+}
+
