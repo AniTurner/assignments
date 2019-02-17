@@ -319,7 +319,7 @@ span {
     }
 }
 
-@media (min-width: 1132px) {
+/* @media (min-width: 1132px) {
     .main-container {    
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -334,5 +334,5 @@ span {
         grid-column-end: -1;
     }
 
-}
+} */
 
