@@ -175,21 +175,51 @@ p {
 footer {
     grid-area: f;
 }
-.dark-green-footer {
-    background-image: url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
-    background-size: cover;
-    display: grid;
-    grid-column-start: 0;
-    grid-column-end: 11;
-    padding-left: 37px;
-    padding-right: 37px;
-    padding-bottom: 162px;
+.dark-green-container {
+    background-image: url("http://www.csszengarden.com/214/contours.png"), url('"http://www.csszengarden.com/214/gridlines-opaque.png'), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
+    background-size: auto, auto, auto, cover;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    margin-top: 30px;
     text-align: center;
+    font-size: 23px;
+    margin: 0;
+    width: auto;
+    height: 230px;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 2em;
+    padding: 20px;
+}
+.dark-green-container > font {
+    opacity: 0.7;
+}
+.dark-green-container > i {
+    font-family: librebaskerville;
+
 }
 .footer-plus-grid {
     margin-left: -140px;
+    width: 20px;
+    height: 20px;
 }
 
 .icons {
+    display: block;
+    clear: both;
+    text-align: center;
+    background-color: #134347;
+    padding: 1.1em 10%;
+    font-family: verdemoderna;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 7px;
+    font-weight: lighter;
+}
+ul {
+    display: grid;
+    column-count: 2;
+}
 
+li {
+    font-family: juliussansone;
 }
