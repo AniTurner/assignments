@@ -219,19 +219,36 @@ ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     list-style: none;
-    background-color: #f4fdf6;
+    background-color: #f1f7f2;
 
 }
 
 li {
     font-family: juliussansone;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.1em;
+    border-top: solid 1px #d9e3dc;
     /* color: #c0cac3; */
 }
-font {
+.size {
     font-family: librebaskerville;
+    display: inline-block;
+    font-size: 13px;
 }
 span {
     font-family: librebaskerville-bold;
+    display: inline-block;;
+    font-size: 12px;
+}
+.last {
+    border-top: solid 1px #a0b9ad;   
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color: rgba(138,188,159,0.5);
+}
+#lastest {
+    border-bottom: solid 1px #a0b9ad;
+    width: auto;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
