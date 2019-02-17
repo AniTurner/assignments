@@ -215,11 +215,23 @@ footer {
     letter-spacing: 7px;
     font-weight: lighter;
 }
-ul {
+ul{
     display: grid;
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    background-color: #f4fdf6;
+
 }
 
 li {
     font-family: juliussansone;
+    padding: 20px;
+    font-size: 1.1em;
+    /* color: #c0cac3; */
+}
+font {
+    font-family: librebaskerville;
+}
+span {
+    font-family: librebaskerville-bold;
 }
