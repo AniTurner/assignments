@@ -14,14 +14,13 @@
 
 body {
     background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg');
-    height: 900px;
   
 }
 header {
     background-image: url("https://media.boingboing.net/wp-content/uploads/2018/05/cool-background1.png");
     text-align: center;
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -29,10 +28,28 @@ header {
     border-radius: 0 0 85% 85% / 30%;
 }
 p {
-    font-family: librebaskerville;
+    font-family: Chalkduster, fantasy;
     font-size: 40px;
 }
+h3 {
+    font-family: Bradley Hand, cursive;
+    font-size: 22px;
+    padding-top: 20px;
+}
+h4 {
+    font-family: Bradley Hand, cursive;
 
+}
+.x-button {
+    background: red;
+    color: white;
+    height: 55px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
 .form-display {
     margin: 0 0 0px;
     overflow: hidden;
@@ -44,17 +61,26 @@ p {
 
 .todo-container {
     border: 2px solid rgb(141, 121, 121);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     margin: 5px;
     border-radius: 4px;
     padding: 3px;
 }
-.todo-container input {
-    font-size: 140px;
-}
 .todo-container h1 {
-
+    color: rgb(146, 102, 110);
+    font-family: Stencil Std, fantasy;
+    padding-top: 15px;
+   
+}
+.form-display input::-webkit-input-placeholder {
+    font-size: 20px;
+    color: black;
+}
+.todo-container input {
+    zoom: 2;
+    margin-top: 10px;
 }
 
 .todoList-container {
@@ -65,21 +91,16 @@ p {
 .input-text {
     width: 200px;
     height: 40px;
-    font-family: juliussansone;
+    font-family: Stencil Std, fantasy	;
     border: none;
     background-color: #ecdada;
     padding: 10px;
 }
 
-@keyframes button {
-    from {background-color: red;}
-    to {background-color: blue;}
-  }
-
 .main-button {
     display: inline-block;
     border-radius: 6px;
-    background-color: blue;
+    background-color: rgb(75, 75, 224);
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -93,7 +114,7 @@ p {
 button {
     display: inline-block;
     border-radius: 6px;
-    background-color: #f4511e;
+    background-color: #cdd46b;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -105,29 +126,8 @@ button {
     margin: 5px;
 }
       
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-      
-.button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-      
-.button:hover span {
-    padding-right: 5px;
-}
-      
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
+button :hover {
+    background-color: blue;
 }
 
 

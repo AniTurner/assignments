@@ -1,17 +1,10 @@
-// import axios from "axios";
 
 const todoListContainer = document.getElementById('toDo-list-container')
 const todoForm = document["add-todo-form"]
 
-//package axios to get our data from API
-// const data = axios.get('https://api.vschool.io/ani/todo')  //our data stores pending promise this way
-
-//that is why we need to write
-//to reuse this make it a function
 function getData() {
     axios.get('https://api.vschool.io/ani/todo').then(response => {
-    // console.log(reponse) //will show all the object in console, we need data
-    // console.log(reponse.data) // put into a variable
+ 
         const todos = response.data
         listTodos(todos) //will show it is not defined, there we need to define it in another function
 
@@ -19,9 +12,6 @@ function getData() {
 }
 
 function listTodos(todosArr) {
-    // console.log(todosArr) //will show empty objects
-    //make 1 todo show up, then reuse that code to make all todos show up
-    // const firstTodo = todosArr[0] //take this out and add index in todosArr to make it show each one
     for(let i = 0; i < todosArr.length; i++) {
 
         //How to make it show on the DOM
@@ -42,34 +32,20 @@ function listTodos(todosArr) {
         let deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'X';
         todoContainer.appendChild(deleteBtn);
-        deleteBtn.style.background = 'red';
-        deleteBtn.style.color = 'white';
-        deleteBtn.style.height = '25px';
+        deleteBtn.classList.add('x-button')
+        deleteBtn.style.background = 'linear-gradient(to right, pink , purple)';
 
-        
-
-
-
-    
-
-
-        // const input2 = document.createElement('input');
-        
-        // input2.type = 'h1'
         
         const title = document.createElement('h1')
         const imgUrl = document.createElement('img')
-        // console.log(input2)
 
         //Edit the element/ give it content
         todoContainer.classList.add('todo-container')
-        // input2.textContent = todosArr[i].input2
         title.textContent = todosArr[i].title
         imgUrl.setAttribute('src', todosArr[i].imgUrl)
        
 
         //Append it to the DOM
-        // todoContainer.appendChild(input2)
         todoContainer.appendChild(input)
         todoContainer.appendChild(title)
         todoContainer.appendChild(imgUrl)
@@ -90,7 +66,7 @@ function listTodos(todosArr) {
             // }
         })
         
-        // edit button even listener
+        // edit button eventListener
         editBtn.addEventListener('click',function(){
             editRequest(todosArr[i],editBtn,todoContainer)
         })
@@ -123,8 +99,6 @@ todoForm.addEventListener('submit', (e) => {
         getData()
     })
 })
-
-
 
     let inputTitle=  todoForm.title;
     let inputPrice=  todoForm.price;
