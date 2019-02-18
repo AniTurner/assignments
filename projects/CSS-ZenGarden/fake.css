@@ -1,0 +1,137 @@
+/* FONTS AND ICONS */
+@font-face {
+    font-family: verdemoderna;
+    src: url(verdemoderna.woff);
+}
+@font-face {
+    font-family: juliussansone;
+    src: url(https://fonts.gstatic.com/s/juliussansone/v7/1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
+}
+@font-face {
+    font-family:  librebaskerville;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2)
+}
+@font-face {
+    font-family:  librebaskerville-bold;
+    src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header-background {
+    background-color: rgba(0, 155, 0, .5);
+    height: 250px;
+    width: 100%;
+    position: absolute;
+}
+
+#header {
+    height: 180px;
+
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+#sub-header {
+    height: 70px;
+
+}
+
+article {
+    padding-left: 40px;
+    padding-right: 35px;
+    font-family: librebaskerville-bold;
+    font-size: 0.85em;
+    line-height: 2em;
+    color: #325050;
+}
+
+h3 {
+    font-family: "juliussansone";
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+}
+
+p {
+    padding-bottom: 10px;
+}
+#p-tag1 {
+    padding-top: 30px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.links a {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1130px) {
+    #container {
+        display: grid;
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr hdr hdr shdr shdr shdr shdr"
+            "a1 a1 a1 a1 a1 a1 a1 a1 l1 l1 l1 l1"
+            "a2 a2 a2 a2 a2 a2 a2 a2 l2 l2 l2 l2"
+            "a3 a3 a3 a3 a3 a3 a3 a3 . . . ."
+            "f f f f f f f f f f f f"
+            "sf sf sf sf sf sf sf sf sf sf sf sf";
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #header {
+        grid-area: hdr;
+        height: 250px;
+    }
+
+    #sub-header {
+        grid-area: shdr;
+    }
+
+    #article-1 {
+        grid-area: a1;
+    }
+
+    #article-2 {
+        grid-area: a2;
+    }
+
+    #article-3 {
+        grid-area: a3;
+    }
+
+    #links-1 {
+        grid-area: l1;
+    }
+
+    #links-2 {
+        grid-area: l2;
+    }
+
+    #footer {
+        grid-area: f;
+    }
+
+    #sub-footer {
+        grid-area: sf;
+    }
+}

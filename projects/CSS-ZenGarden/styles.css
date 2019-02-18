@@ -29,7 +29,7 @@
 .main-container {    
     font-family: librebaskerville-bold;
     font-size: 0.85em;
-    line-height: 1.7em;
+    line-height: 2em;
     color: #325050;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -38,12 +38,9 @@
         'h h h h h h h h h h h h'
         'm m m m m m m m m m m m'
         'f f f f f f f f f f f f';
-    /* border-top: 10px solid black; */
 
 }
-.container{
-    padding-bottom: 0;
-}
+
 .container-white1, .container-white2 {
     padding-left: 37px;
     padding-right: 37px;
@@ -113,14 +110,14 @@ h3 {
   
 }
 .plus-grid {
-    margin-top: -195px;
-    margin-left: -140px;
+    /* margin-top: -195px; */
+    /* margin-left: -140px; */
     opacity: 0.6;
 }
 
 .nav-bar {
-    position: relative;
-    top: -50pt;
+    /* position: relative; */
+    /* top: -50pt; */
     background-color: rgba(225,255,255,0.2);
     padding: 18pt;
     
@@ -251,6 +248,15 @@ span {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+other {
+    text-decoration: underline dotted;
+}
+color {
+    color: blue;
+}
+a {
+    text-decoration: none;
 }
 
 
