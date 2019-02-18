@@ -1,0 +1,67 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    display: inline-block; 
+    background-color: blue;
+}
+
+#box1:hover{
+    background-image: linear-gradient(to right, yellow, red);
+    -webkit-transition: width 2s, height 4s;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+    transition-timing-function: ease;
+    
+
+}
+
+#box2:hover {
+    background-color: red;
+    position: sticky;
+    margin-top: 30px;
+    -webkit-transition: width 2s, height 4s;
+    transition: width 2s, height 4s;
+    transition-timing-function: ease;
+    -webkit-transition-delay: 1s; 
+    transition-delay: 1s;
+
+
+}
+
+#box3:hover {
+    background-color: yellow;
+    width: 130px;
+    height: 130px;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+    transition-timing-function: ease;
+
+}
+
+#box4:hover {
+    background-color: purple;
+    margin: 30px;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 5s, height 5s, transform 5s;
+    transition-timing-function: ease;
+
+}
+
+#box5:hover {
+    background-color: magenta;
+    opacity: 0.2;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+    transition-timing-function: ease;
+
+}
+#box6:hover {
+    background-color: orange;
+    border: 5px dotted darkblue;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+    transition-timing-function: ease;
+
+}
