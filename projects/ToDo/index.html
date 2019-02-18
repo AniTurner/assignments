@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>To-Do List</title>
 </head>
 <body onload="getData()">
-    <h1>To-Do List</h1>
-    <form name="add-todo-form">
-        <input type="text" name="title" placeholder="Title">
-        <input type="text" name="price" placeholder="price">
-        <input type="text" name="description" placeholder="description">
-        <input type="text" name="img" placeholder="Image URl">
-        <button>Add Todo</button>
-    </form>
-    <div id="toDo-list-container">
-
-
-    </div>
+    <header>
+        <div class="overlay">
+            <p>To-Do List</p><br>
+            <h3>“The Way Get Started Is To Quit Talking And Begin Doing.” – Walt Disney</h3>
+        </div>
+    </header>
+        <div class='form-display'>
+            <form name="add-todo-form">
+                <input type="text" name="title" placeholder="Title" class='input-text'>
+                <input type="text" name="price" placeholder="price" class='input-text'>
+                <input type="text" name="description" placeholder="description" class='input-text'>
+                <input type="text" name="img" placeholder="Image URl" class='input-text'>
+                <button class='main-button'>Add</button>
+            </form>
+            <div id="toDo-list-container"></div>
+        </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="app.js"></script>
 </body>

@@ -28,33 +28,76 @@ function listTodos(todosArr) {
         //Create Elements
         const todoContainer = document.createElement('div')
         todoContainer.setAttribute('id', todosArr[i]._id)
+        //Checkbox
         const input = document.createElement('input');
-        input.addEventListener('click', updateItem)
         input.type = 'checkbox';
-        const input2 = document.createElement('input');
+        let checkboxId = todosArr[i]._id;
         
-        input.addEventListener('click', deleteItem)
-        input2.type = 'h1'
+        // Edit button
+        let editBtn = document.createElement('button');
+        editBtn.textContent = "EDIT";
+        todoContainer.appendChild(editBtn);
+
+        //delete button
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'X';
+        todoContainer.appendChild(deleteBtn);
+        deleteBtn.style.background = 'red';
+        deleteBtn.style.color = 'white';
+        deleteBtn.style.height = '25px';
+
+        
+
+
+
+    
+
+
+        // const input2 = document.createElement('input');
+        
+        // input2.type = 'h1'
         
         const title = document.createElement('h1')
         const imgUrl = document.createElement('img')
-        console.log(input2)
+        // console.log(input2)
 
         //Edit the element/ give it content
         todoContainer.classList.add('todo-container')
-        input2.textContent = todosArr[i].input2
+        // input2.textContent = todosArr[i].input2
         title.textContent = todosArr[i].title
         imgUrl.setAttribute('src', todosArr[i].imgUrl)
-        if(todosArr[i].completed) {
-            title.style.textDecoration = "line-through"
-        }
-    
+       
+
         //Append it to the DOM
-        todoContainer.appendChild(input2)
+        // todoContainer.appendChild(input2)
         todoContainer.appendChild(input)
         todoContainer.appendChild(title)
         todoContainer.appendChild(imgUrl)
-        todoListContainer.appendChild(todoContainer)       
+        todoListContainer.appendChild(todoContainer)  
+        
+        input.addEventListener('change',function(e){
+            e.preventDefault();
+            let completed = {};
+            completed.completed = this.checked;
+
+            axios.put(`https://api.vschool.io/ani/todo/${checkboxId}`,completed).then(function(response){
+                title.classList.toggle('lineThrough');
+            })
+            // if(input.checked){
+            //     console.log(checkboxId);
+            //     title.classList.toggle('lineThrough');
+
+            // }
+        })
+        
+        // edit button even listener
+        editBtn.addEventListener('click',function(){
+            editRequest(todosArr[i],editBtn,todoContainer)
+        })
+
+        deleteBtn.addEventListener('click',function(){
+            deleteRequest(todosArr[i]._id);  
+        })
 
     }
 }
@@ -83,46 +126,61 @@ todoForm.addEventListener('submit', (e) => {
 
 
 
-function updateItem(event) {
-    if (event.completed) {
-        const updateAToDo = { 
-            completed: true
+    let inputTitle=  todoForm.title;
+    let inputPrice=  todoForm.price;
+    let inputDescription=  todoForm.description;
+    let inputImgUrl=  todoForm.img;
+    let editData;
 
-        }
-        const parentId = event.target.parentNode.id
-        axios.put(`https://api.vschool.io/ani/todo/${parentId}`, updateAToDo ).then(response => {
-            console.log(response)
-            todoListContainer.innerHTML = ""
-            getData()
-        }).catch(err => console.log(err)) 
-    } else {
-        const updateAToDo = {
-                completed: false
-    
-            }
-            const parentId = event.target.parentNode.id
-            axios.put(`https://api.vschool.io/ani/todo/${parentId}`, updateAToDo ).then(response => {
-                console.log(response)
-                todoListContainer.innerHTML = ""
-                getData()
-            }).catch(err => console.log(err)) 
+
+    //Put request and edit
+    function editRequest(todosArr, editBtn, todoContainer){
+             
+            // Load the data from postman to the inputs on DOM
+            inputTitle.value = todosArr.title;  
+            inputPrice.value = todosArr.price;  
+            inputDescription.value = todosArr.description;  
+            inputImgUrl.value = todosArr.imgUrl;  
+
+            editBtn.style.display = 'none';
+            //create SAVE button
+            let save = document.createElement('button');
+            save.textContent = 'SAVE';
+            todoContainer.appendChild(save);
+
+            // FIXME - save not showing up
+            // save.style.display = 'block';
+            
+
+            // let newTitle = todoForm.title;
+
+            save.addEventListener('click',function(){
+               
+                axios.put(`https://api.vschool.io/ani/todo/${todosArr._id}`, {
+                    title: `${inputTitle.value}`,
+                    price: `${inputPrice.value}`,
+                    description: `${inputDescription.value}`,
+                    imgUrl: `${inputImgUrl.value}`
+                    
+                }).then(function(response){
+                    window.location.reload(); 
+                   
+                }).catch(function(err){
+                    console.log(err)
+                })
+            })
+            // save.style.display = 'none';
+            // editBtn.style.display = 'block';
+
+        
     }
-}
 
-function deleteItem(event) {
-    if (event.completed) {
-        updateItem()
+    function deleteRequest(id){
+        axios.delete(`https://api.vschool.io/ani/todo/${id}`).then(function(response){
+        window.location.reload();    
+        alert('Deleted successfully.');
+        });
     }
 
-    const parentId = even.target.parentNode.id
-    axios.delete(`https://api.vschool.io/ani/todo/${parentId}`, ).then(reponse => {
-        console.log(reponse)
-        todoListContainer.innerHTML = ""
-        getData()
-    }).catch(err => console.log(err))
-}
-
-// axios.delete(`https://api.vschool.io/ani/todo/:id`).then(function(res) {
-//     console.log(res.data)
-// }) 
+ 
     
