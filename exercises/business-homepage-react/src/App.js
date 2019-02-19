@@ -3,6 +3,7 @@ import Products from './Products.js'
 import Header from './Header.js'
 import Footer from './Footer.js'
 import Nav from './Nav.js'
+import './styles.css'
 
 
 // A nav bar
@@ -13,7 +14,7 @@ import Nav from './Nav.js'
 
 function App() {
     return (
-        <div>
+        <div className='background-picture'>
             <Header />
             <Nav />
             <Products />
