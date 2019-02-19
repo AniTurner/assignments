@@ -10,19 +10,20 @@
 </head>
 
 <body>
-    <div id="header-background"></div>
-    <div id="container">
-        <header id="header" class="centered">
-           <div>
-                <img class='centered' id="logo" src="http://www.csszengarden.com/214/enso.svg" alt="logo">
-                <h1>CSS ZEN GARDEN</h1>
-                <h4>The Beauty of CSS Design</h3>
-           </div>
-        </header>
-        <header id="sub-header" class="centered">
-            <p>VIEW ALL DESIGNS</p>
-            <p id='arrow'>></p>
-        </header>
+    <div id="header-background">
+        <div id="container">
+            <header id="header" class="centered">
+            <div class='header-content-wrapper'>
+                    <img id="logo" src="http://www.csszengarden.com/214/enso.svg" alt="logo">
+                    <h1>CSS ZEN GARDEN</h1>
+                    <h4>The Beauty of CSS Design</h3>
+            </div>
+            </header>
+            <header id="sub-header" class="centered">
+                <p>VIEW ALL DESIGNS</p>
+                <p id='arrow'>></p>
+            </header>
+        </div>
         <article id="article-1">
             <p id='p-tag1'>A demonstration of what can be accomplished through CSS-based design. Select any style sheet from the list to load it into this page.</p>
 
@@ -58,12 +59,13 @@
         </article>
 
         <footer id="footer">
-            <p>By</p>
+            <p class='footerText'>By
             <font color='white'>Dave Shea.</font>
-            <p>Bandwidth graciously donated by</p>
-            <font color='white'>mediatemple.</font>
-            <p>Now available:</p>
+            Bandwidth graciously donated by
+            <font color='white'>mediatemspanle.</font>
+            Now available:
             <font color='white'>Zen Garden, the book.</font>
+            </p>
         </footer>
 
         <footer id="sub-footer"class="centered">
@@ -75,37 +77,56 @@
         </footer>
 
         <nav id="links-1" class="links">
-            <a href="">MID CENTURY MODERN</a>
-                <font class="size" color='c0cac3'>by</font>
-                <span class='span-font'>Andrew Lohman</span>
+            <div class='leftLinks'>
 
-            <a href="">GARMENTS</a>
-                <font class="size" color='c0cac3'>by</font>  
-                <span class='span-font'>Dan Mall</span>
+                <div class='footerLink'>
+                    <a  href="">MID CENTURY MODERN</a>
+                        <font class="size" color='c0cac3'>by</font>
+                        <span class='span-font'>Andrew Lohman</span>
+                </div>
 
-            <a href="">STEEL</a>
-                <font class="size" color='c0cac3'>by</font>  
-                <span class='span-font'>Steffen Knoeller</span>
+                <div class='footerLink'>
+                    <a href="">GARMENTS</a>
+                        <font class="size" color='c0cac3'>by</font>  
+                        <span class='span-font'>Dan Mall</span>
+                </div>
 
-            <a href="">APOTHECARY</a>
-                <font class="size" color='c0cac3'>by</font>
-                <span class='span-font'>Trent Walton</span>  
+                <div class='footerLink'>
+                    <a href="">STEEL</a>
+                        <font class="size" color='c0cac3'>by</font>  
+                        <span class='span-font'>Steffen Knoeller</span>
+                </div>
 
-            <a href="">SCREEN FILLER</a>
-                <font class="size" color='c0cac3'>by</font> 
-                <span class='span-font'>Elliot Jay Stocks</span> 
+                <div class='footerLink'>
+                    <a href="">APOTHECARY</a>
+                        <font class="size" color='c0cac3'>by</font>
+                        <span class='span-font'>Trent Walton</span>  
+                </div>
+            </div>
 
-            <a href="">FOUNTAIN KISS</a>
-                <font class="size" color='c0cac3'>by</font>  
-                <span class='span-font'>Jeremy Carlson</span>
+            <div class='rightLinks'>
+                <div class='footerLink'>
+                    <a href="">SCREEN FILLER</a>
+                        <font class="size" color='c0cac3'>by</font> 
+                        <span class='span-font'>Elliot Jay Stocks</span> 
+                </div>
 
-            <a href="">A ROBOT NAMED JIMMY</a>
-                <font class="size" color='c0cac3'>by</font>  
-                <span class='span-font'>meltmedia</span>
-            
-            <a href="">VERDE MODERNA</a>
-                <font class="size" color='c0cac3'>by</font> 
-                <span class='span-font'>Dave Shea</span>
+                <div class='footerLink'>
+                    <a href="">FOUNTAIN KISS</a>
+                        <font class="size" color='c0cac3'>by</font>  
+                        <span class='span-font'>Jeremy Carlson</span>
+                </div>
+                <div class='footerLink'>
+                    <a href="">A ROBOT NAMED JIMMY</a>
+                        <font class="size" color='c0cac3'>by</font>  
+                        <span class='span-font'>meltmedia</span>
+                </div>
+                <div class='footerLink'>
+                    <a href="">VERDE MODERNA</a>
+                        <font class="size" color='c0cac3'>by</font> 
+                        <span class='span-font'>Dave Shea</span>
+                    </div>
+            </div>
 
             
         </nav>

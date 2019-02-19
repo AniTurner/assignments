@@ -30,7 +30,7 @@
     border-top: 10px solid #2e484c;  
     height: 250px;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #header {
@@ -38,7 +38,9 @@
     height: 180px;
 
 }
+.header-content-wrapper{
 
+}
 #logo {
     width: 50px;
     height: 50px;
@@ -55,7 +57,7 @@
     opacity: 0.9;
     height: 80px;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
 
 }
 #arrow {
@@ -91,7 +93,7 @@ h1 {
     color: white;
     font-size: 30px;
     font-weight: lighter;
-    position: absolute;
+    
 }
 
 h3 {
@@ -129,7 +131,17 @@ p {
     width: auto;
     height: 222px;
     color: rgba(255, 255, 255, 0.4);
-    line-height: 22px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.footerText{
+    opacity: 0.7;
+
 }
 
 #footer > font {
@@ -190,6 +202,25 @@ a {
     text-decoration: none;
 }
 
+#links-1{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.leftLinks{
+    display: flex;
+    flex-direction: column;
+}
+.rightLinks{
+    display: flex;
+    flex-direction: column;
+}
+.footerLink{
+    color: black;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+}
 #links-2 {
     border-top: solid 1px #a0b9ad;   
     background-image: url("http://www.csszengarden.com/214/bamboo.png");
@@ -234,6 +265,7 @@ a {
 
     #links-1 {
         grid-area: l1;
+        flex-direction: column;
     }
 
     #links-2 {
