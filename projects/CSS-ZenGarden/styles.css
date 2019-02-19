@@ -213,7 +213,9 @@ a {
     text-decoration: none;
 }
 
-
+#transparent-text {
+    display: none;
+}
 
 
 
@@ -222,11 +224,39 @@ a {
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
     #logo {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         opacity: 0.6;
+        display: flex;
+        align-content: space-between;
+        margin-left: -70px;
+        position: absolute;
+
+    }
+   
+}
+
+@media (min-width: 601px) {
+    #logo {
+        width: 80px;
+        height: 80px;
+        opacity: 0.6;
+        display: flex;
+        align-content: space-between;
+        margin-left: -80px;
+        margin-top: -15px;
+        position: absolute;
+    } 
+    #transparent-text {
+        font-family: librebaskerville-bold;
+    
+    }
+    #icon-text {
+        font-family: verdemoderna;
+        
     }
 }
+
 @media (min-width: 1130px) {
     #container {
         display: grid;
