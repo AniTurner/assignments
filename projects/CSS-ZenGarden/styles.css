@@ -15,330 +15,236 @@
     font-family:  librebaskerville-bold;
     src: url(https://fonts.gstatic.com/s/librebaskerville/v5/kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2)
 }
-/* bottom picture: http://www.csszengarden.com/214/koi.jpg */
-/* top picture: http://www.csszengarden.com/214/huntington.jpg */
-/* logo: http://www.csszengarden.com/214/enso.svg */
 
-/* MAIN STYLE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main-container {    
+#header-background {
+    background-image: url("http://www.csszengarden.com/214/contours.png"),url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/huntington.jpg");
+    background-size: auto, auto, auto, cover;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    border-top: 10px solid #2e484c;  
+    height: 250px;
+    width: 100%;
+    position: absolute;
+}
+
+#header {
+    text-align: center;
+    height: 180px;
+
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+#sub-header {
+    background-color: rgba(225,255,255,0.2);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-family: "juliussansone";
+    color: white;
+    font-size: 16px;
+    opacity: 0.9;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+
+}
+#arrow {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    font-family: verdemoderna;
+    font-size: 45px;
+    opacity: 0.6;
+
+    
+}
+
+article {
+    padding-left: 40px;
+    padding-right: 35px;
     font-family: librebaskerville-bold;
     font-size: 0.85em;
     line-height: 2em;
     color: #325050;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 250px auto 40px;
-    grid-template-areas:
-        'h h h h h h h h h h h h'
-        'm m m m m m m m m m m m'
-        'f f f f f f f f f f f f';
-
 }
-
-.container-white1, .container-white2 {
-    padding-left: 37px;
-    padding-right: 37px;
-
-}
-
--->/* HEADER */-->
-.logo {
-    display: absolute;
-    margin-top: 5%;
-    width: 12%;
-    height: 20%;
-    opacity: 0.6;
-}
-header .bottom {
-    display: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 10%;
-    margin-left: 0;
-    margin-right: 0;
-
-}
-header {
-    grid-area: h;
-    background-image: url("http://www.csszengarden.com/214/contours.png"),url("http://www.csszengarden.com/214/huntington.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    position: relative;
-    border-top: 10px solid #2e484c;  
-     
-
-}
-h1 {
-    font-family: "juliussansone";
-    color: white;
-    font-size: 200%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 3%;
-    font-weight: lighter;
-}
-
-h3 {
-    font-family: "librebaskerville";
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    opacity: 0.6;
-    color: white;
-    font-weight: lighter;
-    font-size: 12.5pt;
-    padding: 10pt;
-
-}
-.see-through-bar {
-    position: absolute;
-    
-}
-.view-all-designs {
-    font-family: "juliussansone";
-    color: white;
-    text-align: center;  
-    font-size: 12pt;
-    opacity: 0.8;
-  
-}
-.plus-grid {
-    /* margin-top: -195px; */
-    /* margin-left: -140px; */
-    opacity: 0.6;
-}
-
-.nav-bar {
-    /* position: relative; */
-    /* top: -50pt; */
-    background-color: rgba(225,255,255,0.2);
-    padding: 18pt;
-    
-}
-.arrow {
-    position: absolute;
-    margin-top: -25px;
-    margin-left: 300px;
-    font-family: verdemoderna;
-    text-align: center;
-    color: white;
-    width: 70px;
-    height: 70px;
-    font-size: 40px;
-    opacity: 0.6;
-}
-
-
-
--->/* MAIN BODY */-->
-
-main {
-    grid-area: m;
-    margin-top: 10%;
-}
-.title1, .title2, .green1, .green2, .title3{
-    margin-top: 10%;
-    margin-bottom: 4%;
-    font-family: "juliussansone";
-    font-size: 1.5em;
-}
-
-.container-green{
+#article-2 {
     background-color: rgba(138,188,159,0.5);
     background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/bamboo.png");
     background-size: auto, auto, cover;
     background-repeat: repeat, repeat, no-repeat;
-    display: grid;
-    grid-column-start: 0;
-    grid-column-end: 11;
     background-attachment: scroll, scroll, fixed;
-    padding-left: 37px;
-    padding-right: 37px;
     padding-bottom: 22px;
 }
-p {
-    margin-bottom: 4%;
-    margin-top: 0;  
-}
--->/* FOOTER */-->
 
-footer {
-    grid-area: f;
+h1 {
+    font-family: "juliussansone";
+    color: white;
+    font-size: 30px;
+    font-weight: lighter;
+    position: absolute;
 }
-.dark-green-container {
+
+h3 {
+    font-family: "juliussansone";
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+}
+ 
+h4 {
+    position: absolute;
+    font-family: "librebaskerville";
+    opacity: 0.6;
+    color: white;
+    font-weight: lighter;
+    font-size: 12.5pt;
+
+}
+
+p {
+    padding-bottom: 10px;
+}
+#p-tag1 {
+    padding-top: 100px;
+}
+#footer {
     background-image: url("http://www.csszengarden.com/214/contours.png"), url('"http://www.csszengarden.com/214/gridlines-opaque.png'), url("http://www.csszengarden.com/214/gridlines-opaque.png"), url("http://www.csszengarden.com/214/koi.jpg");
     background-size: auto, auto, auto, cover;
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-attachment: fixed, fixed, fixed, scroll;
-    margin-top: 30px;
     text-align: center;
     font-size: 23px;
     margin: 0;
     width: auto;
-    height: 230px;
+    height: 222px;
     color: rgba(255, 255, 255, 0.4);
-    line-height: 2em;
-    padding: 20px;
+    line-height: 22px;
 }
-.dark-green-container > font {
+
+#footer > font {
     opacity: 0.7;
+
 }
-.dark-green-container > i {
+
+#footer > p {
     font-family: librebaskerville;
-
-}
-.footer-plus-grid {
-    margin-left: -140px;
-    width: 20px;
-    height: 20px;
 }
 
-.icons {
-    display: block;
-    clear: both;
+#sub-footer {
     text-align: center;
     background-color: #134347;
-    padding: 1.1em 10%;
+    height: 110.19px;
     font-family: verdemoderna;
     font-size: 35px;
     color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 7px;
+    letter-spacing: 20px;
     font-weight: lighter;
 }
-ul{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    list-style: none;
-    background-color: #f1f7f2;
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-li {
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     font-family: juliussansone;
-    padding: 10px;
+    background-color: #f1f7f2;
+}
+
+.links a {
+    text-align: center;
+    border-top: solid 1px #d9e3dc;    
     font-size: 1.1em;
-    border-top: solid 1px #d9e3dc;
-    /* color: #c0cac3; */
+
 }
 .size {
     font-family: librebaskerville;
     display: inline-block;
     font-size: 13px;
 }
-span {
+.span-font {
     font-family: librebaskerville-bold;
     display: inline-block;;
     font-size: 12px;
 }
-.last {
-    border-top: solid 1px #a0b9ad;   
-    background-image: url("http://www.csszengarden.com/214/bamboo.png");
-    background-color: rgba(138,188,159,0.5);
-}
-#lastest {
-    border-bottom: solid 1px #a0b9ad;
-    width: auto;
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
+
 other {
     text-decoration: underline dotted;
 }
-color {
-    color: blue;
-}
+
 a {
     text-decoration: none;
 }
 
+#links-2 {
+    border-top: solid 1px #a0b9ad;   
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color: rgba(138,188,159,0.5);
+
+}
 
 /* MEDIA QUERIES */
-
-@media (min-width: 500px) {
-    .nav-bar {
-        top: -25px;
-    }
-    .arrow {
-        margin-left: 400px;
-    }
-    
-    h1 {
-        justify-content: left;
-        padding-top: 10%;
-        margin-left: 160px;
-    }
-    
-    h3 {
-        justify-content: left;
-        margin-left: 160px;
-
-    }
-
-    .logo {
-        float: left;
-        margin-left: 90px;
-        margin-top: 40px;
-        width: 10%;
-        height: 10%;
-    }
-}
-
-
-
-
-/* DOESNT WORK */
-@media (min-width: 601px) {  
-    .nav-bar {
-        top: -38px;
-    }
-    .arrow {
-        margin-left: 500px;
-    }
-    .logo {
-        float: left;
-        margin-right: 14px;
-        margin-left: 110px;
-        margin-top: 30px;
-        width: 13%;
-        height: 15%;
-    }
-
-}
-@media (min-width: 750px) {
-    .nav-bar {
-        top: -50px;
-    }
-    .arrow {
-        margin-left: 650px;
-    }
-    .logo {
-        margin-top: 40px;
-        width: 10.5%;
-    }
-}
-
-/* @media (min-width: 1132px) {
-    .main-container {    
+@media (min-width: 1130px) {
+    #container {
         display: grid;
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr hdr hdr shdr shdr shdr shdr"
+            "a1 a1 a1 a1 a1 a1 a1 a1 l1 l1 l1 l1"
+            "a2 a2 a2 a2 a2 a2 a2 a2 l2 l2 l2 l2"
+            "a3 a3 a3 a3 a3 a3 a3 a3 . . . ."
+            "f f f f f f f f f f f f"
+            "sf sf sf sf sf sf sf sf sf sf sf sf";
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 250px auto 40px;
-
-    }
-    footer {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 250px auto 40px;
-        grid-column-start: 9;
-        grid-column-end: -1;
     }
 
-} */
+    #header {
+        grid-area: hdr;
+        height: 250px;
+    }
 
+    #sub-header {
+        grid-area: shdr;
+    }
+
+    #article-1 {
+        grid-area: a1;
+    }
+
+    #article-2 {
+        grid-area: a2;
+    }
+
+    #article-3 {
+        grid-area: a3;
+    }
+
+    #links-1 {
+        grid-area: l1;
+    }
+
+    #links-2 {
+        grid-area: l2;
+    }
+
+    #footer {
+        grid-area: f;
+    }
+
+    #sub-footer {
+        grid-area: sf;
+    }
+}
