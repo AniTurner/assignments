@@ -184,5 +184,3 @@
 // console.log(reverse(null))
 
 
-const str = "1234"
-console.log(str[0])
