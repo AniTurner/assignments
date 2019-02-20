@@ -14,9 +14,9 @@ import './styles.css'
 
 function App() {
     return (
-        <div className='background-picture'>
-            <Header />
+        <div className='background'>
             <Nav />
+            <Header />
             <Products />
             <Footer />
         </div>
