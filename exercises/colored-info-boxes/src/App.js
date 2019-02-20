@@ -79,7 +79,7 @@ function App() {
     return (
         <div>
             <Box style={obj1.backgroundColor} title = {obj1.title} subtitle={obj1.subtitle} information={obj1.information}/>
-            <Box  style={obj2.backgroundColor} title = {obj2.title} subtitle = {obj2.subtitle} information = {obj2.information}/>
+            <Box style={obj2.backgroundColor} title = {obj2.title} subtitle = {obj2.subtitle} information = {obj2.information}/>
             <Box style={obj3.backgroundColor} title = {obj3.title} subtitle = {obj3.subtitle} information = {obj3.information}/>
             <Box style={obj4.backgroundColor} title = {obj4.title} subtitle = {obj4.subtitle} information = {obj4.information}/>
             <Box style={obj5.backgroundColor} title = {obj5.title} subtitle = {obj5.subtitle} information = {obj5.information}/>
@@ -92,8 +92,6 @@ function App() {
         </div>
     )
 }
-
-
 
 
 export default App;
