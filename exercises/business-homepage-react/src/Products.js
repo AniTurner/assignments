@@ -3,7 +3,7 @@ import React from 'react'
 
 function Products() {
     return (
-        <div class='products'>
+        <div className='products'>
             <div className='product-container'>
                 <h3 className='burger'>The burger</h3>
                 <div className='picture1'>
