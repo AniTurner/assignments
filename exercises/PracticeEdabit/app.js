@@ -188,14 +188,26 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that takes an array of numbers and return the first and last elements as a new array.
 
-function firstLast(arr) {
-    return [arr.shift(), arr.pop()]
+// function firstLast(arr) {
+//     return [arr.shift(), arr.pop()]
+// }
+
+// console.log(firstLast([5, 10, 15, 20, 25]))  //[5, 25]
+
+// console.log(firstLast(["edabit", 13, null, false, true])) //["edabit", true]
+
+// console.log(firstLast([undefined, 4, "6", "hello", null])) // [undefined, null]
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that takes an array of numbers. Return the largest number in the array.
+
+function findLargestNum(arr) {
+    return Math.max(...arr)
 }
 
+console.log(findLargestNum([4, 5, 1, 3])) // ➞ 5
 
+console.log(findLargestNum([300, 200, 600, 150])) // ➞ 600
 
-console.log(firstLast([5, 10, 15, 20, 25]))  //[5, 25]
-
-console.log(firstLast(["edabit", 13, null, false, true])) //["edabit", true]
-
-console.log(firstLast([undefined, 4, "6", "hello", null])) // [undefined, null]
+console.log(findLargestNum([1000, 1001, 857, 1])) // ➞ 1001
