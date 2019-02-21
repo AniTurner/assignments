@@ -202,12 +202,30 @@
 /////////////////////////////////////////////////////////////////
 //Create a function that takes an array of numbers. Return the largest number in the array.
 
-function findLargestNum(arr) {
-    return Math.max(...arr)
+// function findLargestNum(arr) {
+//     return Math.max(...arr)
+// }
+
+// console.log(findLargestNum([4, 5, 1, 3])) // ➞ 5
+
+// console.log(findLargestNum([300, 200, 600, 150])) // ➞ 600
+
+// console.log(findLargestNum([1000, 1001, 857, 1])) // ➞ 1001
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//Create a function that returns the number of argument it was called with.
+
+function numArgs(...arr) {
+  return arr.length
 }
 
-console.log(findLargestNum([4, 5, 1, 3])) // ➞ 5
+console.log(numArgs()) // ➞ 0
 
-console.log(findLargestNum([300, 200, 600, 150])) // ➞ 600
+console.log(numArgs("foo")) // ➞ 1
 
-console.log(findLargestNum([1000, 1001, 857, 1])) // ➞ 1001
+console.log(numArgs("foo", "bar")) // ➞ 2
+
+console.log(numArgs(true, false)) // ➞ 2
+
+console.log(numArgs({})) // ➞ 1
