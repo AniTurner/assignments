@@ -2,13 +2,14 @@ import React from 'react'
 
 
 const Navbar = () => {
+
     return (
-        <ul>
-            <li>Start Bootstrap</li>
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>SAMPLE POST</li>
-            <li>CONTACT</li>
+        <ul className = 'menu'>
+            <li className = 'odd-one-out'>Start Bootstrap</li>
+            <li className= 'menu-item'>HOME</li>
+            <li className= 'menu-item'>ABOUT</li>
+            <li className= 'menu-item'>SAMPLE POST</li>
+            <li className= 'menu-item'>CONTACT</li>
 
         </ul>
     )

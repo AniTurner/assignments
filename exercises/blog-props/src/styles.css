@@ -1,0 +1,47 @@
+@font-face {
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.top {
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg');
+    height: 534px;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+    height: 533px;
+}
+.mytitle {
+    font-size: 80px;
+    color: black;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica,Arial,sans-serif;
+}
+
+.menu {
+    color: black;
+    display: flex;    
+    flex-direction: row;
+    justify-content: flex-end; 
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    list-style: none;
+
+
+}
+.menu li {
+    margin: 0px 10px;
+}
+.odd-one-out {
+    display: flex;
+    float: left;
+   
+
+}
+.menu-item {
+    
+}

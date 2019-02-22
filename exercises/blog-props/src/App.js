@@ -1,8 +1,8 @@
 import React from 'react'
-import App from './App.js'
 import Header from './Header.js'
 import BlogList from './BlogList.js'
 import Footer from './Footer.js'
+import './styles.css'
 
 
 const App = () => {
