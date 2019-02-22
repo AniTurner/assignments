@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CounterControls = props => {
     return (
@@ -13,6 +14,12 @@ const CounterControls = props => {
     )
 }
 
+CounterControls.propTypes = {
+    handleIncrement: PropTypes.func.isRequired,
+    handleClick: PropTypes.func.isRequired,
+    handleMultiply: PropsTypes.func.isRequired,
+    handleZero: PropsTypes.func.isRequired
+}
 
 
 export default CounterControls
