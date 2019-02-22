@@ -18,6 +18,11 @@ img {
 .mytitle {
     font-size: 80px;
     color: black;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0.67em;
+    font-weight: bold;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica,Arial,sans-serif;
 }
 
