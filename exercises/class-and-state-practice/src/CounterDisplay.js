@@ -5,6 +5,7 @@ const CounterDisplay = (props) => {
     return (
         <div>
             <h1>{props.counter}</h1>
+            
         </div>
     )
 }

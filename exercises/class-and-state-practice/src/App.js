@@ -1,6 +1,6 @@
 import React from 'react'
 import CounterDisplay from './CounterDisplay.js'
-
+import CounterControls from './CounterControls.js'
 
 class App extends React.Component{
     constructor() {
@@ -16,11 +16,40 @@ class App extends React.Component{
             }
         })
     }
+
+    handleIncrement = () => {
+        this.setState(prevState => {
+            return {
+                counter: prevState.counter -1
+            }
+        })
+    }
+
+    handleMultiply = () => {
+        this.setState(prevState => {
+            return {
+                counter: prevState.counter * 2
+            }
+        })
+    }
+
+    handleZero = () => {
+        this.setState(prevState => {
+            return {
+                counter: 0
+            }
+        })
+    }
+
     render() {
         return (
             <div>
                 <CounterDisplay counter={this.state.counter}/>
-                <button onClick={this.handleClick}>+</button>
+                <CounterControls 
+                    handleClick={this.handleClick} 
+                    handleIncrement={this.handleIncrement} 
+                    handleMultiply={this.handleMultiply}
+                    handleZero={this.handleZero}/>
             </div>
         )
     }
