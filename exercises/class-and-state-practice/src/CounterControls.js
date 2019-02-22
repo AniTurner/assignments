@@ -17,8 +17,8 @@ const CounterControls = props => {
 CounterControls.propTypes = {
     handleIncrement: PropTypes.func.isRequired,
     handleClick: PropTypes.func.isRequired,
-    handleMultiply: PropsTypes.func.isRequired,
-    handleZero: PropsTypes.func.isRequired
+    handleMultiply: PropTypes.func.isRequired,
+    handleZero: PropTypes.func.isRequired
 }
 
 
