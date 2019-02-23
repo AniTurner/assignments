@@ -23,7 +23,7 @@ class Music extends React.Component {
                 {/* <audio ref={audio => this.audio = audio}>
                     <source src={soundFile} ></source>
                 </audio> */}
-                <button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</button>
+                <button style={{backgroundColor: 'blue', border: '2px dotted blue', fontWeight: 'bold', fontSize: 20}} onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</button>
             </div>
         )
     }

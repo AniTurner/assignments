@@ -135,9 +135,9 @@ class App extends React.Component {
                     <div style={boxStyles4}>Box4</div>
                 </div>
                 <div style={{border: '3px solid black', backgroundColor: 'black', display: 'flex', marginTop: '30px', padding: '10px'}}>
-                    <button  onClick={this.handleChangeColor}>Change Color</button>
-                    <button  onClick={this.handleChangeBlackWhite}>Change to Black and White</button>
-                    <button  onClick={this.handleChangeSize}>Change Size</button>
+                    <button style={{backgroundColor: 'white', border: '2px dotted green', fontWeight: 'bold', fontSize: 15}} onClick={this.handleChangeColor}>Change Color</button>
+                    <button style={{backgroundColor: 'white', border: '2px dotted blue', fontWeight: 'bold', fontSize: 15}} onClick={this.handleChangeBlackWhite}>Change to Black and White</button>
+                    <button style={{backgroundColor: 'white', border: '2px dotted blue', fontWeight: 'bold', fontSize: 15}} onClick={this.handleChangeSize}>Change Size</button>
                     <Music />
                 </div>
             </div>
