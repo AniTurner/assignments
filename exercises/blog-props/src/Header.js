@@ -4,13 +4,12 @@ import Navbar from './Navbar.js'
 
 const Header = () => {
     return (
-        <div className = 'top'>
-           
-            <Navbar />
-            <h1 className = 'mytitle'>Clean Blog</h1>
-            <h3>A Blog Theme by Start Bootstrap</h3>
-
-        </div>
+            <div className = 'top'>
+                <Navbar />
+                <header className = 'mytitle'>Clean Blog</header>
+                <h3 className = 'mysubtitle'>A Blog Theme by Start Bootstrap</h3>
+            </div>
+            
     )
 }
 

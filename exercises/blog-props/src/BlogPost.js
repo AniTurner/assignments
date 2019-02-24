@@ -1,12 +1,14 @@
 import React from 'react'
 
 
-const BlogPost = () => {
+const BlogPost = (props) => {
     return (
-        <div>
-            <h1></h1>
-            <h2></h2>
-            <h4></h4>
+        <div className="blogpost-container">
+            <p className="title">{props.title} </p>
+            <p className="subtitle">{props.subtitle}</p>
+            <p className="lastsentence">{props.author}</p>
+            <p className="lastsentence">{props.date}</p>
+            <p className="line-through">{props.line}</p>
         </div>
     )
 }

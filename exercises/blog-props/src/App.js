@@ -10,6 +10,7 @@ const App = () => {
         <div>
             <Header />
             <BlogList/>
+            <div className="bottom-line"></div>
             <Footer />
         </div>
     )
