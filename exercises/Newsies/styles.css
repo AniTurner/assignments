@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    background: #e7e0e0;
+    
+   
+}
+header {
+    border-top: 6px double black;
+    font-family: 'Playfair Display';
+    font-size: 60px;
+    text-align: center;
+    padding: 12px;
+}
+.otherhead{
+    font-size:20px;
+    font-family: 'Oswald'; 
+    font-weight: 700;
+}
+h2 {
+    border-top: 6px solid black;
+    border-bottom: 6px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 510;
+}
+.paragraph1{
+    display: inline-block;
+}
+main {
+    display:inline-block;
+    column-count: 3;
+    vertical-align: top;
+    width: 900px;
+    display: inline-block;
+    overflow: hidden;
+    border-width: 2px;
+    font-family: 'Droid Serif';
+    font-size: 14px;
+    page-break-inside: avoid;
+    margin: 0;
+    
+}
+.headshot-image {
+    display: inline-block;
+    align-self: center;
+    height: 150px;
+
+    
+ 
+}
+.goal-image {
+    display: inline-block;
+    align-self: center;
+    height: 150px;
+
+    
+}
+footer {
+    
+    border-top: 6px double black;
+    display: block;
+    text-align: center;
+}
+

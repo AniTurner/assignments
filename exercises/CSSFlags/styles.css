@@ -1,0 +1,314 @@
+#frenchflag1 {
+    width: 50px;
+    height: 90px;
+    background-color: blue;
+    display: inline-block;
+}
+#frenchflag2 {
+    width: 50px;
+    height: 90px;
+    background-color: white;
+    display: inline-block;
+}
+#frenchflag3 {
+    width: 50px;
+    height: 90px;
+    background-color: red;
+    display: inline-block;
+}
+
+#Germanflag1 {
+    width: 170px;
+    height: 40px;
+    background-color: black;
+    display: block;
+}
+#Germanflag2 {
+    width: 170px;
+    height: 40px;
+    background-color: red;
+    display: block;
+}
+#Germanflag3 {
+    width: 170px;
+    height: 40px;
+    background-color: gold;
+    display: block;
+}
+#Madagascarflag1 {
+    width: 45px;
+    height: 88px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+}
+#Madagascarflag2 {
+    width: 162px;
+    height: 45px;
+    background-color: red;
+    /* border-color: red; */
+    display: block;
+}
+#Madagascarflag3 {
+    width: 162px;
+    height: 45px;
+    background-color: green;
+    display: block;
+}
+#Schweizflag3 {
+    width: 84px;
+    height: 30px;
+    position: absolute;
+    background-color: white;
+    display: inline-block;
+    left: 0;
+    margin-left: 45px;
+    margin-top: 46px;
+}
+#Schweizflag1 {
+    width: 30px;
+    height: 80px;
+    position: absolute;
+    background-color: white;
+    display: inline-block;
+    margin-left: 65px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+#Schweizflag2 {
+    width: 160px;
+    height: 120px;
+    border: 90px;
+    background-color: red;
+    display: inline-block;
+}
+#Swedenflag1 {
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    background-color: #FECC00;
+    display: inline-block;
+    left: 0;
+    margin-left: 8px;
+    margin-top: 46px;
+}
+#Swedenflag2 {
+    width: 20px;
+    height: 120px;
+    position: absolute;
+    background-color: #FECC00;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+#Swedenflag3 {
+    width: 170px;
+    height: 120px;
+    border: 90px;
+    background-color: #006AA7;
+    display: inline-block;
+}
+#Gambia1 {
+    width: 170px;
+    height: 30px;
+    background-color: #CE1126;
+    display: block;
+    margin-bottom: 4px;
+    border-bottom-color: white;
+}
+#Gambia2 {
+    width: 170px;
+    height: 20px;
+    background-color: #0C1C8C;
+    display: inline-block;
+    border: #FFFFFF;
+    margin-top: 3px;
+}
+#Gambia3 {
+    width: 170px;
+    height: 30px;
+    background-color: #3A7728;
+    margin-top: 3px;
+    display: block;
+}
+#Tonga1 {
+    width: 50px;
+    height: 20px;
+    position: relative;
+    background-color: black;
+    display: block;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 46px;
+}
+
+.Tonga {
+    width: 180px;
+    height: 120px;
+    position: relative;    
+    background-color: #C10000;
+    display: grid;
+}
+#Tonga2{
+    width: 90px;
+    height: 60px;
+    position: relative;
+    background-color: white;
+    display: grid;
+}
+#Tonga2::before {
+    background: #C10000;
+    content: "";
+    position: relative;
+    top: 18px;
+    width: 50px;
+    height: 20px;
+    margin-left: 15px;
+}
+#Tonga2::after {
+    content: "";
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    background-color: #C10000;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#Japan1 {
+    height: 70px;
+    width: 70px;
+    background-color: #BC002D;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 55px;
+    margin-top: 30px;
+    position: absolute;
+}
+#Japan2 {
+    width: 180px;
+    height: 120px;
+    border-style: solid;
+    background-color: white;
+    display: inline-block;
+    border-width: thin;
+    
+}
+#Niger1 {
+    width: 170px;
+    height: 40px;
+    background-color: #E05206;
+    position: absolute;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+#Niger2 {
+    width: 170px;
+    height: 40px;
+    background-color: white;
+    display: block;
+}
+#Niger3 {
+    height: 40px;
+    width: 40px;
+    background-color: #E05206;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 65px;
+    margin-top: 5px;
+    position: absolute;
+}
+#Niger4 {
+    width: 170px;
+    height: 40px;
+    background-color: #0DB02B;
+    position: absolute;
+    margin-top: 50px;
+    display: inline-block;
+}
+#Maldives1 {
+    width: 110px;
+    height: 60px;
+    position: absolute;
+    background-color: green;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+#Maldives2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: -10px 00 white;
+    margin-top: 35px;
+    display: block;
+    position: absolute;
+    margin-left: 80px;
+}
+#Maldives3 {
+    width: 170px;
+    height: 120px;
+    border: 90px;
+    background-color: red;
+    display: inline-block;
+}
+.Greece {
+    width: 170px;
+    height: 90px;
+    background-color: #0C1C8C;
+    top: 20px;
+    position: relative;
+}
+#Greece2 {
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    background-color: white;
+    top: 0px;
+    margin-left: 15px;
+}
+#Greece3 {
+    width: 40px;
+    height: 10px;
+    background-color: white;
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    top: 8px;
+    /* margin-bottom: 8px; */
+    /* margin-bottom: 8px; */
+}
+#Greece4 {
+    width: 180px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    left: 40px;
+    top: 10px;
+}
+#Greece5 {
+    width: 180px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+#Greece6 {
+    width: 200px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    top: 30px;
+}
+#Greece7 {
+    width: 200px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    left: 0px;
+    top: 40px;
+}

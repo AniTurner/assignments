@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #6d6876;
+    
+}
+h1 {
+    text-align: center;
+    font-family: "scriptina";
+    color: #ffcdbf;
+    font-size: 290%;
+}
+.hidden {
+    display: none;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #ffcdbf;
+    font-family: BeautyMountainsPersonalUse;
+    height: 40px;
+}
+.navbar a {
+    float: left;
+    font-size: 140%;
+    color: #6d6876;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropbtn {
+    display: none;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #6d6876;
+    padding: 5px 12px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;    
+}
+.dropdown > a:hover  {
+    background-color: #b5838d;
+}
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #b5838d;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+    z-index: 1;
+    margin-top: -1px;
+}
+.dropdownContent a {
+    float: none;
+    color: #ffcdbf;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdownContent a:hover {
+    background-color:#6d6876;
+}
+
+div .dropdown {
+    margin: 0;
+    padding: 0;
+}
+
+.myPicture {
+    float: left;
+    margin: 10px;
+}
+.ptag {
+    font-size: 30px;
+    font-family: Parkavenue, cursive
+}
+input {
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    margin: 2px;
+    background-color: #b5838d;
+    border: none;
+    font-size: 15px;
+    color: #ffcdbf;
+    font-family: Parkavenue, cursive
+
+}
+#hearAboutMe {
+    margin-left: 31.5%;
+}
+#message {
+    margin-left: 31.5%;
+}
+/* footer {
+    background: #061D25;
+    padding: 10px 0;
+    text-align: center;
+}
+footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+}
+footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+footer a:hover {
+    color: white;
+} */
+
+@media (max-width: 911px) {
+    .navbar a {
+        display: none;
+        float: left;
+        font-size: 140%;
+        color: #6d6876;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .dropdownContent a {
+        float: none;
+        color: #ffcdbf;
+        padding: 10px 14px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar:hover, .dropdown:hover .dropbtn {
+        background-color: #b5838d;
+    }
+    .hidden {
+        display: none;
+    }
+    .dropbtn {
+        display: initial; 
+    }
+    .dropdownContent {
+        display: inherit;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        text-align: center;
+        font-family: "scriptina";
+        color: #ffcdbf;
+        font-size: 200%;
+    }
+    .hidden {
+        display: none;
+    }
+    #hearAboutMe {
+        margin-left: 0;
+        width: 100%;
+        height: 40px;
+    }
+    #message {
+        margin-left: 0px;
+        width: 100%;
+        height: 40px;
+    }
+    #names {
+        margin-left: 0px;
+        width: 100%;
+        height: 40px;
+    }
+    #email {
+        margin-left: 0px;
+        width: 100%;
+        height: 40px;
+    }
+    #venue {
+        margin-left: 0px;
+        width: 100%;
+        height: 40px;
+    }
+    .ptag {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        text-align: center;
+        font-family: "scriptina";
+        color: #ffcdbf;
+        font-size: 150%;
+    }
+    input {
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        margin: 2px;
+        background-color: #b5838d;
+        border: none;
+        font-size: 15px;
+        color: #ffcdbf;
+        font-family: BeautyMountainsPersonalUse
+    }
+    .ptag {
+        font-size: 15px;
+        font-family: BeautyMountainsPersonalUse;
+        float: right;
+    }
+    .myPicture {
+        float: center;
+        margin-left: 106px;
+    }
+    #hearAboutMe {
+        margin-left: 0px;
+    }
+    #message {
+        margin-left: 0;
+    }
+
+}
+@media (min-width: 920px) {
+    .mySlides {
+        margin-top: 20px;
+        margin-left: 22%;
+        width: 1000px;
+        height: 630px;
+    }
+    .navbar a {
+        float: center;
+        font-size: 220%;
+        color: #6d6876;
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 10%;
+    }
+    h1 {
+        text-align: center;
+        font-family: "scriptina";
+        color: #ffcdbf;
+        font-size: 390%;
+    }
+    .hidden {
+        display: none;
+    }
+    input {
+        display: inline-block;
+        width: 50%;
+        height: 50px;
+        /* margin: 2px; */
+        background-color: #b5838d;
+        border: none;
+        font-size: 15px;
+        color: #ffcdbf;
+        font-family: BeautyMountainsPersonalUse
+    }
+    #hearAboutMe {
+        margin-left: 0px;
+    }
+    #message {
+        margin-left: 0px;
+    }
+}
