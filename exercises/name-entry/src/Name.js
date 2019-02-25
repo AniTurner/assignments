@@ -2,9 +2,9 @@ import React from 'react'
 
 
 const Name = (props) => {
-    <ul>
+    return (
         <li>{props.name}</li>
-    </ul>
+    )
 }
 
 export default Name

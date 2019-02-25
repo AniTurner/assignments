@@ -1,7 +1,9 @@
 import React from 'react'
 import Name from './Name.js'
+
+
 const List = props => {
-    const mappedNames = this.state.names.map((name, i) =>  <li key={i}>{name}</li>)
+    const mappedNames = props.names.map((name, i) =>  <Name key={i} name={name}/>)
 
     return (
 

@@ -31,10 +31,13 @@ class App extends React.Component {
     }
 
     render() {            
-        const mappedNames = this.state.names.map((name, i) =>  <li key={i}>{name}</li>)
         return (
             <div>
-                <EntryForm handleChange= {this.handleChange} handleSubmit={this.handleSubmit} nameInput={this.state.nameInput}/>
+                <EntryForm 
+                    handleChange= {this.handleChange} 
+                    handleSubmit={this.handleSubmit} 
+                    nameInput={this.state.nameInput}/>
+                    
                 <List names= {this.state.names}/>
             </div>
         )
