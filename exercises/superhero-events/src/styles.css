@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+img {
+    width: 400px;
+    height: 250px;
+    /* border-radius: 340px; */
+}
+
+.pic-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    
+}
+
+h1 {
+    color: red;
+    padding: 30px;
+    text-align: center;
+    font-family: 'MJ Scriptonite Demo';
+    font-size: 90px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'MJ Scriptonite Demo';
+    font-size: 40px; 
+}
+
+p {
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'squirk'
+}

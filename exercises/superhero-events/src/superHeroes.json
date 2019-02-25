@@ -7,27 +7,27 @@
         },
         {
             "name": "Wonder Woman",
-            "imgUrl": "wonderwoman.jpg",
+            "imgUrl": "https://fsmedia.imgix.net/87/c6/60/da/48a4/4683/90d7/b8ec4787d6ea/wonder-woman-1jpg.jpeg?rect=109%2C0%2C766%2C383&auto=format%2Ccompress&dpr=2&w=650",
             "catchPhrase": "A deal is a promise and a promise is unbreakable."
         },
         {
             "name": "Thor",
-            "imgUrl": "thor.jpg",
+            "imgUrl": "https://images.hellogiggles.com/uploads/2016/05/21074112/thor-pic.jpg",
             "catchPhrase": "You know, I used to want to be a Valkyrie when I was younger, until I found out you were all women. There’s nothing wrong with women, of course, I like women. Sometimes a little too much. Not in a creepy way, just more like a respectful appreciation. I think it’s great, an elite force of women warriors."
         },
         {
             "name": "Superman",
-            "imgUrl": "superman.jpg",
+            "imgUrl": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/13/11/man-of-steel-henry-cavill.jpg",
             "catchPhrase": "You will be different, sometimes you’ll feel like an outcast, but you’ll never be alone."
         },
         {
             "name": "Aquaman",
-            "imgUrl": "aquaman.jpg",
+            "imgUrl": "https://cdn.flickeringmyth.com/wp-content/uploads/2018/12/aquaman-3-600x352.jpg",
             "catchPhrase": "I call it an ass whopping"
         },
         {
             "name": "Hulk",
-            "imgUrl": "hulk.jpg",
+            "imgUrl": "https://fsmedia.imgix.net/fc/a8/97/8f/9715/458c/ab50/a5aaeea1aa74/hulk-age-of-ultron-civil-war.jpeg?rect=0%2C199%2C2560%2C1280&auto=format%2Ccompress&dpr=2&w=650",
             "catchPhrase": "HULK SMASH!"
         }
     ]

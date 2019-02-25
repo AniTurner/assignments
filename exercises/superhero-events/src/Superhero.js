@@ -6,9 +6,11 @@ const Superhero = (props) => {
 
     return (
         <div onClick={props.onClick}>  
-            <div>{props.imgUrl}</div>          
-            <h2>{props.name}</h2>
-        
+            <div >
+                <img src={props.imgUrl}></img>          
+            </div>    
+                <h2>{props.name}</h2>
+            
         </div>
     )
 }

@@ -25,8 +25,8 @@ class App extends React.Component {
     return (
         <div>
             <h1>Superheroes</h1>
-            <p>Click on the image to see the Superheroes catchphrase</p>
-            <div>{superHeroes}</div>
+            <p>Click on the image to see the Superheroes' catchphrase:</p>
+            <div className="pic-container">{superHeroes}</div>
         </div>
         )
     }
