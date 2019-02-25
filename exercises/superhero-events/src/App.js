@@ -14,11 +14,10 @@ class App extends React.Component {
         const superHeroes = data.superHeroes.map((hero, key) =>
             <Superhero 
                 name={hero.name}
-                show={hero.show}
+                imgUrl={hero.imgUrl}
                 onClick= {() => {
                     alert(hero.catchPhrase)
                 }}
-                imageName={hero.imageName}
                 key={key}/>
                 )
     
