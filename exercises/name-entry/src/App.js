@@ -1,11 +1,13 @@
 import React from 'react'
-import Name from './Name.js'
+import EntryForm from './EntryForm.js'
+import List from './List.js'
 
 class App extends React.Component {
     constructor() {
         super()
-        this.state() = {
-            nameInput = ""
+        this.state = {
+            nameInput: "",
+            names: []
         }
     }
 
@@ -13,6 +15,7 @@ class App extends React.Component {
         e.persist()
         this.setState ({
             [e.target.name]: e.target.value
+            
         })
     }
 
@@ -22,14 +25,17 @@ class App extends React.Component {
             return {
                 names: [...prevState.names, this.state.nameInput],
                 nameInput: ""
+
             }
         })
     }
 
-    render() {
+    render() {            
+        const mappedNames = this.state.names.map((name, i) =>  <li key={i}>{name}</li>)
         return (
             <div>
-                <Name />
+                <EntryForm handleChange= {this.handleChange} handleSubmit={this.handleSubmit} nameInput={this.state.nameInput}/>
+                <List names= {this.state.names}/>
             </div>
         )
     }
