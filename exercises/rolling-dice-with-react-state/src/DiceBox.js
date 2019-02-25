@@ -1,9 +1,8 @@
 import React from 'react'
 import Die from './Die.js'
-import { ReactComponent } from '*.svg';
 
 
-class DiceBox extends ReactComponent {
+class DiceBox extends React.Component {
     constructor() {
         super()
 
@@ -32,13 +31,16 @@ class DiceBox extends ReactComponent {
     render() {
         return (
             <div>
-                <button onClick={this.handleRollingDice}></button>
-                <Die dieNum={this.state.die1}
-                     dieNum={this.state.die2}
-                     dieNum={this.state.die3}
-                     dieNum={this.state.die4}
-                     dieNum={this.state.die5}/>
-
+                <div className="button">
+                    <button onClick={this.handleRollingDice}>Roll your die:</button>
+                </div>
+                <div className='die-container'>
+                    <Die num={this.state.die1}/>
+                    <Die num={this.state.die2}/>
+                    <Die num={this.state.die3}/>
+                    <Die num={this.state.die4}/>
+                    <Die num={this.state.die5}/>
+                </div>
             </div>
         )
     }
@@ -48,4 +50,4 @@ class DiceBox extends ReactComponent {
 
 
 
-export default App
+export default DiceBox
