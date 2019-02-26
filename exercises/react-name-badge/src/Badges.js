@@ -1,28 +1,24 @@
 import React from 'react'
-import Badge from './Badge'
+import Badge from './Badge.js'
 
 const Badges = (props) => {
-    const mappedBadges = props.badgeCollection.map((
-        key,
-        firstNameInput,
-        phoneInput,
-        lastNameInput, 
-        placeOfBirthInput,
-        favFoodInput,
-        emailInput,
-        ) => 
+    const mappedBadges = props.badgeCollection.map((item,key) => 
+        
         <Badge 
             key={key}
-            firstNameInput={firstNameInput}
-            lastNameInput={lastNameInput}
-            phoneInput={phoneInput}
-            placeOfBirthInput={placeOfBirthInput}
-            favFoodInput={favFoodInput}
-            emailInput={emailInput}
-             />)
+            firstNameInput={item.firstNameInput}
+            lastNameInput={item.lastNameInput}            
+            emailInput={item.emailInput}
+            placeOfBirthInput={item.placeOfBirthInput}
+            phoneInput={item.phoneInput}
+            favFoodInput={item.favFoodInput}
+            aboutYouInput={item.aboutYouInput}
+            
+             />
+    )
         
     return (
-        <div>
+        <div className='badge-container'>
             {mappedBadges}    
         </div>
     )
