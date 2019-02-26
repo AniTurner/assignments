@@ -37,11 +37,12 @@ class App extends React.Component {
             favFoodInput: this.state.favFoodInput,
             aboutYouInput: this.state.aboutYouInput
         }
+
         if (this.state.firstNameInput === '' || this.state.lastNameInput === '' || this.state.emailInput === '' || this.state.placeOfBirthInput === '' || this.state.phoneInput === '' || this.state.favFoodInput === '' || this.state.aboutYouInput === '' || this.state.firstNameInput <2  || this.state.lastNameInput <2  || this.state.emailInput <2  || this.state.placeOfBirthInput <2  || this.state.phoneInput < 2  || this.state.favFoodInput <2 || this.state.aboutYouInput < 2 ){
-            alert('You need to meet requirement')
+            alert('Your input needs to have at least two letters.')
         } else{
             if(!Number(this.state.phoneInput)){
-                alert('your phone number is not corret')
+                alert('Your phone number is incorrect.')
             } else {
 
         this.setState(prevState => {
