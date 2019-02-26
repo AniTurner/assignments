@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EntryForm = (props) => {console.log(props)
+const EntryForm = (props) => {
     return (
         
         <div>
