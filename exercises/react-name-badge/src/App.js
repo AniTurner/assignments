@@ -1,7 +1,6 @@
 import React from 'react'
 import Badges from './Badges.js'
 import './styles.css'
-import image from './image.png'
 
 
 class App extends React.Component {
