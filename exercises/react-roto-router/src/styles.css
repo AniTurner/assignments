@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1,h2 {
+    font-family: Arial;
+    font-size: 45px;
+}
+
+.top-header {
+    
+}
+
+.image {
+    background-color: red;
+}
