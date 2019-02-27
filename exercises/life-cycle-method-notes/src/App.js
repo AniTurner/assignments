@@ -1,20 +1,21 @@
-import React from 'react'
 import React, { Component } from 'react'
+import './styles.css'
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
             username: "",
-            bgColor: 'blue',
+            bgColor: "blue",
         }
     }
 
-    componentDidMount() {
+    componentDidMount() { 
         window.addEventListener('keydown', (e) => { //will enable you to press any key on your keyboard to press on while you are on your website
             if(e.which === 71) {  //if you press letter 'd' the backgroundcolor becomes green -- console.log a letter to find out its 'which'
                 this.setState({
                     bgColor: 'green'
+                    
                 })
             }
         })
@@ -28,8 +29,13 @@ class App extends Component {
 
     render(){
         return(
-            <div style={{ backgroundColor: this.state.bgColor }}>
-                Lifcycle Methods!
+            <div className='box-container' >
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
+                <div style={{backgroundColor: 'blue'}} className='box'></div>
             </div>
         )
     }

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+  
+}
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20pt;
+    justify-content: center;
+
+}
+.box {
+    width: 200pt;
+    height: 200pt;
+    margin: 50px auto;
+    border: 2px solid black;
+}
