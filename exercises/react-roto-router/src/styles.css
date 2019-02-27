@@ -16,7 +16,18 @@ h1,h2 {
 }
 
 .top-header {
-    
+    position: relative;
+    color: #aaa;
+    background-color: blue;
+    height: 100pt;
+    padding: 50pt 100pt;
+}
+.top-header {
+    position: absolute;
+    top: 100pt;
+    width: 100%;
+    height: 15px;
+    background: url('')
 }
 
 .image {
