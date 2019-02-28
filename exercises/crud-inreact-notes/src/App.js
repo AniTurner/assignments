@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import TodoList from './TodoList.js'
 
 
 //GET - Map out todos
@@ -13,6 +14,13 @@ import axios from 'axios'
         //window.eventListeners
         //setInterval, setTimeout
 
+////////////////////////////////
+
+//POST - Components
+    //<AddTodoForm />
+    //state properties for input values
+    //handleChange, handleSubmit
+
 class App extends Component {
     constructor() {
         super()
@@ -22,19 +30,26 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://api.vschool.io/natej/todo').then(response => {
+       this.getTodos()
+    }
 
-        console.log(response) //to see if we get an error or not
+    getTodos = () => {
+         axios.get('https://api.vschool.io/ani/todo').then(response => {
+
+        // console.log(response) //to see if we get an error or not
+        this.setState({
+            todos: response.data
+        })
 
         }).catch(error => console.log(error))
             //it's either resolves(.then) or rejects(.catch)
     }
 
-
     render() {
+        console.log(this.state)  //comes after creating setState
         return (
             <div>
-
+                <TodoList todos={this.state.todos}/>
             </div>
         )
     }
