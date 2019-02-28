@@ -7,7 +7,8 @@ class App extends Component {
   componentDidMount() {
     this.props.getTodos()
   }
-  return(
+  render() {
+    return(
       <div className={`app-container-${props.theme}`}>
         {this.props.todos.map(todo =>  (
           <div style={{backgroundImage: `url(${todo.imgUrl})`}}> 
@@ -16,8 +17,9 @@ class App extends Component {
               <p>Price: {todo.price}</p>
           </div>
         ))}
-     </div>
-  )
+      </div>
+    )
+  }
 }  
 
 
