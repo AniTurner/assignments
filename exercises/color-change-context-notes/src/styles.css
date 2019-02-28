@@ -1,0 +1,15 @@
+.home-light {
+    background-color: yellow;
+}
+
+.home-light p {
+    background-color: blue;
+}
+
+.home-dark {
+    background-color: black;
+}
+
+.home-dark p {
+    background-color: red;
+}
