@@ -38,7 +38,8 @@ img {
 
 h1 {
     color: white;
-    font-family: arial;
+    font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 .pic-h1 {
@@ -54,8 +55,8 @@ h1 {
 }
 
 .image-text-container {
-    margin-top: 40px;
-    width: 100%;
+    margin: 40px auto;
+    width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
    
