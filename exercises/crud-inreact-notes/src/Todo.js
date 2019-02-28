@@ -11,6 +11,7 @@ const Todo = (props) => {
             <h3>{description}</h3>
             <p>Price: {price}</p>
             <input type='checkbox' defaultChecked={completed} />
+            <button onClick={() => props.handleDelete(_id)}>Delete</button>
         </div>
     )
 }
