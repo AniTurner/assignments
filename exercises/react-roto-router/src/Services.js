@@ -4,7 +4,7 @@ const Services = () => {
     return (
         <main>
             <div>
-                <div>
+                <div className='home'>
                     <h1>Services we provide</h1>
                     <h2>Experts at hand</h2>
                     <button>Learn more</button>

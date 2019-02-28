@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color: #f1e3dd;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
@@ -17,38 +17,25 @@ h1,h2 {
 
 .top-header {
     position: relative;
-    color: #aaa;
-    background-color: blue;
-    height: 100pt;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-image: url('http://static.wixstatic.com/media/725d4a_7192beea29c142838af8d4409a83c758~mv2.jpg/v1/fill/w_1024,h_575,al_c,q_85,usm_0.66_1.00_0.01/725d4a_7192beea29c142838af8d4409a83c758~mv2.webp');
+    color: black;
+    background-color: #bccad6;
+    height: 150pt;
     padding: 50pt 100pt;
-}
-.top-header:after {
-    position: absolute;
-    top: 100pt;
-    width: 100%;
-    height: 15px;
-    background: url('');
-    content: '';
-    z-index: 1;
-    margin-left: -100pt;
 }
 
 header {
     position: relative;
-    background-color: blue;
+    background-color: #8d9db6;
     width: 100%;
     z-index: 2;
     padding: 25pt;
 }
 
-header h1 {
-    position: relative;
-    background-image: url('');
-    background-repeat: none;
-    background-size: cover;
-    height: 43px;
-    width: 197px;
-}
+
 nav ul, footer ul {
     list-style: none;
     margin: 0;
@@ -61,7 +48,7 @@ nav ul li, footer ul li {
     margin: 0 15pt;
     padding: 0;
     height: 30px;
-    color: red;
+    color: white;
 
 }
 
@@ -78,7 +65,7 @@ footer ul li:last-of-type {
 }
 
 nav a, footer a {
-    color: blue;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -90,8 +77,49 @@ nav a, footer a {
 
 main {
     position: relative;
-    float: left;
+    float: center;
 }
-.image {
-    background-color: red;
+
+main .image1 {
+    position: relative;
+    float: left;
+    background-image: url('http://www.site-fusion.co.uk/files/writeable/uploads/basekit-template-images/webfusion83_live83458_header.png')
+}
+
+.home {
+    display: block;
+    margin-block-start: 10.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+    text-align: center;
+
+}
+
+button {
+    color: #bccad6;
+    background-color: #667292;
+    padding: 15pt 35pt;
+    font-size: 15pt;
+    border: 2px solid #8d9db6;
+    margin-bottom: 50pt;
+}
+
+footer {
+    display: block;
+    background-color: #667292;
+    height: 60px;
+    width: 100%;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+footer>div {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.services-title {
+
 }

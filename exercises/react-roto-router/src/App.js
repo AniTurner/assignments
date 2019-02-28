@@ -11,7 +11,6 @@ import {Switch, Route} from 'react-router-dom'
 const App = () => {
     return (
         <div className='container'>
-            <Nav/>
             <Header />
                 <Switch>
                     <Route exact path='/' component={Home} />
