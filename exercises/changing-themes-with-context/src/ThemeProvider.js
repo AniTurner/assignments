@@ -11,9 +11,9 @@ class ThemeProvider extends Component {
     }
 
     toggleTheme = () => {
-        this.setState(prevState => {
+        this.setState(prevState => ({
             theme: prevState.theme === 'light' ? 'dark' : 'light'
-        })
+        }))
     }
 
     render() {
@@ -35,3 +35,5 @@ export const withTheme = C => props => (
         {value => <C {...value} {...props}/>}
     </ThemeContext.Consumer>
 )
+
+export default ThemeProvider

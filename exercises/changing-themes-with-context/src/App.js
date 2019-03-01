@@ -1,4 +1,8 @@
 import React from 'react'
+import {withTheme} from './ThemeProvider.js'
+import Navbar from './Navbar.js'
+import Main from './Main.js'
+import Footer from './Footer.js'
 import './styles.css'
 
 
@@ -15,4 +19,4 @@ const App = props => {
 }
 
 
-export default App
+export default withTheme(App)
