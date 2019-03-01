@@ -47,7 +47,12 @@ class App extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-
+        this.props.addTodo(this.state)
+        this.setState ({
+            title: '',
+            description: '',
+            price: ''
+        })
         
        
     }
@@ -61,10 +66,12 @@ class App extends Component {
                     handleSubmit={this.handleSubmit}
                     title={this.state.title}
                     description={this.state.description}
-                    price={this.state.price} />
+                    price={this.state.price} 
+                    btnText="Add Todo"/>
                 <TodoList 
                     todos={this.props.todos} 
                     handleDelete={this.props.handleDelete}
+                    handleEdit={this.props.handleEdit}
                         />
                
             </div>

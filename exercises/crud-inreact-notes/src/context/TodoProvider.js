@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 
 class TodoProvider extends Component {
@@ -54,14 +55,26 @@ class TodoProvider extends Component {
         }).catch(error => console.log(error))
     }
 
-   render() {
+    handleEdit = (_id, updates) => {
+        axios.put('https://api.vschool.io/ani/todo/${_id}', updates).then(response => {
+            const updatedTodo = response.data
+            this.setState(prevState => {
+                return {
+                    todos:prevState.todos.map(todo => todo._id === _id ? updatedTodo : todo)
+                }
+            })
+        }).catch(error => console.log(error))
+    }
+
+    render() {
         return (
             <TodoContext.Provider 
                 value={{
                     todos: this.state.todos,
                     getTodos: this.getTodos,
                     addTodo: this.addTodo,
-                    deleteTodo: this.delete
+                    handleDelete: this.handleDelete,
+                    handleEdit: this.handleEdit
                 }}>
                 {this.props.children}
             </TodoContext.Provider>
@@ -72,6 +85,8 @@ class TodoProvider extends Component {
 
 export const withTodos = C => props => (
     <TodoContext.Consumer>
-        {value => <C {..props} {...value}/>}
+        {value => <C {...props} {...value}/>}
     </TodoContext.Consumer>
 )
+
+export default TodoProvider
