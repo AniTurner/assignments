@@ -42,9 +42,25 @@ class UglyThing extends Component {
         return (
             <div>
                 {!this.state.isToggled
-                
+                    ? <div className='uglything-div' style={{ backgroundImage: `url(${imgUrl})`}}>
+                        <h1>{title}</h1>
+                        <h3>{descpription}</h3>
+                        <button onClick={ () => handleDelete(_id)}>Delete</button>
+                        <button onClick={this.toggler}>Edit</button>
+                      </div>
+                    :  <div className='edit-uglything-div'>
+                            <UglyThingsForm
+                                {...this.state}
+                                btnText="Submit Edit"
+                                handleChange={this.handleChange}
+                                handleSubmit={this.handleSubmit}
+                            />
+                            <button onClick={this.toggler}>Close</button>
+                        </div>
                 }
             </div>
         )
     }
 }
+
+export default UglyThing

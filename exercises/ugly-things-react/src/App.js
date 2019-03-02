@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import UglyThings from './component/UglyThings.js'
+import UglyThingsForm from './component/UglyThingsForm.js'
+import { withUglyThings } from './context/UglyThingsProvider.js'
 import './styles.css'
 
 
@@ -13,7 +16,7 @@ class App extends Component {
         }
     }
     componentDidMount() {
-    
+        this.props.getUglyThings()
     }
 
     handleChange = e => {
@@ -23,6 +26,12 @@ class App extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        this.props.addUglyThings(this.state)
+        this.setState({
+            title: '',
+            imgUrlg: '',
+            description: '',
+        })
 
     }
 
@@ -30,6 +39,19 @@ class App extends Component {
         return (
             <div className='main-container'>
                 <h1>Ugly Things</h1>
+                <UglyThingsForm 
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    title={this.state.title}
+                    imgUrl={this.state.imgUrl}
+                    description={this.state.description}
+                    btnText='Add Ugly Thing'
+                />
+                <UglyThings
+                    uglythings={this.props.uglythings}
+                    handleDelete={this.props.handleDelete}
+                    handleEdit={this.props.handleEdit}
+                />
                 
                 
             </div>
@@ -37,3 +59,5 @@ class App extends Component {
         )
     }
 }
+
+export default withUglyThings(App)
