@@ -6,13 +6,13 @@ class ThemeProvider extends Component {
     constructor() {
         super()
         this.state = {
-            theme: 'light'
+            theme: 'nice'
         }
     }
 
     toggleTheme = () => {
         this.setState(prevState => ({
-            theme: prevState.theme === 'light' ? 'dark' : 'light'
+            theme: prevState.theme === 'nice' ? 'dark' : 'nice'
         }))
     }
 
