@@ -10,7 +10,7 @@ const UglyThingsList = props => {
                                         key={uglything._id}
                                     />)
     return (
-        <div>
+        <div className='container'>
             {mappedUglyThings}
         </div>
     )

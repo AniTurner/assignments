@@ -3,5 +3,69 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+    font-size: 16pt;
+}
+
+h1 {
+    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    text-shadow: 2px 2px darkblue;
+    background-color: slategrey;
+    /* border-bottom: 1px solid slategrey; */
+    -webkit-box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
+
+}
+
+h2 {
+    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.main-container {
+    background-color: slategrey;
+}
+
+form {
+
+}
+.container {
+    display: flex;
+    justify-content: center;
     
+}
+.ugly-container {
+    max-width: 600px;
+}
+
+.uglything-div {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    max-width: 600px;
+    -webkit-box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
+  
+
+}
+
+.uglything-div button {
+    width: 50px;
+    height: 30px;
+    
+}
+
+
+
+.edit-uglything-div {
+
 }

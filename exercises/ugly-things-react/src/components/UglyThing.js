@@ -40,10 +40,10 @@ class UglyThing extends Component {
         const { title, imgUrl, description, handleDelete, _id } = this.props
         
         return (
-            <div>
+            <div className='ugly-container'>
                 {!this.state.isToggled
                     ? <div className='uglything-div' style={{ backgroundImage: `url(${imgUrl})`}}>
-                        <h1>{title}</h1>
+                        <h2>{title}</h2>
                         <h3>{description}</h3>
                         <button onClick={ () => handleDelete(_id)}>Delete</button>
                         <button onClick={this.toggler}>Edit</button>
