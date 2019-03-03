@@ -38,14 +38,14 @@ class App extends Component {
     render() {
         return (
             <div className='main-container'>
-                <h1>Funny-Ugly Things</h1>
+                <h1>Funny Things</h1>
                 <UglyThingsForm 
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     title={this.state.title}
                     imgUrl={this.state.imgUrl}
                     description={this.state.description}
-                    btnText='Add Ugly Thing'
+                    btnText='Add Funny Thing'
                 />
                 <UglyThingsList
                     uglythings={this.props.uglythings}

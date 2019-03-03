@@ -1,52 +1,65 @@
 * {
     box-sizing: border-box;
-}
-
-body {
-    padding: 0;
     margin: 0;
-    font-family: arial;
-    font-size: 16pt;
-}
-
-h1 {
+    padding: 0;
     font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
-    font-size: 30pt;
-    text-align: center;
-    padding: 10px;
-    margin-top: 0px;
-    text-shadow: 2px 2px darkblue;
-    background-color: slategrey;
-    /* border-bottom: 1px solid slategrey; */
-    -webkit-box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
-
-}
-
-h2 {
-    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
-    font-size: 20pt;
-    text-align: center;
 }
 
 .main-container {
-    background-color: slategrey;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
-
-form {
-
+.main-container * {
+    grid-column: 2/3;
 }
-.container {
+.main-container > form {
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
 }
-.ugly-container {
-    max-width: 600px;
+
+.main-container > h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px darkblue;
+}
+
+.main-container > h2 {
+    text-align: center;
+}
+
+.main-container > form > input {
+    height: 25px;
+    margin: 1px 0;
+    background-color: #008f95;
+    border: none;
+}
+
+.main-container > form > button {
+    padding: 4px 0;
+    border-radius: 3px;
+    background-color: #e9b000;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+.main-container {
+    background-color: #e24e42;
 }
 
 .uglything-div {
-    width: 100%;
+    
+    border-radius: 3px;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     height: 400px;
     background-size: cover;
     background-position: center;
@@ -54,18 +67,59 @@ form {
     -webkit-box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 3px 30px 2px rgba(0,0,0,0.75);
-  
+
+}
+
+.uglything-div h2 {
+    text-shadow: 2px 2px white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.uglything-div h3 {
+    text-shadow: 0.5px 0.5px lavenderblush;
 
 }
 
 .uglything-div button {
-    width: 50px;
-    height: 30px;
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 3px;
+    width: 60px;
+    height: 40px;
+    color: black;
+    font-weight: bolder;
+    border: none;
+}
+
+.uglything-div button:nth-child(3) {
+    background-color: #e24e42;
     
 }
 
-
-
-.edit-uglything-div {
-
+.uglything-div button:nth-child(4) {
+    background-color: #008f95;
 }
+
+.edit-uglything-div form {
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.edit-uglything-div form button:nth-child(4) {
+    background-color: #e9b000;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.edit-uglything-div button:nth-child(2) {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 3px;
+}
+
