@@ -59,8 +59,23 @@ class UglyThingsProvider extends Component {
         return (
             <UglyThingsContext.Provider
                 value={{
-                    uglythings: this.state.uglythings
-                }}
+                    uglythings: this.state.uglythings,
+                    getUglyThings: this.getUglyThings,
+                    addUglyThings: this.addUglyThings,
+                    handleDelete: this.handleDelete,
+                    handleEdit: this.handleEdit
+                }}>
+                {this.props.children}
+            </UglyThingsContext.Provider>
+        
         )
     }
 }
+
+export const withUglyThings = C => props => (
+    <UglyThingsContext.Consuler>
+        {value => <C {...props} {...value}/>}
+    </UglyThingsContext.Consuler>
+)
+
+export default UglyThingsProvider
