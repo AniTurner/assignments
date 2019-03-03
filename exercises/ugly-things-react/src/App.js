@@ -38,7 +38,7 @@ class App extends Component {
     render() {
         return (
             <div className='main-container'>
-                <h1>Ugly Things</h1>
+                <h1>Funny-Ugly Things</h1>
                 <UglyThingsForm 
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
