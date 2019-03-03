@@ -1,7 +1,7 @@
 import React from 'react'
 import UglyThing from './UglyThing.js'
 
-const UglyThings = props => {
+const UglyThingsList = props => {
     const mappedUglyThings = props.uglythings.map(uglything => 
                                     <UglyThing
                                         {...uglything}
@@ -16,4 +16,4 @@ const UglyThings = props => {
     )
 }
 
-export default UglyThings
+export default UglyThingsList

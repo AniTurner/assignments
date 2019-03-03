@@ -44,7 +44,7 @@ class UglyThing extends Component {
                 {!this.state.isToggled
                     ? <div className='uglything-div' style={{ backgroundImage: `url(${imgUrl})`}}>
                         <h1>{title}</h1>
-                        <h3>{descpription}</h3>
+                        <h3>{description}</h3>
                         <button onClick={ () => handleDelete(_id)}>Delete</button>
                         <button onClick={this.toggler}>Edit</button>
                       </div>

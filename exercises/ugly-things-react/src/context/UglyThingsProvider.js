@@ -37,7 +37,7 @@ class UglyThingsProvider extends Component {
         axios.delete(`${this.url}/${_id}`).then(response => {
             this.setState(prevState => {
                 return {
-                    uglythings: prevState.uglythings.filter(uglything => uglything._id) !== _id
+                    uglythings: prevState.uglythings.filter(uglything => uglything._id !== _id)
                 }
             })
         }).catch(error => console.log(error))
@@ -73,9 +73,9 @@ class UglyThingsProvider extends Component {
 }
 
 export const withUglyThings = C => props => (
-    <UglyThingsContext.Consuler>
+    <UglyThingsContext.Consumer>
         {value => <C {...props} {...value}/>}
-    </UglyThingsContext.Consuler>
+    </UglyThingsContext.Consumer>
 )
 
 export default UglyThingsProvider

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import UglyThings from './component/UglyThings.js'
-import UglyThingsForm from './component/UglyThingsForm.js'
+import UglyThingsList from './components/UglyThingsList.js'
+import UglyThingsForm from './components/UglyThingsForm.js'
 import { withUglyThings } from './context/UglyThingsProvider.js'
 import './styles.css'
 
@@ -47,7 +47,7 @@ class App extends Component {
                     description={this.state.description}
                     btnText='Add Ugly Thing'
                 />
-                <UglyThings
+                <UglyThingsList
                     uglythings={this.props.uglythings}
                     handleDelete={this.props.handleDelete}
                     handleEdit={this.props.handleEdit}
