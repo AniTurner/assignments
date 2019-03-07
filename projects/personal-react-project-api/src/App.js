@@ -78,9 +78,10 @@ class App extends Component {
         })
     }
     
-    handleClick = () => {
-        
-    }
+    // handleClick = () => {
+    //     e.preventDefault()
+
+    // }
     
     render() {
         
@@ -111,7 +112,7 @@ class App extends Component {
                     />
                     <button>Submit</button>
                 </form>
-                <div onClick={this.handleClick}>
+                <div>
                 {mappedCuisines}
                 </div>
                 {/* {mappedRestaurant} */}
