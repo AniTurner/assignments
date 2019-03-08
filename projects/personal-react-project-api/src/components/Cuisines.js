@@ -13,8 +13,7 @@ const Cuisines = props => {
     return (
         <div>
             <div>Cuisines</div>
-            {/* <img src={mappedCuisines.image_Url}/> */}
-            <p>{mappedCuisines}</p>
+            <div>{mappedCuisines}</div>
         </div>
     )
 }

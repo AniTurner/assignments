@@ -40,12 +40,12 @@ class CityProvider extends Component {
         // const restaurantData = 
     }
 
-    updateDailyMenu = async () => {
-        const nearby = await axios.get(`https://developers.zomato.com/api/v2.1/geocode?lat=${this.state.lat}&lon=${this.state.lon}`, { headers:
-        {"user-key":"***REMOVED***" }})
-        const nearbyData = nearby.data.popularity.nearby_res
-        console.log(nearbyData)
-    }
+    // updateDailyMenu = async () => {
+    //     const nearby = await axios.get(`https://developers.zomato.com/api/v2.1/geocode?lat=${this.state.lat}&lon=${this.state.lon}`, { headers:
+    //     {"user-key":"***REMOVED***" }})
+    //     const nearbyData = nearby.data.popularity.nearby_res
+    //     console.log(nearbyData)
+    // }
 
     render() {
         return (

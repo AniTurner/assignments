@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Header from './components/Header.js'
 import Navbar from './components/Navbar.js'
 import Cuisines from './components/Cuisines.js'
 import Home from './components/Home.js'
@@ -26,7 +25,6 @@ class App extends Component {
             const imgUrl = "https://banner2.kisspng.com/20180612/uzt/kisspng-restaurant-computer-icons-food-menu-issues-5b2087e8297cd0.5561046515288586001699.jpg"
             return (
                 <div className="app-container">
-                    {/* <Header /> */}
                     <Navbar navToggle={navToggle} toggler={this.toggler}/>
                     <div onClick={this.toggler} className={`overlay overlay-${navToggle ? "open" : "closed"}`}></div>
                     <button className={`rotate rotate-${navToggle ? "open" : "closed"}`} onClick={this.toggler} style={{backgroundImage:'url('+imgUrl+')',backgroundSize:"cover"}}>
