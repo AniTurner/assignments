@@ -34,6 +34,9 @@ class CityProvider extends Component {
         }
     }
 
+    getRestaurantList = async () => {
+        const restaurants = await axios.get(`https://developers.zomato.com/api/v2.1/restaurants?city_id=${this.state.lat}&lon=${this.state.lon}`, { headers:{"user-key":"***REMOVED***" }})
+    }
 
     updateDailyMenu = async () => {
         const nearby = await axios.get(`https://developers.zomato.com/api/v2.1/geocode?lat=${this.state.lat}&lon=${this.state.lon}`, { headers:

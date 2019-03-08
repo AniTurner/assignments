@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div>
+        <div style={{backgroundColor: '#f25f50', height: 100}}>
             <div>Header</div>
         </div>
     )

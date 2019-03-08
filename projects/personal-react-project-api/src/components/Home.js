@@ -21,6 +21,7 @@ class Home extends Component {
         this.setState({
             cityIdInput: '',
         })
+        this.props.history.push('/cuisines')
     }
 
     render() {
