@@ -11,8 +11,9 @@
 
 html {
     background-color: #50514F;
-    
 }
+
+/* NAVBAR *//* NAVBAR *//* NAVBAR *//* NAVBAR *//* NAVBAR */
 
 
 .home,
@@ -156,4 +157,11 @@ html {
 .page-fade-exit.page-fade-exit-active {
     opacity: 0;
     transition: opacity 600ms linear;
+}
+
+
+/* HEADER *//* HEADER *//* HEADER *//* HEADER *//* HEADER */
+
+.header {
+    background-image: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1058&q=80')
 }

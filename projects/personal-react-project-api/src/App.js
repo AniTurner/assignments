@@ -3,6 +3,7 @@ import Header from './components/Header.js'
 import Navbar from './components/Navbar.js'
 import Cuisines from './components/Cuisines.js'
 import Home from './components/Home.js'
+import RestaurantList from './components/RestaurantList.js'
 import About from './components/About.js'
 import { withCity } from './context/CityProvider.js'
 import { Route, Switch, withRouter } from 'react-router-dom'
@@ -36,7 +37,7 @@ class App extends Component {
                         <Route exact path='/' component={Home} />
                         <Route path='/cuisines' component={Cuisines} />
                         <Route path='/about' component={About}/>
-                        {/*<Route path="/restaurants/:cuisine" component={RestaurantList}/>*/}
+                        <Route path="/restaurants/:cuisine" component={RestaurantList}/>
                         {/*<Route path="/restaurants/:dailymenu" component={Dailymenu}/>*/}
                     </Switch>
                 </PageFade>
