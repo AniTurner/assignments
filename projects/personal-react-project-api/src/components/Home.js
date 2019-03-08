@@ -36,7 +36,7 @@ class Home extends Component {
                     name='cityIdInput'
                     value={this.state.cityIdInput}
                     onChange={this.handleChange}
-                    placeholder='Enter your city'
+                    placeholder='Enter your city...'
                     />
                     <button style={{marginLeft: 130, marginTop: 10, backgroundColor: '#F25F5C' ,display: 'grid', justifyContent: 'center', width: 100, height: 20, fontSize: 15}}>Submit</button>
                 </form>
