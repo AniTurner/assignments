@@ -28,6 +28,7 @@ class Home extends Component {
 // console.log(this.props)
         return (
             <div>
+                <header></header>
                 <form onSubmit={this.handleSubmit}>
                     <input
                     type='text'
