@@ -11,6 +11,10 @@
 
 html {
     background-color: #50514F;
+    background-image: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1058&q=80');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
 }
 
 /* NAVBAR *//* NAVBAR *//* NAVBAR *//* NAVBAR *//* NAVBAR */
@@ -163,9 +167,10 @@ html {
 /* HEADER *//* HEADER *//* HEADER *//* HEADER *//* HEADER */
 
 header {
-    background-image: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1058&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1058&q=80');
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom; */
+    height: 300px;
 }
 
 

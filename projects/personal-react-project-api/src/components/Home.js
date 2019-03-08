@@ -28,16 +28,17 @@ class Home extends Component {
 // console.log(this.props)
         return (
             <div>
-                <header></header>
+                <header style={{padding: 20, textAlign: 'center', fontSize:30, fontWeight: 'bolder',   textShadow: '1px 1px #ffff'}}>"People who love to eat are always the best people" - Julia Child</header>
+                <div></div>
                 <form onSubmit={this.handleSubmit}>
-                    <input
+                    <input style={{width: 200, height: 60, marginLeft: 90, border: 'none', backgroundColor: '#50514F', borderRadius: '10%'}}
                     type='text'
                     name='cityIdInput'
                     value={this.state.cityIdInput}
                     onChange={this.handleChange}
                     placeholder='Enter your city'
                     />
-                    <button>Submit</button>
+                    <button style={{marginLeft: 130, marginTop: 10, backgroundColor: '#F25F5C' ,display: 'grid', justifyContent: 'center', width: 100, height: 20, fontSize: 15}}>Submit</button>
                 </form>
             </div>
         )
