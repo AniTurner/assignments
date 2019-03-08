@@ -6,7 +6,7 @@ import Home from './components/Home.js'
 import About from './components/About.js'
 import { withCity } from './context/CityProvider.js'
 import { Route, Switch, withRouter } from 'react-router-dom'
-import { PageFade } from './transitions'
+import { PageFade } from './transitions/transition'
 import './styles.css'
 
 class App extends Component {
@@ -22,12 +22,14 @@ class App extends Component {
         render() {
             const {navToggle} = this.state
             const {location } = this.props
+            const imgUrl = "https://banner2.kisspng.com/20180612/uzt/kisspng-restaurant-computer-icons-food-menu-issues-5b2087e8297cd0.5561046515288586001699.jpg"
             return (
                 <div className="app-container">
                     <Header />
                     <Navbar navToggle={navToggle} toggler={this.toggler}/>
                     <div onClick={this.toggler} className={`overlay overlay-${navToggle ? "open" : "closed"}`}></div>
-                    <button className={`rotate rotate-${navToggle ? "open" : "closed"}`} onClick={this.toggler}>|||</button>
+                    <button className={`rotate rotate-${navToggle ? "open" : "closed"}`} onClick={this.toggler} style={{backgroundImage:'url('+imgUrl+')',backgroundSize:"cover"}}>
+                    </button>
                
                 <PageFade location = {location}>
                     <Switch>
