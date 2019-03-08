@@ -3,7 +3,7 @@ import Home from '/.component/Home.js'
 
 const Cuisine = (props) => {
     return (
-        <div>
+        <div onClick={this.handleClick}>
             {this.props.getRestaurantList}
         </div>
     )
