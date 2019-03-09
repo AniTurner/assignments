@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Restaurant from './components/Restaurant.js'
+import Restaurant from './Restaurant.js'
 import axios from 'axios'
 
 class  RestaurantList extends Component {
@@ -10,9 +10,9 @@ class  RestaurantList extends Component {
         }
     }
     getRestaurantList = async cuisine => {
-        const restaurants = await axios.get(`https://developers.zomato.com/api/v2.1/search?city_id=${this.state.lat}&lon=${this.state.lon}&cuisines=${cuisine}`, { headers:{"user-key":"***REMOVED***" }})
-        console.log(restaurants)
-        const allRestaurants = this.props.match.params.restaurants
+        const res = await axios.get(`https://developers.zomato.com/api/v2.1/search?city_id=${this.state.lat}&lon=${this.state.lon}&cuisines=${this.props.match.params.cuisine}`, { headers:{"user-key":"***REMOVED***" }})
+        console.log(res)
+        const allRestaurants = res.data.restaurants
         this.setState({
             allRestaurants
         })
@@ -21,15 +21,16 @@ class  RestaurantList extends Component {
         this.getRestaurantList();
     }
 
-    const mappedRestaurants = props.allRestaurants.map(restaurant => <Restaurant {...restaurant}/>)
 
+    render() {    
+        const mappedRestaurants = this.state.allRestaurants.map(restaurant =>                                                                         <Restaurant 
+                                                        {...restaurant}
+                                                    />)
 
-    render() {
         return (
         <div>
             <div>Restaurant List</div>
             <div>
-                {this.state.allRestaurants} 
                 {mappedRestaurants}
             </div>
             

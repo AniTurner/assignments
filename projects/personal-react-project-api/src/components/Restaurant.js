@@ -1,22 +1,23 @@
 import React from 'react'
 
-const Restaurant = (props) => {
-    return (
-        <div>
+const  Restaurant = (props) => {
+  
+        const {name, location:{address, city, zipcode}, price_range,average_cost_for_two, user_rating:{votes}, photos_url  } = props.restaurant
+        return (
+            <div>
+                <h1>{name}</h1>
+                <h3>{address}</h3>
+                <h3>{city}</h3>
+                <h3>{zipcode}</h3>
+                <h3>{price_range}</h3>
+                <h3>{average_cost_for_two}</h3>
+                <h4>{votes}</h4>
+                <a href={photos_url}>HIIIII</a>
+            </div>
+        )
+    }
 
-            <h1>{this.props.name}</h1>
-            <h3>{this.props.address}</h3>
-            <h3>{this.props.city}</h3>
-            <h3>{this.props.zipcode}</h3>
-            <h3>{this.props.price_range}</h3>
-            <h3>{this.props.average_cost_for_two}</h3>
-            <h4>{this.props.user_rating}</h4>
-
-
-
-        </div>
-    )
-}
+  
 
 
 export default Restaurant
