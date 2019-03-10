@@ -3,7 +3,11 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div >
+        <div>
+            <div className='title-container'>
+                <h1>Collections</h1>
+                <h3>Explore curated lists of top restaurants, cafés, pubs, and bars near you, based on trends.</h3>
+            </div>
             <div className='home-container'>
                 <div className='items'>
                     <div className='box1'></div>
@@ -51,7 +55,10 @@ const Home = () => {
                 </div>
             </div>
 
-
+            <div className='title-container'>
+                <h1>Quick Searches</h1>
+                <h3>Discover restaurants by type of meal</h3>
+            </div>
             <div className='icon-container'>
                 <div className='icon' >
                     <div className='icon1'></div>
@@ -74,7 +81,37 @@ const Home = () => {
                     <h4>Cafés</h4>
                 </div>
             </div>
+
+            <div className='stats-container'>
+                <div className='stat'>
+                    <h1>24</h1>
+                    <h3>COUNTRIES</h3>
+                </div>
+                <div className='stat'>
+                    <h1>1.2M</h1>
+                    <h3>RESTAURANTS</h3>
+                </div>
+                <div className='stat'>
+                    <h1>120M</h1>
+                    <h3>FOODIES EVERY MONTH</h3>
+                </div>
+                <div className='stat'>
+                    <h1>30M</h1>
+                    <h3>PHOTOS</h3>
+                </div>
+                <div className='stat'>
+                    <h1>10M</h1>
+                    <h3>REVIEWS</h3>
+                </div>
+                <div className='stat'>
+                    <h1>18M</h1>
+                    <h3>BOOKMARKS</h3>
+                </div>
+            </div>
+
         </div>
+
+        
         
     )
 }
