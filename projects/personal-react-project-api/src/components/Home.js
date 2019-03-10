@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { withCity } from '../context/CityProvider.js'
+import DemoCarousel from '../transitions/DemoCarousel.js'
 
 
 
@@ -21,13 +22,14 @@ class Home extends Component {
         this.setState({
             cityIdInput: '',
         })
-        this.props.history.push('/cuisines')
+       
     }
 
     render() {
 // console.log(this.props)
         return (
             <div>
+                <DemoCarousel />
                 <header style={{padding: 20, textAlign: 'center', fontSize:30, fontWeight: 'bolder',   textShadow: '1px 1px #ffff'}}>"People who love to eat are always the best people" - Julia Child</header>
                 <div></div>
                 <form onSubmit={this.handleSubmit}>

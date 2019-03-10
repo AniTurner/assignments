@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Restaurant from './Restaurant.js'
+import { withCity } from '../context/CityProvider.js'
+
 import axios from 'axios'
 
 class  RestaurantList extends Component {
@@ -9,8 +11,10 @@ class  RestaurantList extends Component {
             allRestaurants: []
         }
     }
+    
     getRestaurantList = async cuisine => {
-        const res = await axios.get(`https://developers.zomato.com/api/v2.1/search?city_id=${this.state.lat}&lon=${this.state.lon}&cuisines=${this.props.match.params.cuisine}`, { headers:{"user-key":"***REMOVED***" }})
+        // console.log(this.props.match.params.cuisine)
+        const res = await axios.get(`https://developers.zomato.com/api/v2.1/search?lat=${this.props.lat}&lon=${this.props.lon}&cuisines=${cuisine}`, { headers:{"user-key":"***REMOVED***" }})
         console.log(res)
         const allRestaurants = res.data.restaurants
         this.setState({
@@ -18,15 +22,16 @@ class  RestaurantList extends Component {
         })
     }
     componentDidMount() {
-        this.getRestaurantList();
+        this.getRestaurantList(this.props.match.params.cuisine);
     }
 
 
     render() {    
-        const mappedRestaurants = this.state.allRestaurants.map(restaurant =>                                                                         <Restaurant 
+        const mappedRestaurants = this.state.allRestaurants.map(restaurant => 
+                                                    <Restaurant 
                                                         {...restaurant}
                                                     />)
-
+console.log(this.state.allRestaurants)
         return (
         <div>
             <div>Restaurant List</div>
@@ -40,4 +45,4 @@ class  RestaurantList extends Component {
    
 }
 
-export default RestaurantList
+export default withCity(RestaurantList)

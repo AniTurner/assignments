@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
+
 
 const CityContext = React.createContext()
 
@@ -28,7 +30,7 @@ class CityProvider extends Component {
             // console.log(cuisineData)
             this.setState({
                 lat, lon, cityId, cuisineData
-            })
+            }, () =>  this.props.history.push('/cuisines'))
         } catch(err) {
             console.log(err)
         }
@@ -49,7 +51,7 @@ class CityProvider extends Component {
                 value = {{
                     ...this.state,
                     getCityId: this.getCityId,
-                    getRestaurantList: this.getRestaurantList
+                    // getRestaurantList: this.getRestaurantList
                 }}>
                 {this.props.children}
                 </CityContext.Provider>
@@ -63,4 +65,4 @@ export const withCity = C => props => (
     </CityContext.Consumer>
 )
 
-export default CityProvider
+export default withRouter(CityProvider)

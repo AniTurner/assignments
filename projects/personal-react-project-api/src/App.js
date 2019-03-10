@@ -35,8 +35,8 @@ class App extends Component {
                         <Route exact path='/' component={Home} />
                         <Route path='/cuisines' component={Cuisines} />
                         <Route path='/about' component={About}/>
-                        <Route path="/restaurant/:cuisine" component={RestaurantList}/>
-                        {/*<Route path="/restaurants/:dailymenu" component={Dailymenu}/>*/}
+                        <Route exact path="/restaurant/:cuisine" component={RestaurantList}/>
+                        {/* <Route exact path="/restaurants/:dailymenu" component={Dailymenu}/> */}
                     </Switch>
                 </PageFade>
             </div>

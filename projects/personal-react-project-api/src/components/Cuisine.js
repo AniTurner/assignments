@@ -1,13 +1,12 @@
-import React from 'react'
-import Home from '/.component/Home.js'
+// import React from 'react'
 
-const Cuisine = (props) => {
-    return (
-        <div onClick={this.handleClick}>
-            {this.props.getRestaurantList}
-        </div>
-    )
-}
+// const Cuisine = (props) => {
+//     return (
+//         <div onClick={this.handleClick}>
+//             {this.props.getRestaurantList}
+//         </div>
+//     )
+// }
 
 
-export default Cuisine
+// export default Cuisine
