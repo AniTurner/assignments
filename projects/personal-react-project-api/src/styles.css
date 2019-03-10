@@ -99,6 +99,8 @@ form {
     background-size: cover;
     width: 250px;
     height: 200px;
+    text-align: center;
+
 }
 .box3 {
     background-image: url('https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');
@@ -109,15 +111,24 @@ form {
 .box4 {
     background-image: url('https://images.unsplash.com/photo-1496545087308-51ec893e6bbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
-    width: 250px;
+    width: 390px;
     height: 200px;
     
 }
 .box5 {
     background-image: url('https://images.unsplash.com/photo-1506092286663-676948dea189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
+    width: 390px;
+    height: 200px;
+    text-align: center;
+}
+
+.box6 {
+    background-image: url('https://images.unsplash.com/photo-1471421298428-1513ab720a8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80');
+    background-size: cover;
     width: 250px;
     height: 200px;
+   
 }
 .items {
     display: flex;
@@ -131,6 +142,51 @@ form {
     box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
 
 }
+
+.icon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    background-color: whitesmoke;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.icon1 {
+    background-image: url('https://cdn0.iconfinder.com/data/icons/set-06-food-colors-doodle/91/Food_284-512.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.icon2 {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/breakfast-lineal-color-set/512/breakfast-512.png');
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+}
+
+.icon3 {
+    background-image: url('https://www.shareicon.net/data/2016/08/30/820927_food_512x512.png');
+    background-size: cover;
+    width: 70px;
+    height: 80px;
+}
+
+.icon4 {
+    background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/dinner-45-245865.png');
+    background-size: cover;
+    width: 70px;
+    height: 80px;
+}
+
+.icon5 {
+    background-color: url('https://iconsplace.com/wp-content/uploads/_icons/fa8072/256/png/coffee-icon-15-256.png')
+}
+
+
 html {
     background-color: #50514F;
     height: 100vh;
