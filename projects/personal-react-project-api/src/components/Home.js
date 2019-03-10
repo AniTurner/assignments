@@ -53,17 +53,26 @@ const Home = () => {
 
 
             <div className='icon-container'>
-                <div>
+                <div className='icon' >
                     <div className='icon1'></div>
                     <h4>Delivery</h4>
                 </div>
-                <div>
+                <div className='icon'>
                     <div className='icon2'></div>
                     <h4>Breakfast</h4>
                 </div>
-                <div className='icon3'></div>
-                <div className='icon4'></div>
-                <div className='icon5'></div>
+                <div className='icon'>
+                    <div className='icon3'></div>
+                    <h4>Lunch</h4>
+                </div>
+                <div className='icon'>
+                    <div className='icon4'></div>
+                    <h4>Dinner</h4>
+                </div>
+                <div className='icon'>
+                    <div className='icon5'></div>
+                    <h4>Cafés</h4>
+                </div>
             </div>
         </div>
         

@@ -153,6 +153,16 @@ form {
     margin-left: 50px;
     margin-right: 50px; 
 }
+.icon {
+    width: 100px;
+    display: grid;
+    margin: 0;
+    border: 1px solid red;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    /* padding: 10px; */
+}
 
 .icon1 {
     background-image: url('https://cdn0.iconfinder.com/data/icons/set-06-food-colors-doodle/91/Food_284-512.png');
@@ -183,10 +193,10 @@ form {
 }
 
 .icon5 {
-    background-color: url('https://iconsplace.com/wp-content/uploads/_icons/fa8072/256/png/coffee-icon-15-256.png');
+    background-color: url('https://cdn4.iconfinder.com/data/icons/coffee-shop-colored-style/64/paper-coffee-cup_colored-512.pngg');
     background-size: cover;
-    width: 70px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 
