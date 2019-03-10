@@ -6,11 +6,8 @@ class DemoCarousel extends Component {
     render() {
         return (
             <Carousel showThumbs={false}>
-                <div style={{backgroundImage: "url(" + "https://www.eatthis.com/wp-content/uploads/media/images/ext/175228805/sugary-restaurant-meals-ocharleys-babybackribs-500x375.jpg" + ")",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'}}>
-                    {/* <img src='https://www.eatthis.com/wp-content/uploads/media/images/ext/175228805/sugary-restaurant-meals-ocharleys-babybackribs-500x375.jpg' alt='pic1'/> */}
+                <div className='carousel-image1'>
+                    <img src='https://www.eatthis.com/wp-content/uploads/media/images/ext/175228805/sugary-restaurant-meals-ocharleys-babybackribs-500x375.jpg' alt='pic1'/>
                 </div>
                 <div>
                     <img src='https://secure.i.telegraph.co.uk/multimedia/archive/02999/restaurant_2999753b.jpg' alt='pic2'/>
