@@ -5,14 +5,14 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className='footer'>
-            <div>
-                <div></div>
-                <ul>
-                    <li>Privacy</li>
-                    <li>Terms</li>
-                    <li>Policy</li>
-                    <li>Security</li>
-                </ul>
+            <div className='footer-content'>
+                <img style={{width: 100, height: 'auto', marginTop: 50}} src='https://cdn2.iconfinder.com/data/icons/line-elements/512/cook-512.png'/>
+                <div className='footer-items'>
+                    <div>Privacy</div>
+                    <div>Terms</div>
+                    <div>Policy</div>
+                    <div>Security</div>
+                </div>
                 <p>Ani Turner &copy for V School</p>
             </div>
 

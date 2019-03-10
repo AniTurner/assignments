@@ -15,10 +15,11 @@ const Cuisines = props => {
                 <Link to={`/restaurant/${cuisine.cuisine.cuisine_name}`}>{cuisine.cuisine.cuisine_name}</Link> 
             </div>)
     return (
-        <div>
-            <div>Cuisines</div>
-            <div>{mappedCuisines}</div>
-            {/* {this.props.getRestaurantList} */}
+        <div className='cuisines-container'>
+            <h1>Cuisines</h1>
+            <div className='cuisine-items'>
+                <div>{mappedCuisines}</div>
+            </div>
         </div>
     )
 }
