@@ -33,10 +33,12 @@ class  RestaurantList extends Component {
                                                     />)
 console.log(this.state.allRestaurants)
         return (
-        <div>
+        <div className='restaurant-display'>
             <div>Restaurant List</div>
-            <div>
-                {mappedRestaurants}
+            <div className='cards-container'>
+                <div className='card'>
+                    {mappedRestaurants}
+                </div>
             </div>
             
         </div>

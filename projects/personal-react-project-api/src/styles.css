@@ -86,17 +86,20 @@ form {
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+   
 }
 .box1 {
     background-image: url('https://images.unsplash.com/photo-1483648969698-5e7dcaa3444f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80');
     background-size: cover;
+
     width: 250px;
     height: 200px;
-    
+   
 }
 .box2 {
     background-image: url('https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
+    background-position: center;
     width: 250px;
     height: 200px;
     text-align: center;
@@ -105,37 +108,44 @@ form {
 .box3 {
     background-image: url('https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');
     background-size: cover;
+    background-position: center;
     width: 250px;
     height: 200px;
 }
 .box4 {
     background-image: url('https://images.unsplash.com/photo-1496545087308-51ec893e6bbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
-    width: 390px;
+    background-position: center;
+    width: 250px;
     height: 200px;
     
 }
 .box5 {
     background-image: url('https://images.unsplash.com/photo-1506092286663-676948dea189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
-    width: 390px;
+    background-position: center;
+    width: 250px;
     height: 200px;
-    text-align: center;
 }
 
 .box6 {
     background-image: url('https://images.unsplash.com/photo-1471421298428-1513ab720a8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80');
     background-size: cover;
+    background-position: center;
     width: 250px;
     height: 200px;
    
 }
 .items {
+   
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    border: 1px solid red;
     border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 40px;
     padding: 10px;
     -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
@@ -476,4 +486,49 @@ html {
 }
 
 
-/* RESTAURANTS */
+/* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS */
+
+.restaurant-display {
+    /* border: 1px solid red; */
+}
+
+.cards-container {
+    /* border: 2px solid blue; */
+    display: grid;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    
+}
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.card > div{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    -webkit-box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);
+    box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);     
+    
+   
+    
+}
+
+.card div h1 {
+    font-size: 26pt;
+    font-weight: bold;
+    color: #247BA0;
+}
+
+span {
+    font-weight: bold;
+}
