@@ -297,7 +297,13 @@ form {
 
 }
 
+/* ABOUT US *//* ABOUT US *//* ABOUT US *//* ABOUT US *//* ABOUT US *//* ABOUT US */
 
+.about-container {
+    border: 1px solid red;
+    display: grid;
+    
+}
 
 
 html {
@@ -307,13 +313,14 @@ html {
 /* CAROUSEL *//* CAROUSEL *//* CAROUSEL *//* CAROUSEL *//* CAROUSEL *//* CAROUSEL */
 .carousel .slide img {
     background-image: url('https://www.eatthis.com/wp-content/uploads/media/images/ext/175228805/sugary-restaurant-meals-ocharleys-babybackribs-500x375.jpg');
-    width: 100vw;
-    height: 500px;
+    width: 50vw;
+    height: auto;
 }
 
 .carousel .slider-wrapper {
-    width: 100vw;
+    width: 50vw;
     height: auto;
+    margin-top: 160px;
 }
 
 

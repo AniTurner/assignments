@@ -13,7 +13,7 @@ const Footer = () => {
                     <div>Policy</div>
                     <div>Security</div>
                 </div>
-                <p>Ani Turner &copy for V School</p>
+                <p>Ani Turner &copy; for V School</p>
             </div>
 
         </div>

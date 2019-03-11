@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import { withCity } from '../context/CityProvider.js'
-// import DemoCarousel from '../transitions/DemoCarousel.js'
 
 
 
@@ -29,7 +28,6 @@ class Form extends Component {
 // console.log(this.props)
         return (
             <div className='form-div'>
-                {/* <DemoCarousel /> */}
                 {/* <header style={{padding: 20, textAlign: 'center', fontSize:30, fontWeight: 'bolder',   textShadow: '1px 1px #ffff'}}>"People who love to eat are always the best people" - Julia Child</header> */}
                 <form onSubmit={this.handleSubmit}>
                     <input className='form-input'
