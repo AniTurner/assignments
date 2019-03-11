@@ -36,7 +36,7 @@ class App extends Component {
                     </div>
                     <div >
                     
-                
+            
                     <PageFade location = {location}>
                         <Switch>
                             <Route exact path='/' component={Home} />
@@ -46,6 +46,7 @@ class App extends Component {
                             {/* <Route exact path="/restaurants/:dailymenu" component={Dailymenu}/> */}
                         </Switch>
                     </PageFade>
+                    
                     
                     </div>
                     <div className='footer-div'>

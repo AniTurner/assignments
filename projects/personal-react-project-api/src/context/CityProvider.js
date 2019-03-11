@@ -14,7 +14,8 @@ class CityProvider extends Component {
             lat: '',
             lon: '',
             res_id: [],
-            daily_menu: ''
+            daily_menu: '',
+            cuisinesLoading: true
         }
     }
 
@@ -29,7 +30,8 @@ class CityProvider extends Component {
             const cuisineData = cuisines.data.cuisines
             // console.log(cuisineData)
             this.setState({
-                lat, lon, cityId, cuisineData
+                lat, lon, cityId, cuisineData,
+                cuisinesLoading: false
             }, () =>  this.props.history.push('/cuisines'))
         } catch(err) {
             console.log(err)

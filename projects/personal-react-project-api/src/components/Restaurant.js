@@ -1,7 +1,8 @@
 import React from 'react'
 
 const  Restaurant = (props) => {
-  
+    console.log(props.restaurant.price_range)
+  console.log(props.costIcon)
         const {name, location:{address, city, zipcode}, price_range,average_cost_for_two, user_rating:{votes}, thumb  } = props.restaurant
         return (
             <div >

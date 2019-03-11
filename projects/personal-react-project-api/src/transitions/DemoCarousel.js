@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 class DemoCarousel extends Component {
     render() {
         return (
-            <Carousel showThumbs={false}>
+            <Carousel showThumbs={false} autoPlay={true} stopOnHover={true} transitionTime={10} style={{width: '50vw'}}>
                 <div className='carousel'>
                     <img src='https://www.eatthis.com/wp-content/uploads/media/images/ext/175228805/sugary-restaurant-meals-ocharleys-babybackribs-500x375.jpg' alt='pic1'/>
                 </div>

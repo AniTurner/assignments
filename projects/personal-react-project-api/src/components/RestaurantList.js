@@ -8,7 +8,8 @@ class  RestaurantList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            allRestaurants: []
+            allRestaurants: [],
+            isLoading: true
         }
     }
     
@@ -18,26 +19,35 @@ class  RestaurantList extends Component {
         console.log(res)
         const allRestaurants = res.data.restaurants
         this.setState({
-            allRestaurants
+            allRestaurants,
+            isLoading: false
         })
     }
     componentDidMount() {
         this.getRestaurantList(this.props.match.params.cuisine);
     }
 
+    // generateCost = (icon, cost) => {
+    //     console.log(icon, cost)
+    //     return icon.repeat(Number(cost))
+    // }
 
     render() {    
-        const mappedRestaurants = this.state.allRestaurants.map(restaurant => 
+        const mappedRestaurants = this.state.allRestaurants.map((restaurant) => 
                                                     <Restaurant 
-                                                        {...restaurant}
+                                                    // costIcon={this.generateCost('$', restaurant.price_range)}
+                                                    {...restaurant}
                                                     />)
 console.log(this.state.allRestaurants)
         return (
-        <div className='restaurant-display'>
+        <div className='restaurant-display' style={{height: 700, overflowY: 'scroll'}}>
             <h1>Restaurant List</h1>
             <div className='cards-container'>
                 <div className='card'>
-                    {mappedRestaurants}
+                    {this.state.isLoading ?
+                        <div style={{display: 'grid', gridColumnStart: 2,textAlign: 'center'}}>Loading...</div>
+                    : mappedRestaurants
+                    }
                 </div>
             </div>
             
