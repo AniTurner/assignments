@@ -32,6 +32,8 @@ app.get('/people', (req, res) => {
 app.get('/people/:_id', (req, res) => {
     const ID = req.params._id
     const foundPerson = people.find(person => person._id === ID)
+
+    res.send(foundPerson)
 })
 
 
