@@ -7,6 +7,11 @@
     font-weight: lighter;
     outline: none;
 }
+.header img {
+    width: 100px;
+    height: auto;
+    margin-top: 50px
+}
 
 .header-div {
     height: 400px;
@@ -37,10 +42,10 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-.header-div p {
+.header-div h1 {
     padding-top: 10px;
     padding-bottom: 20px;
-    font-size: 60px;  
+    font-size: 60pt;  
     color: black;
     text-shadow: 0 0.5px 0 white;
     font-weight: 700;
@@ -67,7 +72,7 @@ form {
     width: 8vw;
     height: 8vh;
     font-weight: bolder;
-    font-size: 17px;
+    font-size: 17pt;
     background-color: #F25F5C;
     border-radius: 5px;
     border: none;
@@ -86,12 +91,11 @@ form {
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-   
+    flex-wrap: wrap;
 }
 .box1 {
     background-image: url('https://images.unsplash.com/photo-1483648969698-5e7dcaa3444f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80');
     background-size: cover;
-
     width: 250px;
     height: 200px;
    
@@ -152,7 +156,10 @@ form {
     box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.75);
 
 }
-
+.items div h1 {
+    font-size: 20pt;
+    font-weight: bold;
+}
 .icon-container {
     display: flex;
     flex-direction: row;    
@@ -230,6 +237,7 @@ form {
     font-family: Playfair Display,serif;
 
 }
+
 .stats-container{
     display: flex;
     flex-direction: row;    
@@ -253,6 +261,8 @@ form {
     font-size: 3em;
 }
 
+/* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER */
+
 .footer {
     height: 330px;
     margin-top: 150px;
@@ -261,6 +271,9 @@ form {
 
 .footer-content img {
     margin: 20px;
+    width: 100px;
+    height: auto;
+    margin-top: 50px
 }
 
 .footer-items {
@@ -459,9 +472,6 @@ html {
     justify-content: center;
     align-items: center;
     margin: 20px;
-
-
-  
 }
 .cuisine-items > div {
     display: grid;
@@ -487,10 +497,6 @@ html {
 
 
 /* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS *//* RESTAURANTS */
-
-.restaurant-display {
-    /* border: 1px solid red; */
-}
 
 .cards-container {
     /* border: 2px solid blue; */
@@ -518,9 +524,6 @@ html {
     -webkit-box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);
     box-shadow: 0px 0px 42px 4px rgba(0,0,0,1);     
-    
-   
-    
 }
 
 .card div h1 {
@@ -531,4 +534,319 @@ html {
 
 span {
     font-weight: bold;
+}
+
+
+.restaurant-display h1 {
+    
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+        font-family: Playfair Display,serif;
+        color: #70C1B3;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    
+}
+
+
+
+/* MEDIA QUERIES *//* MEDIA QUERIES *//* MEDIA QUERIES *//* MEDIA QUERIES *//* MEDIA QUERIES *//* MEDIA QUERIES */
+
+@media (max-width: 1640px) {
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        width: 92%;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        padding: 20px;
+    }
+     
+    .header-div h1 {
+        font-size: 50pt;  
+    }
+
+    .form-input {
+        height: 10vh;
+    }
+    /* form {
+        height: 9vh;
+    } */
+
+    .search-button {
+        height: 12vh;
+    }
+
+}
+
+@media (max-width: 1060px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        width: 91%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .items {
+        width: 70%;
+    }
+
+    .stat {
+        padding: 20px;
+    }
+
+    .header-div h1 {
+        font-size: 40pt;  
+    }
+    .search-button {
+        height: 6vh;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        width: 87%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .stat {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .header-div h1 {
+        font-size: 35pt;  
+    }
+
+    .search-button {
+        height: 12vh;
+        font-size: 17px;
+    }
+    .rotate {
+        width: 35px;
+        height: 35px;
+    }
+    .title-container h3 {
+        font-size: 17px;
+    }
+    .footer-content img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .stat {
+        font-size: 8px;
+        padding: 5px;
+    }
+    .stats-container{
+        padding-bottom: 10px;
+        margin-top: 150px;
+        margin-left: 250px;
+        margin-right: 250px; 
+       
+    }
+
+    .icon1 {
+        width: 70px;
+        height: 70px;
+    }
+    .icon3 {
+        width: 70px;
+        height: 70px;
+    }
+    .icon2 {
+        width: 70px;
+        height: 70px;
+    }
+    .icon4 {
+        width: 70px;
+        height: 70px;
+    }
+    .icon5 {
+        width: 70px;
+        height: 70px;
+    }
+    .title-container h1 {
+        font-size: 30px;
+    }
+    .title-container h3 {
+        font-size: 15px;
+    }
+
+    .footer-content img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-items {
+        font-size: 20px;
+    }
+    .footer-content p {
+        font-size: 14px;
+    }
+
+    .search-button {
+        height: 10vh;
+        font-size: 15px;
+    }
+    .form-input {
+        width: 200px;
+    }
+
+    .form-input::placeholder {
+        font-size: 12px;
+    }
+
+    .items div h1 {
+        font-size: 19px;
+    }
+    .items div h3 {
+        font-size: 12px;
+    }
+
+    .box1 {
+        width: 150px;
+        height: 100px
+    }
+    .box2 {
+        width: 150px;
+        height: 100px
+    }
+    .box3 {
+        width: 150px;
+        height: 100px
+    }
+    .box4 {
+        width: 150px;
+        height: 100px
+    }
+    .box5 {
+        width: 150px;
+        height: 100px
+    }
+    .box6 {
+        width: 150px;
+        height: 100px
+    }
+
+    .title-container h3 {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .stats-container{
+        padding-bottom: 0px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px; 
+    }
+    .icon1 {
+        width: 40px;
+        height: 40px;
+    }
+    .icon3 {
+        width: 40px;
+        height: 40px;
+    }
+    .icon2 {
+        width: 40px;
+        height: 40px;
+    }
+    .icon4 {
+        width: 40px;
+        height: 40px;
+    }
+    .icon5 {
+        width: 40px;
+        height: 40px;
+    }
+    .icon-container {
+        padding-bottom: 20px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px; 
+        height: 90px;
+    }
+    .icon h4 {
+        font-size: 13px;
+    }
+
+    .home-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .title-container {
+        margin-top: 40px;
+    }
+    .title-container h3 {
+        font-size: 8.5px;
+    }
+
+    .footer-content img {
+        margin: 10px;
+        
+    }
+    .header img {
+        width: 70px;
+        height: auto;
+        margin-top: 20px
+    }
+    
+    .header-div h1 {
+        font-size: 40px;
+    }
+
+    .search-button {
+        width: 50px;
+    }
+    .form-input {
+        width: 150px;
+        height: 40px
+    }
+
+    .footer {
+        height: 230px;
+        margin-top: 150px;
+        background-color: #70C1B3;
+    }
+    .footer-items div {
+        font-size: 15px;
+    }
+
+    .footer-content p {
+        font-size: 11px;
+    }
+
+    .cuisines-container h1 {
+        font-size: 30px;
+    }
+
+    .cuisine-items > div {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 15pt;
+        
+        padding: 20px;
+    }
+
+    .card > div {
+        padding: 20px;
+    }
+
+
+      
 }

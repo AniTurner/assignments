@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer-content'>
-                <img style={{width: 100, height: 'auto', marginTop: 50}} src='https://cdn2.iconfinder.com/data/icons/line-elements/512/cook-512.png'/>
+                <img src='https://cdn2.iconfinder.com/data/icons/line-elements/512/cook-512.png'/>
                 <div className='footer-items'>
                     <div>Privacy</div>
                     <div>Terms</div>
