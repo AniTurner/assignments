@@ -20,16 +20,24 @@ app.get('/todos', (req, res) => {
     res.send(todos)
 })
 
-app.post('/people', (req, res) => {
+app.post('/todos', (req, res) => {
     req.body._id = uuid()
-    people.push(req.body)
+    todos.push(req.body)
     res.send(req.body)
 })
 
-app.delete('./people/:_id', (req, res) => {
+app.delete('./todos/:_id', (req, res) => {
     const updatedTodos = todos.filter(todo => tod._id !== req.params._id)
     todos = updatedTodos
     res.send(todos)
 })
 
-app.put
+app.put('./todos/:_id', (req, res) => {
+    const foundTodo = todos.find(todo => todo._id == req.params._id)
+    Object.assign(foundTodo, req.body)
+    res.send(foundTodo)
+})
+
+app.listen(7700, () => {
+    console.log('Server is running on port 7700')
+})
