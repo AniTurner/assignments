@@ -18,6 +18,11 @@ const todoSchema = new Schema ({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    department: {
+        type: String,
+        enum: ["Clothing", "Food", "Jewelery"],
+        required: true
     }
 })
 

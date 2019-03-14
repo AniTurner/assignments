@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const AddBountyForm = props => {
-    const {handleSubmit, handleChange, firstName, lastName, isGood} = props
+    const {handleSubmit, handleChange, firstName, lastName, isAlive} = props
     return (
         <form onSubmit = {handleSubmit}>
             <input  
