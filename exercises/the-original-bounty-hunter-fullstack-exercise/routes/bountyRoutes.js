@@ -1,60 +1,62 @@
 const express = require("express")
 const bountyRouter = express.Router()
+const Bounty = require('../models/bounty.js')
 const uuid = require('uuid/v4')
 
-let bounties = [
-    {
-        firstName: 'K-2SO',
-        lastName: '',
-        isAlive: false,
-        bountyAmountInMillion: 5,
-        species: 'Droid',
-        sideOfTheForce: 'light',
-        _id: uuid()
-    },
-    {
-        firstName: 'Rey',
-        lastName: '',
-        isAlive: true,
-        bountyAmountInMillion: 13,
-        species: 'Human',
-        sideOfTheForce: 'light',
-        _id: uuid()
-    },
-    {
-        firstName: 'Princess',
-        lastName: 'Leia',
-        isAlive: true,
-        bountyAmountInMillion: 22,
-        species: 'Human',
-        sideOfTheForce: 'light',
-        _id: uuid()
-    },
-    {
-        firstName: 'Lyra',
-        lastName: 'Erso',
-        isAlive: false,
-        bountyAmountInMillion: 10,
-        species: 'Human',
-        sideOfTheForce: 'light',
-        _id: uuid()
-    },
-    {
-        firstName: 'Orson',
-        lastName: 'Krennic',
-        isAlive: false,
-        bountyAmountInMillion: 12,
-        species: 'Human',
-        sideOfTheForce: 'dark',
-        _id: uuid()
-    }
-]
+// let bounties = [
+//     {
+//         firstName: 'K-2SO',
+//         lastName: '',
+//         isAlive: false,
+//         bountyAmountInMillion: 5,
+//         species: 'Droid',
+//         sideOfTheForce: 'light',
+//         _id: uuid()
+//     },
+//     {
+//         firstName: 'Rey',
+//         lastName: '',
+//         isAlive: true,
+//         bountyAmountInMillion: 13,
+//         species: 'Human',
+//         sideOfTheForce: 'light',
+//         _id: uuid()
+//     },
+//     {
+//         firstName: 'Princess',
+//         lastName: 'Leia',
+//         isAlive: true,
+//         bountyAmountInMillion: 22,
+//         species: 'Human',
+//         sideOfTheForce: 'light',
+//         _id: uuid()
+//     },
+//     {
+//         firstName: 'Lyra',
+//         lastName: 'Erso',
+//         isAlive: false,
+//         bountyAmountInMillion: 10,
+//         species: 'Human',
+//         sideOfTheForce: 'light',
+//         _id: uuid()
+//     },
+//     {
+//         firstName: 'Orson',
+//         lastName: 'Krennic',
+//         isAlive: false,
+//         bountyAmountInMillion: 12,
+//         species: 'Human',
+//         sideOfTheForce: 'dark',
+//         _id: uuid()
+//     }
+// ]
 
 
 
 
 
 //Routes
+//GET, POST, DELETE
 bountyRouter.route('/search')
     .get((req, res) => {
         const {isAlive, species, sideOfTheForce} = req.query
@@ -91,30 +93,59 @@ bountyRouter.route('/search')
 
 bountyRouter.route('/')
     .get((req, res) => {
-        res.send(bounties)
+        Bounty.find((err, bounties) => {
+            if(err) {
+                res.status(500)
+                return res.send(err)
+            }
+            return res.status(200).send(todos)
+        })
+        
     })
     .post((req, res) => {
-        const newBounty = req.body
-        newBounty._id = uuid()
-        bounties.push(newBounty)
-        res.send(newBounty)
+        const newBounty = new Bounty(req.body)
+        newBounty.save((err, newBountyObj) => {
+            if(err) {
+                res.status(500)
+                return res.send(err)
+            }
+            return res.status(201).send(newBountyObj)
+        })
     })
 
 
 bountyRouter.route('/:_id')
     .get((req, res) => {
-        const foundBounty = bounties.find(bounty => bounty._id === req.params._id)
-        res.send(foundBounty)
+        Bounty.findOne({_id: req.params._id}, (err, foundBounty) => {
+            if(err) {
+                res.status(500)
+                return res.send(err)
+            }
+            return res.status(200).send(foundBounty)
+        })
     })
     .put((req, res) => {
-        const foundBounty = bounties.find(bounty => bounty._id === req.params._id)
-        Object.assign(foundBounty, req.body)
-        res.send(foundBounty)
+        Bounty.findOneAndUpdate(
+            {_id: req.params._id},
+            req.body,
+            {new: true},
+            (err, updatedBounty) => {
+                if(err) {
+                    res.status(500)
+                    return res.send(err)
+                }
+                return res.status(201).send(updatedBounty)
+            }
+        )
     })
     .delete((req, res) => {
-        const updatedDB = bounties.filter(bounty => bounty._id !== req.params._id)
-        bounties = updatedDB
-        res.send("Bounty successfully deleted")
+        Bounty.findOneAndRemove({_id: req.params._id}, (err, deleteBounty) => {
+            if(err) {
+                res.status(500)
+                return res.send(err)
+            }
+            return res.status(202).send(`You successfully deleted ${deletedBounty.firstName} ${deletedBounty.lastName}`)
+        })
     })
 
 
