@@ -32,7 +32,7 @@ class BountyProvider extends Component {
     deleteBounty = _id => {
         axios.delete(`/bounty/${_id}`).then(res => {
             alert(res.data)
-            this.setState(preState => ({
+            this.setState(prevState => ({
                 bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
             }))
         })
@@ -53,11 +53,11 @@ class BountyProvider extends Component {
     }
 }
 
-export default WizardProvider
+export default BountyProvider
 
 
 export const withBounties = C => props => (
-    <WizardContext.Consumer>
+    <BountyContext.Consumer>
         { value => <C {...props} {...value}/>}
-    </WizardContext.Consumer>
+    </BountyContext.Consumer>
 )
