@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema //Blueprint how all bounties are going to look like 
 
 
 const bountySchema = new Schema ({
@@ -15,11 +15,11 @@ const bountySchema = new Schema ({
         type: Boolean, 
         default: false
     },
-    bountAmount: {
+    bountyAmount: {
         type: Number,
         required: true
     },
-    species: {
+    side: {
         type: String,
         enum: ["Sith", "Jedi"],
         required: true
