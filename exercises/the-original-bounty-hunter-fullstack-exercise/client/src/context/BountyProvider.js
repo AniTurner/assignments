@@ -32,7 +32,7 @@ class BountyProvider extends Component {
     deleteBounty = _id => {
         const bountyNameVerification = this.state.bounties.find(bounty => bounty._id === _id) 
         const answer = prompt(`Are you sure you want to delete ${bountyNameVerification.firstName} ${bountyNameVerification.lastName}?`)
-        if(answer === "yes" || answer === "Yes" || key === 89)
+        if(answer === "yes" || answer === "Yes" || onkeypress === 89)
         axios.delete(`/bounty/${_id}`).then(res => {
             alert(res.data)
             this.setState(prevState => ({
