@@ -7,7 +7,8 @@ const BountyList = props => {
         <div>
             {props.bounties.map(bounty => 
                                 <Bounty
-                                    deleteBounty={props.deletBounty}
+                                    deleteBounty={props.deleteBounty}
+                                    updateBounty={props.updateBounty}
                                     key={bounty._id}
                                     {...bounty}
                                     />)

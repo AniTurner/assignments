@@ -5,13 +5,13 @@ import {withBounties} from './context/BountyProvider.js'
 
 
 class App extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             firstName: '',
             lastName: '',
             isAlive: false,
-            bountyAmount: '',
+            bountyAmount: undefined,
             species: '',
             sideOfTheForce: ''
         }
@@ -32,23 +32,35 @@ class App extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+        const {firstName, lastName, isAlive, bountyAmount, species, sideOfTheForce} = this.state
         const newBounty = {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            isAlive: this.state.isAlive,
-            bountyAmount: this.state.bountyAmount,
-            species: this.state.species,
-            sideOfTheForce: this.state.sideOfTheForce,
+            firstName,
+            lastName,
+            isAlive,
+            bountyAmount,
+            species,
+            sideOfTheForce
 
         }
         this.props.addBounty(newBounty)
-        this.setState({ firstName: "", lastName: "", isAlive: false, bountyAmount: "", species: "", sideOfTheForce: "" })
+        this.setState({ 
+            firstName: "", 
+            lastName: "", 
+            isAlive: false, 
+            bountyAmount: undefined, 
+            species: "", 
+            sideOfTheForce: "" })
     }
 
     render() {
+        console.log(this.props.bounties)
         return(
             <div>
+                <div>
+                    <h1><span>The Original Bounty Hunter</span></h1>
+                </div>
                 <BountyForm  
+                    btnText="Add Bounty"
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     {...this.state}

@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const AddBountyForm = props => {
-    const {handleSubmit, handleChange, firstName, lastName, isAlive, bountyAmount, species} = props
+const BountyForm = props => {
+    const {handleSubmit, handleChange, firstName, lastName, isAlive, bountyAmount, species, sideOfTheForce, btnText} = props
     return (
         <form onSubmit = {handleSubmit}>
             <input  
@@ -35,12 +35,17 @@ const AddBountyForm = props => {
                 value={species}
                 onChange={handleChange}
                 placeholder="Select the species"/>
-            <button>Add Bounty</button>
+            <select
+                type="text"
+                name="sideOfTheForce"
+                value={sideOfTheForce}
+                onChange={handleChange}
+                placeholder="Select which side of the force they are on..."/>
+            <button>{btnText}</button>
 
-        
         </form>
     )
 }
 
 
-export default AddBountyForm
+export default BountyForm

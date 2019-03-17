@@ -5,11 +5,11 @@ const Schema = mongoose.Schema //Blueprint how all bounties are going to look li
 const bountySchema = new Schema ({
     firstName: {
         type: String, 
-        required: true
+        // required: true
     },
     lastName: {
         type: String, 
-        required: true
+        // required: true
     },
     isAlive: {
         type: Boolean, 
@@ -17,17 +17,17 @@ const bountySchema = new Schema ({
     },
     bountyAmount: {
         type: String,
-        required: true
+        // required: true
     },
     species: {
         type: String,
         enum: ["Human", "Droid", "Wookiee", "Chiss", "Zabrak", "Hutt", "Ewok", "Gungan", "Zeltron"],
-        required: true
+        // required: true
     },
     sideOfTheForce: {
         type: String,
         enum: ["Light Side", "Dark Side"],
-        required: true
+        // required: true
     }
 })
 

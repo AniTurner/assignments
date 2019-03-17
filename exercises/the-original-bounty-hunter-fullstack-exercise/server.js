@@ -15,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/bounty-db", {useNewUrlParser: true},
 })
 
 //Routes
-app.use("/bounty", require("./routes/bountyRoutes.js"))
+app.use("/bounty/v1", require("./routes/bountyRoutes.js"))
 
 //Global Error Handler
 app.use((err, req, res, next) => {
