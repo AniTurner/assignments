@@ -6,6 +6,7 @@ const Bounty = props => {
     return (
         <div>
             <h1>{firstName} {lastName}</h1>
+            <div>{isAlive}</div>
             <button onClick={() => deleteBounty(_id)}>Delete</button>
         </div>
     )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import AddBountyForm from './components/AddBountyForm.js'
+import BountyForm from './components/BountyForm.js'
 import BountyList from './components/BountyList.js'
 import {withBounties} from './context/BountyProvider.js'
 
@@ -10,7 +10,10 @@ class App extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            isAlive: false
+            isAlive: false,
+            bountyAmount: '',
+            species: '',
+            sideOfTheForce: ''
         }
     }
 
@@ -19,7 +22,7 @@ class App extends Component {
     }
 
     handleChange = e => {
-        const value = e.target.type === 'checkbox'
+        const value = e.target.type === "checkbox"
             ? e.target.checked
             : e.target.value
         this.setState({
@@ -32,16 +35,20 @@ class App extends Component {
         const newBounty = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
-            isAlive: this.state.isAlive
+            isAlive: this.state.isAlive,
+            bountyAmount: this.state.bountyAmount,
+            species: this.state.species,
+            sideOfTheForce: this.state.sideOfTheForce,
+
         }
         this.props.addBounty(newBounty)
-        this.setState({ firstName: '', lastName: '', isAlive: false })
+        this.setState({ firstName: "", lastName: "", isAlive: false, bountyAmount: "", species: "", sideOfTheForce: "" })
     }
 
     render() {
         return(
             <div>
-                <AddBountyForm  
+                <BountyForm  
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     {...this.state}
@@ -49,6 +56,7 @@ class App extends Component {
                 <BountyList
                     bounties={this.props.bounties}
                     deleteBounty={this.props.deleteBounty}
+                    updateBounty={this.props.updateBounty}
                 />
 
             </div>

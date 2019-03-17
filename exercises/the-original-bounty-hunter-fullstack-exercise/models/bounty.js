@@ -8,7 +8,7 @@ const bountySchema = new Schema ({
         required: true
     },
     lastName: {
-        type: String,
+        type: String, 
         required: true
     },
     isAlive: {
@@ -16,12 +16,17 @@ const bountySchema = new Schema ({
         default: false
     },
     bountyAmount: {
-        type: Number,
+        type: String,
         required: true
     },
-    side: {
+    species: {
         type: String,
-        enum: ["Sith", "Jedi"],
+        enum: ["Human", "Droid", "Wookiee", "Chiss", "Zabrak", "Hutt", "Ewok", "Gungan", "Zeltron"],
+        required: true
+    },
+    sideOfTheForce: {
+        type: String,
+        enum: ["Light Side", "Dark Side"],
         required: true
     }
 })
