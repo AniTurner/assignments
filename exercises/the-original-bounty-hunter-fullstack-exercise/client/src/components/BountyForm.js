@@ -10,7 +10,8 @@ const BountyForm = props => {
                 name="firstName"
                 value={firstName}
                 onChange={handleChange}
-                placeholder="First Name"/>
+                placeholder="First Name"
+                required/>
             <input
                 type="text"
                 name="lastName"
@@ -21,8 +22,8 @@ const BountyForm = props => {
                 type="checkbox"
                 name='isAlive'
                 value={isAlive}
-                onChange={handleChange}
-                placeholder="Is this person alive?"/>
+                onChange={handleChange}/>
+                <label>Alive...?</label>
             <input
                 type="number"
                 name="bountyAmount"
@@ -30,17 +31,33 @@ const BountyForm = props => {
                 onChange={handleChange}
                 placeholder="Enter bounty amount..."/>
             <select
-                type="select"
                 name="species"
-                value={species}
                 onChange={handleChange}
-                placeholder="Select the species"/>
-            <select
-                type="text"
+                placeholder="Select the species">
+                <option>{species}</option>
+            </select>
+            
+            <label>
+            <input
+                type="radio"
                 name="sideOfTheForce"
-                value={sideOfTheForce}
+                value="Light Side"
+                checked= {sideOfTheForce === "Light Side"}
                 onChange={handleChange}
-                placeholder="Select which side of the force they are on..."/>
+            />
+            Light Side
+            </label>
+
+            <label>
+            <input
+                type="radio"
+                name="sideOfTheForce"
+                value="Dark Side"
+                checked= {sideOfTheForce === "Dark Side"}
+                onChange={handleChange}
+            />
+            Dark Side
+            </label>
             <button>{btnText}</button>
 
         </form>

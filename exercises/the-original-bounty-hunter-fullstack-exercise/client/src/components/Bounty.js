@@ -44,18 +44,19 @@ class Bounty extends Component {
     render() {
         const {firstName, lastName, isAlive, _id, deleteBounty, bountyAmount, species, sideOfTheForce} = this.props
         return (
-            <div style={isAlive ? {backgroundColor: "blue", height: 100} : {backgroundColor: "red", height: 100}}>
+            <div key={_id} style={isAlive ? {backgroundColor: "blue", height: 100} : {backgroundColor: "red", height: 100}}>
                 {!this.state.editToggle ?
                     <>
-                        <h1>{firstName} {lastName}</h1>
-                        <div>{bountyAmount}</div>
-                        <option>{species}</option>
-                        <option>{sideOfTheForce}</option>
+                        <h2>{firstName} {lastName}</h2>
+                        <p>Bounty: ${bountyAmount.toString()}</div>
+                        {/* <option>{species}</option>
+                        <option>{sideOfTheForce}</option> */}
                         <button onClick={() => deleteBounty(_id)}>Delete</button>
                         <button onClick={() => this.toggler}>Edit</button>
                     </>
                     :
                     <>
+                        {/* <div className={`close ${(sideOfTheForce === "Light Side") ? "close-light" : "close-dark"}`}></div> */}
                         <BountyForm
                             handleChange={this.handleChange}
                             handleSubmit={this.handleSubmit}

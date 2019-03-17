@@ -4,7 +4,7 @@ import Bounty from './Bounty.js'
 
 const BountyList = props => {
     return (
-        <div>
+        <>
             {props.bounties.map(bounty => 
                                 <Bounty
                                     deleteBounty={props.deleteBounty}
@@ -13,7 +13,7 @@ const BountyList = props => {
                                     {...bounty}
                                     />)
                 }
-        </div>
+        </>
     )
 }
 

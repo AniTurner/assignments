@@ -13,7 +13,7 @@ class BountyProvider extends Component {
     }
 
     getBounties = () => {
-        axios.get("/bounty").then(res => {
+        axios.get("/bounty/v1").then(res => {
             console.log(res.data)
             this.setState({
                 bounties: res.data
@@ -23,7 +23,7 @@ class BountyProvider extends Component {
 
     addBounty = newBounty => {
         
-        axios.post("/bounty", newBounty).then(res => {
+        axios.post("/bounty/v1", newBounty).then(res => {
             this.setState(prevState => ({
                 bounties: [...prevState.bounties, res.data]
                 
@@ -36,7 +36,7 @@ class BountyProvider extends Component {
         const bountyNameVerification = this.state.bounties.find(bounty => bounty._id === _id) 
         const answer = prompt(`Are you sure you want to delete ${bountyNameVerification.firstName} ${bountyNameVerification.lastName}?`)
         if(answer === "yes" || answer === "Yes" || answer === onkeypress(89)) {
-            axios.delete(`/bounty/${_id}`).then(res => {
+            axios.delete(`/bounty/v1/${_id}`).then(res => {
                 // alert(res.data)
                 this.setState(prevState => ({
                     bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
@@ -48,9 +48,9 @@ class BountyProvider extends Component {
     }
 
     updateBounty = (_id, updates) => {
-        axios.put(`/bounty/${_id}`, updates).then(res => {
+        axios.put(`/bounty/v1/${_id}`, updates).then(res => {
             this.setState(prevState => ({
-                bounties: prevState.bounties.map(bounty => bounty._id --- _id ? res.data : bounty)
+                bounties: prevState.bounties.map(bounty => bounty._id === _id ? res.data : bounty)
             }))
         })
     }

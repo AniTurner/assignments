@@ -49,7 +49,8 @@ class App extends Component {
             isAlive: false, 
             bountyAmount: undefined, 
             species: "", 
-            sideOfTheForce: "" })
+            sideOfTheForce: "" 
+        })
     }
 
     render() {
