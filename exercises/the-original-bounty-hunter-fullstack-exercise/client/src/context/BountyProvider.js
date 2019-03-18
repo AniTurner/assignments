@@ -33,6 +33,7 @@ class BountyProvider extends Component {
 
 
     deleteBounty = _id => {
+        //maybe change instead of typing, clicking a yes or no button 
         const bountyNameVerification = this.state.bounties.find(bounty => bounty._id === _id) 
         const answer = prompt(`Are you sure you want to delete ${bountyNameVerification.firstName} ${bountyNameVerification.lastName}?`)
         if(answer === "yes" || answer === "Yes" || answer === onkeypress(89)) {
