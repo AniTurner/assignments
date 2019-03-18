@@ -7,7 +7,6 @@ const BountyList = props => {
         <>
             {props.bounties.map(bounty => 
                                 <Bounty
-                                    id='outputs-container'
                                     deleteBounty={props.deleteBounty}
                                     updateBounty={props.updateBounty}
                                     key={bounty._id}

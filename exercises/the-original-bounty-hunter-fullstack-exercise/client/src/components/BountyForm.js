@@ -39,6 +39,7 @@ const BountyForm = props => {
                 onChange={handleChange}
                 value={species}
                 placeholder="Select the species">
+                <option></option>
                 <option value={species.human}>Human</option>
                 <option value={species.droid}>Droid</option>
                 <option value={species.wookiee}>Wookiee</option>
