@@ -29,13 +29,6 @@ body {
     padding: 30px;
 }
 
-.vertical-align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
 
 form {
     display: grid;
@@ -49,11 +42,8 @@ form .selections {
     grid-gap: 10pt;
 }
 
-#add-form {
-    /* background: radial-gradient(circle at 0% 0%, #ebd786, #877943 51%, #544a11); */
-    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,106,121,0.9514180672268907) 51%, rgba(0,212,255,1) 100%); */
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(151,133,195,1) 31%, rgba(68,59,163,1) 100%);
-
+#add-box {
+    background: radial-gradient(circle, rgba(251,160,160,1) 0%, rgba(68,59,163,1) 100%);
 }
 
 .form-container {
@@ -63,9 +53,11 @@ form .selections {
     margin-top: 60px
 }
 
-.card {
+.box {
+    display: grid;
+    text-align: center;
     position: relative;
-    width: 800px;
+    width: 900px;
     height: auto;
     padding: 20pt;
     margin: 0;
@@ -89,7 +81,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Arial';
+    font-family: 'Roboto';
     font-size: 18pt;
     margin-bottom: 10pt;
     text-transform: uppercase;
@@ -107,7 +99,7 @@ p {
 input, button {
     display: inline-block;
     color: 	#c7f080	;
-    font-family: 'arial', Sans-Serif;
+    font-family: 'Roboto', Sans-Serif;
     font-size: 15px;
     background-color: #00000014;
     padding: .9em;
@@ -136,7 +128,7 @@ button:hover {
     background-color: #554269;
 }
 
-#add-form button {
+#add-box button {
     background-color: #443ba3;
 }
 
@@ -144,64 +136,9 @@ input[type="radio"], input[type="checkbox"] {
     margin-right: 10px;
 }
 
-/* input[type="radio"]:first-of-type {
-    /* margin-left: 20px; */
-
-
-#key {
-    display: grid;
-    grid-template-columns: 30px 1fr 30px 1fr 30px 1fr;
-    grid-gap: 20pt;
-    background-color: orange;
-    color: whitesmoke;
-}
-
-#key .square {
-    width: 30px;
-    height: 30px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-#key p {
-    line-height: 30px;
-    font-size: 16px;
-}
-
-/* #key .deceased {
-    background-size: auto;
-}
-
-.deceased {
-    color: #787878 !important;
-}
-
-.deceased-key {
-    background-color: #787878
-}
-
-.deceased h2 {
-    color: #787878 !important;
-} */
-
-/* div.close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 15px;
-    height: 15px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-} */
 
 button.delete {
     width: 25%;
-    /* display: inline-block; */
     overflow: auto;
     white-space: nowrap;
     margin: 20px 5% 0 0;
@@ -210,22 +147,12 @@ button.delete {
 
 button.edit {
     width: 25%;
-    /* display: inline-block; */
     overflow: auto;
     white-space: nowrap;
     margin: 20px 0 0 5%;
   
 }
-/* 
-div.close-light {
-    background-image: url('./gfx/icon-close.png');
-    background-color: whitesmoke;
-}
 
-div.close-dark {
-    background-image: url('./gfx/icon-close-light.png');
-    background-color: #1d1e26;
-} */
 
 .hidden {
     display: none;

@@ -20,6 +20,12 @@ const BountyForm = props => {
                 value={lastName}
                 onChange={handleChange}
                 placeholder="Last Name"/>
+            <input
+                type="number"
+                name="bountyAmount"
+                value={bountyAmount}
+                onChange={handleChange}
+                placeholder="Enter bounty amount..."/>
             <input 
                 className='checkbox'
                 type="checkbox"
@@ -27,12 +33,6 @@ const BountyForm = props => {
                 value={isAlive}
                 onChange={handleChange}/>
                 <label>Alive...?</label>
-            <input
-                type="number"
-                name="bountyAmount"
-                value={bountyAmount}
-                onChange={handleChange}
-                placeholder="Enter bounty amount..."/>
             <select
                 className='species'
                 name="species"

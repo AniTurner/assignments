@@ -14,7 +14,7 @@ class BountyProvider extends Component {
 
     getBounties = () => {
         axios.get("/bounty/v1").then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 bounties: res.data
             })

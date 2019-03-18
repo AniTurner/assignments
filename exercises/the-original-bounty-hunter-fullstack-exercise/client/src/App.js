@@ -10,8 +10,8 @@ class App extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            isAlive: false,
             bountyAmount: undefined,
+            isAlive: false,
             species: '',
             sideOfTheForce: ''
         }
@@ -36,8 +36,8 @@ class App extends Component {
         const newBounty = {
             firstName,
             lastName,
-            isAlive,
             bountyAmount,
+            isAlive,
             species,
             sideOfTheForce
 
@@ -46,8 +46,8 @@ class App extends Component {
         this.setState({ 
             firstName: "", 
             lastName: "", 
-            isAlive: false, 
             bountyAmount: undefined, 
+            isAlive: false, 
             species: "", 
             sideOfTheForce: "" 
         })
@@ -60,12 +60,12 @@ class App extends Component {
 
             <div id="header-container">
 
-                <div className="vertical-align">
+                <div>
                     <h1><span className="hidden">The Original Bounty Hunter</span></h1>
                 </div>
             </div>
             <div className='form-container'>
-                <div className="card" id="add-form">
+                <div className="box" id="add-box">
                     <BountyForm
                         btnText="Add Bounty"
                         handleChange={this.handleChange}
