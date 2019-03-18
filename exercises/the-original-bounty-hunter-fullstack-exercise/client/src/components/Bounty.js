@@ -45,7 +45,7 @@ class Bounty extends Component {
         const {firstName, lastName, isAlive, _id, deleteBounty, bountyAmount, species, sideOfTheForce} = this.props
         // const imgUrl = 'https://ak7.picdn.net/shutterstock/videos/6009377/thumb/1.jpg'
         return (
-            <div key={_id} className='outputs'style={sideOfTheForce === "Light Side" ? {backgroundColor: "#2719C7", height: 100} :  {backgroundColor: "#d21c1c", height: 100}}>
+            <div key={_id} className='outputs'style={sideOfTheForce === "Light Side" ? {backgroundColor: "#2719C7", height: 150} :  {backgroundColor: "#d21c1c", height: 150}}>
                 {!this.state.editToggle ?
                     <>
                         <h2>{firstName} {lastName}</h2>

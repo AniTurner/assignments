@@ -50,12 +50,17 @@ form .selections {
 }
 
 #add-form {
-    background: radial-gradient(circle at 0% 0%, #ebd786, #877943 51%, #544a11);
+    /* background: radial-gradient(circle at 0% 0%, #ebd786, #877943 51%, #544a11); */
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,106,121,0.9514180672268907) 51%, rgba(0,212,255,1) 100%); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(151,133,195,1) 31%, rgba(68,59,163,1) 100%);
+
 }
 
-.add-form .card {
+.form-container {
     display: flex;
-    margin-bottom: 30px;
+    justify-content: center;
+    margin: 50px;
+    margin-top: 60px
 }
 
 .card {
@@ -64,8 +69,6 @@ form .selections {
     height: auto;
     padding: 20pt;
     margin: 0;
-    display: flex;
-    justify-content: center;
     border-radius: 3px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -202,18 +205,20 @@ input[type="radio"], input[type="checkbox"] {
 
 button.delete {
     width: 25%;
-    display: inline-block;
+    /* display: inline-block; */
     overflow: auto;
     white-space: nowrap;
     margin: 20px 5% 0 0;
+ 
 }
 
 button.edit {
     width: 25%;
-    display: inline-block;
+    /* display: inline-block; */
     overflow: auto;
     white-space: nowrap;
     margin: 20px 0 0 5%;
+  
 }
 /* 
 div.close-light {

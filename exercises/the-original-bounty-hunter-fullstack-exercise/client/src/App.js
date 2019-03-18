@@ -64,7 +64,7 @@ class App extends Component {
                     <h1><span className="hidden">The Original Bounty Hunter</span></h1>
                 </div>
             </div>
-
+            <div className='form-container'>
                 <div className="card" id="add-form">
                     <BountyForm
                         btnText="Add Bounty"
@@ -73,6 +73,7 @@ class App extends Component {
                         {...this.state}
                     />
                 </div>
+            </div>
 
            
 
