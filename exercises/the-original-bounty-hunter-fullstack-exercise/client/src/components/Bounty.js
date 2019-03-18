@@ -49,7 +49,7 @@ class Bounty extends Component {
                 {!this.state.editToggle ?
                     <>
                         <h2>{firstName} {lastName}</h2>
-                        <p>Bounty: ${bountyAmount.toString()}</p>
+                        <p style={{color: '#35ba2a'}}>Bounty: <span >$</span>{bountyAmount.toString()}</p>
                         <div>{species}</div>
                         <button className='delete' onClick={() => deleteBounty(_id)}>Delete</button>
                         <button className="edit" onClick={this.toggler}>Edit</button>

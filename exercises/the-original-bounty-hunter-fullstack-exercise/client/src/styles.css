@@ -106,10 +106,10 @@ p {
 
 input, button {
     display: inline-block;
-    color: #443ba3;
+    color: 	#c7f080	;
     font-family: 'arial', Sans-Serif;
     font-size: 15px;
-    background-color: #1d1e2614;
+    background-color: #00000014;
     padding: .9em;
     border: none;
     outline: none;
@@ -121,10 +121,6 @@ input, button {
     transition: all .1s linear;
 }
 
-.sith input {
-    background-color: #ffffff0f;
-    color: whitesmoke;
-}
 
 button {
     background-color: #9785c3;
