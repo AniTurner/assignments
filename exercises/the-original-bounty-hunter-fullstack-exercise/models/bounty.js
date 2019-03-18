@@ -22,7 +22,7 @@ const bountySchema = new Schema ({
     species: {
         type: String,
         enum: ["Human", "Droid", "Wookiee", "Chiss", "Zabrak", "Hutt", "Ewok", "Gungan", "Zeltron"],
-        required: true
+        // required: true
     },
     sideOfTheForce: {
         type: String,

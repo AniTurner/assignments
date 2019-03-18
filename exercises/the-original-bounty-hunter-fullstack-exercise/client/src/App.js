@@ -56,26 +56,37 @@ class App extends Component {
     render() {
         console.log(this.props.bounties)
         return(
-            <div>
-                <div>
-                    <h1><span>The Original Bounty Hunter</span></h1>
+            <div className='main-container'>
+
+            <div id="header-container">
+
+                <div className="vertical-align">
+                    <h1><span className="hidden">The Original Bounty Hunter</span></h1>
                 </div>
-                <BountyForm  
-                    btnText="Add Bounty"
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    {...this.state}
-                />
+            </div>
+
+                <div className="card" id="add-form">
+                    <BountyForm
+                        btnText="Add Bounty"
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}
+                        {...this.state}
+                    />
+                </div>
+
+           
+
+            <div id="container">
+
                 <BountyList
                     bounties={this.props.bounties}
                     deleteBounty={this.props.deleteBounty}
-                    updateBounty={this.props.updateBounty}
-                />
-
+                    updateBounty={this.props.updateBounty} />
             </div>
-        )
-    }
-}
 
+        </div>
+    )
+}
+}
 
 export default withBounties(App)

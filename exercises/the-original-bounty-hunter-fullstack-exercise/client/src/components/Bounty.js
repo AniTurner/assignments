@@ -43,16 +43,16 @@ class Bounty extends Component {
     }
     render() {
         const {firstName, lastName, isAlive, _id, deleteBounty, bountyAmount, species, sideOfTheForce} = this.props
+        // const imgUrl = 'https://ak7.picdn.net/shutterstock/videos/6009377/thumb/1.jpg'
         return (
-            <div key={_id} style={isAlive ? {backgroundColor: "blue", height: 100} : {backgroundColor: "red", height: 100}}>
+            <div key={_id} className='outputs'style={sideOfTheForce === "Light Side" ? {backgroundColor: "#2719C7", height: 100} :  {backgroundColor: "#d21c1c", height: 100}}>
                 {!this.state.editToggle ?
                     <>
                         <h2>{firstName} {lastName}</h2>
-                        <p>Bounty: ${bountyAmount.toString()}</div>
-                        {/* <option>{species}</option>
-                        <option>{sideOfTheForce}</option> */}
-                        <button onClick={() => deleteBounty(_id)}>Delete</button>
-                        <button onClick={() => this.toggler}>Edit</button>
+                        <p>Bounty: ${bountyAmount.toString()}</p>
+                        <div>{species}</div>
+                        <button className='delete' onClick={() => deleteBounty(_id)}>Delete</button>
+                        <button className="edit" onClick={this.toggler}>Edit</button>
                     </>
                     :
                     <>
@@ -60,7 +60,7 @@ class Bounty extends Component {
                         <BountyForm
                             handleChange={this.handleChange}
                             handleSubmit={this.handleSubmit}
-                            btntext="Submit Edit"
+                            btnText="Submit Edit"
                             {...this.state}
                         />
                         <button onClick={this.toggler}>X</button>

@@ -5,7 +5,8 @@ const BountyForm = props => {
     const {handleSubmit, handleChange, firstName, lastName, isAlive, bountyAmount, species, sideOfTheForce, btnText} = props
     return (
         <form onSubmit = {handleSubmit}>
-            <input  
+            <input 
+                className='name' 
                 type="text"
                 name="firstName"
                 value={firstName}
@@ -13,12 +14,14 @@ const BountyForm = props => {
                 placeholder="First Name"
                 required/>
             <input
+                className='name'
                 type="text"
                 name="lastName"
                 value={lastName}
                 onChange={handleChange}
                 placeholder="Last Name"/>
             <input 
+                className='checkbox'
                 type="checkbox"
                 name='isAlive'
                 value={isAlive}
@@ -31,15 +34,26 @@ const BountyForm = props => {
                 onChange={handleChange}
                 placeholder="Enter bounty amount..."/>
             <select
+                className='species'
                 name="species"
                 onChange={handleChange}
+                value={species}
                 placeholder="Select the species">
-                <option>{species}</option>
+                <option value={species.human}>Human</option>
+                <option value={species.droid}>Droid</option>
+                <option value={species.wookiee}>Wookiee</option>
+                <option value={species.chiss}>Chiss</option>
+                <option value={species.zabrak}>Zabrak</option>
+                <option value={species.hutt}>Hutt</option>
+                <option value={species.gungan}>Gungan</option>
+                <option value={species.zeltron}>Zeltron</option>
+                <option value={species.ewok}>Ewok</option>
             </select>
             
             <label>
             <input
-                type="radio"
+                className='radio'
+                type="radio" 
                 name="sideOfTheForce"
                 value="Light Side"
                 checked= {sideOfTheForce === "Light Side"}
@@ -50,6 +64,7 @@ const BountyForm = props => {
 
             <label>
             <input
+                className='radio'
                 type="radio"
                 name="sideOfTheForce"
                 value="Dark Side"

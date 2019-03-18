@@ -101,7 +101,7 @@ bountyRouter.delete('/:_id', (req, res, next) => {
 
 //PUT
 
-bountyRouter.put((req, res, next) => {
+bountyRouter.put('/:_id',(req, res, next) => {
     Bounty.findOneAndUpdate(
         {_id: req.params._id},
         req.body,
