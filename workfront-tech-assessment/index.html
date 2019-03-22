@@ -1,0 +1,50 @@
+<!-- Countdown assignment
+For your assignment, we want you to create a date input field and hook it up such that when the users selects a date it will display a countdown to that date. You can edit this very file however you want to achieve that. Remember this is a chance to demonstrate your understanding of the basics of CSS, HTML and Javascript, make sure that your submission represents your skillset. 
+When you are done save this file with your changes and return it for evaluation.  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="styles.css" rel="stylesheet">
+        <title>Countdown Workfront Assignment</title>
+    </head>
+
+    <body>
+        <h1>Countdown</h1>
+
+        <form name='form'>
+            <input type='number' id='month' placeholder='Month'/>
+            <input type='number' id='day' placeholder='Day'/>
+            <input type='number' id='year' placeholder='Year'/>
+            <input type='number' id='hour' placeholder='Hour'/>
+            <input type='number' id='min' placeholder='Minute'/>
+            <input type='number' id='sec' placeholder='Second'/>
+            <button name="Submit">Submit</button>
+            <p id={timer_value}></p>
+        </form>
+
+        <footer>
+            <div>
+                <div>
+                    <p><span>Name:</span> Ani Turner</p>
+                </div>
+                <div>
+                    <p><span>Phone:</span> (702) 768-2196</p>
+                </div>
+                <div>
+                    <p><span>Email:</span> aniturner93@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+        
+        
+    </body>
+    <script src="app.js"></script>
+
+</html>
