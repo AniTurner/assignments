@@ -16,17 +16,33 @@ When you are done save this file with your changes and return it for evaluation.
     </head>
 
     <body>
-        <h1>Countdown</h1>
+        <div class='header'>
+            <h1>Countdown</h1>
+        </div>
 
         <form name='form'>
-            <input type='number' id='month' placeholder='Month'/>
-            <input type='number' id='day' placeholder='Day'/>
-            <input type='number' id='year' placeholder='Year'/>
-            <input type='number' id='hour' placeholder='Hour'/>
-            <input type='number' id='min' placeholder='Minute'/>
-            <input type='number' id='sec' placeholder='Second'/>
-            <button name="Submit">Submit</button>
-            <p id={timer_value}></p>
+            <select name="month" id="month">
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+            </select>
+            <!-- <input value='12' type='number' id='month' placeholder='Month'/> -->
+            <input value='25' type='number' id='day' placeholder='Day'/>
+            <input value='2019' type='number' id='year' placeholder='Year'/>
+            <input value='0' type='number' id='hour' placeholder='Hour'/>
+            <input value='0' type='number' id='min' placeholder='Minute'/>
+            <input value='0' type='number' id='sec' placeholder='Second'/>
+            <button id="btn" name="submit">Submit</button>
+            <p id="timer_value"></p>
         </form>
 
         <footer>
