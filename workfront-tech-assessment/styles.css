@@ -7,12 +7,151 @@
 .header {
     display: grid;
     text-align: center;
-    font-size: 16pt;
+    font-size: 26pt;
+    margin: 20px;
+    padding: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    text-shadow: 1px 1px #0000009b;
+
 }
-
-
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     background: radial-gradient(circle, rgba(160,237,251,1) 0%, rgba(79,59,163,1) 100%);
 }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 5px;
+    margin-left: 150px;
+    margin-right: 150px;
+    -webkit-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+}
+
+#month, input, button {
+    width: 180px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.678);
+    background-color: rgba(255, 255, 255, 0.534);
+}
+
+#month:focus {
+    outline: none;
+}
+input:focus {
+    outline: none;
+}
+button:focus {
+    outline: none;
+}
+
+#btn {
+    width: 150px;
+    background-color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#btn:focus {
+    outline: none;
+}
+
+#btn:hover {
+    background-color: rgb(183, 199, 228);
+    border: 1px solid  rgb(183, 199, 228);
+}
+
+.output-date {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+   
+}
+
+#countdown {
+    display: none;
+}
+
+.input-date {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;  
+}
+
+
+.output-container {
+    font-size: 70px;
+    border-radius: 15px;
+    margin: 20px;
+    height: 200px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.541);  
+}
+
+.number-title {
+    font-size: 20px;
+    width: 120px;
+    padding: 10px;
+    border-top: 1px solid white;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px #0000009b;
+}
+.number-display {
+    text-align: center;
+    padding: 10px;
+    font-size: 90px;
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px #0000009f;
+}
+
+.footer-elements {
+    text-align: center;
+    width: 100vw;
+    margin: 20px;
+    padding: 40px;
+    text-shadow: 1px 1px #0000009f;
+
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+#my-name {
+    font-size: 16pt;
+    padding: 20px;
+    color: white; 
+}
+
+#my-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
