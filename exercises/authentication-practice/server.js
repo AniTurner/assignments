@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-// Sets up the ability to use a .env file for private environment variables (SECRET)
 require('dotenv').config()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
