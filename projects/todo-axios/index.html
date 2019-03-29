@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+     <!--Import Google Fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+         media="screen,projection" />
+     <link rel="stylesheet" href="styles.css">
+     <title>To Do</title>
+ </head>
+ 
+ <body>
+     <div class="container">
+         <div class="row">
+             <div class="col s12 l6 list-container">
+                 <h1>Today's Tasks</h1>
+ 
+                 <div class="card">
+                     <div class="left-align pink">
+                         <a class="waves-effect waves-light white-text pink btn-flat" onclick="formToggleVisibility('addContainer')">
+                             <i class="material-icons left">add</i>Add a To Do
+                         </a>
+                     </div>
+                     <div class="card-content toggle-content add-edit-container" id="add-edit-addContainer">
+                         <form name="addForm">
+                             <p>
+                                 <input placeholder="Title" id="title" name="title" type="text" class="validate" required />
+                                 <label for="title" class="hide-me">Title</label>
+                             </p>
+                             <p>
+                                <input placeholder="Notes" id="description" name="description" type="text" class="validate" />
+                                <label for="description" class="hide-me">Notes</label>
+                            </p>
+
+                            <p>
+                                <input placeholder="Price" id="price" name="price" type="number" class="validate" />
+                                <label for="number" class="hide-me">Price</label>
+                            </p>
+
+                            <p>
+                                <input placeholder="Image URL" id="imgUrl" name="imgUrl" type="url" class="validate" />
+                                <label for="imgUrl" class="hide-me">Image URL</label>
+                            </p>
+
+                            <button class="waves-effect waves-light light-blue btn"><i class="material-icons left">save</i>Save</button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div id="containerIncomplete">
+                    </div>
+
+                </div>
+    
+                <div class="col s12 l6 list-container">
+                    <h1>Completed</h1>
+    
+                    <div id="containerComplete">
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+    
+    </html>
+    
+    
+    
+    
+    
+    
+    
+    
+<!--     
+    <title>To-Do List</title>
+</head>
+<body onload="getData()">
+    <header>
+        <div class="overlay">
+            <p>To-Do List</p><br>
+            <h3>“The Way To Get Started Is To Quit Talking And Begin Doing.”</h3> 
+            <h4>– Walt Disney</h4>
+        </div>
+    </header>
+        <div class='form-display'>
+            <form name="add-todo-form">
+                <input type="text" name="title" placeholder="Title" class='input-text'>
+                <input type="text" name="price" placeholder="price" class='input-text'>
+                <input type="text" name="description" placeholder="description" class='input-text'>
+                <input type="text" name="img" placeholder="Image URl" class='input-text'>
+                <button class='main-button'>Add</button>
+            </form>
+            <div id="toDo-list-container"></div>
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> -->
