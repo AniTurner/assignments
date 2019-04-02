@@ -23,7 +23,7 @@ const postSchema = new Schema({
     },
     thread: {
         type: String,
-        enum: ["recipes", "entertainment", "news", "sports", "culture", "science", "celebrity", "awhcute", "hobbies", "politics", "architecture", "music", "weather"],
+        enum: ["recipes", "entertainment", "news", "sports", "culture", "science", "celebrity", "awhcute", "hobbies", "politics", "architecture", "music", "humor", "weather"],
         required: true
     },
     comments: [{
@@ -37,12 +37,12 @@ const postSchema = new Schema({
             required: true
         },
         timeStamp: {  //when the comment was made
-            type: DataCue,
+            type: Date,
             default: Date.now
         }
     }],
     timeStamp: {    //when the post was made
-        type: DataCue,
+        type: Date,
         default: Date.now
     },
     tags: [{

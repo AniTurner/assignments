@@ -20,7 +20,7 @@ function showtimer() {
     if (document.getElementById('month').value !== 'Select a month...') {
         document.getElementById('countdown').style["display"] = "flex"
 
-        //Arrange alues in Date Time Format
+        //Arrange values in Date Time Format
         var end = new Date(`${timer_month}, ${timer_day}, ${timer_year}`);
         //Get current Date time
         var now = new Date().getTime();
@@ -36,7 +36,7 @@ function showtimer() {
         var remain = (end - now)
         if (remain < 0) {
             clearInterval(timer);
-            document.getElementById("timer_value")
+            // document.getElementById("timer_value")
             return
         }
 

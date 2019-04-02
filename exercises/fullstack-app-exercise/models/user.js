@@ -36,18 +36,18 @@ const userSchema = new Schema({  //creates a constructor function and makes obje
 })
 
 // User Auth methods
-// pre-save hook for password encryption
+// pre-save hook for password encryption - Signing up
 userSchema.pre("save", function(next) {
     const user = this
     if(!user.isModified("password")) return next()  //if the user has not modified password, return next
-    bcrypt.hash(user.password, 10, (err, has) => {  //10 is how many times it iterates through
+    bcrypt.hash(user.password, 10, (err, hash) => {  //10 is how many times it iterates through
         if(err) return next(err)
         user.password = hash 
         next()  
     })
 })
 
-// checkpassword method
+// checkpassword method - Logging in
 userSchema.methods.checkPassword = function(passwordAttempt, callback){
     bcrypt.compare(passwordAttempt, this.password, (err, isMatch) => {
         if (err) return callback(err)
