@@ -21,7 +21,7 @@ authRouter.post('/signup', (req, res, next) => {
         newUser.save((err, savedUser) => {
             if(err) {
                 res.status(500)
-                return next(err)
+                return next(new Error("Username and Password are required")) //makes it so they can't signup without info
             }
             //Create token - arg1 = payload(with users information) arg2 = secret to sign the token
             const token = jwt.sign(savedUser.withoutPassword(), process.env.SECRET)
